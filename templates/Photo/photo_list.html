@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Фото{% endblock %}
+
+
+{% block main_body %}
+            <h2>Фото</h2>
+            {% csrf_token %}
+            <div class="container">
+                     <div class="row">
+                <div class="col-8">
+
+                    <ul class="list-group">
+                       {% for photo in object_list %}
+                        <li class="list-group-item">
+
+                      <img src= "{{photo.photo.url}}" height="300" width="300" class="figure-img img-fluid rounded" alt="фото">
+                      {{ person.comments}}
+
+                        </li>
+                       {% empty %}
+                        <li>Нет фото</li>
+                       {% endfor %}
+                    </ul>
+
+
+                </div>
+
+                     </div>
+            </div>
+            </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Удалить человека{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+{% endblock %}
+
+{% block main_body %}
+            <form method="post" enctype="multipart/form-data" action="{% url 'delete_person' pk=object.id %}">
+            {% csrf_token %}
+            <div class="container">
+                     <div class="row">
+                <div class="col-4">
+               <p>Are you sure you want to delete "{{ object }}"?</p>
+
+     <input type="submit" value="Удаление">
+
+
+
+                </div>
+
+                     </div>
+            </div>
+            </form>
+
+{% endblock %}

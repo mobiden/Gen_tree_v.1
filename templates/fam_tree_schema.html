@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block main_body %}
+{% csrf_token %}
+            <div class="container">
+
+                {% for line in lines %}
+                     <div class="row">
+                    {% for person in line %}
+                    <div class="col-1">
+                    {% if person is None %}
+            <img src= "/media/work/white.jpg" height="60" width="40" class="figure-img img-fluid rounded" alt="пусто">
+                    {% else %}
+                        {% if person.id %}
+               <a href="{% url 'detailed_person' pk=person.id%}">
+                {% include 'tree_person.html' %}
+               </a>
+                    {% else %}
+                        {% include 'tree_person.html' %}
+                    {% endif %}
+                    {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+
+
+
+
+            </div>
+
+
+
+{% endblock %}

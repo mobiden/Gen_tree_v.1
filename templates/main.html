@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title> {% block title %}{% endblock%}</title>
+
+
+<link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.min.css"%}">
+
+    {% block styles %}{% endblock %}
+
+    <script type="text/javascript" src="{% static "jquery/jquery-3.6.0.min.js"%}"></script>
+    <script type="text/javascript" src="{% static "bootstrap/js/bootstrap.bundle.min.js"%}"></script>
+
+    {% block scripts %}{% endblock %}
+</head>
+
+
+<body>
+{% block body %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'family_tree'%}">Древо</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            База
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'create_person' %}">Добавить человека</a></li>
+            <li><a class="dropdown-item" href="{% url 'add_photo'%}">Добавить фотографию</a></li>
+            <li><a class="dropdown-item" href="{% url 'persons_list'%}">Список людей</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Изменить данные</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+
+      </ul>
+      <form class="d-flex" action="{% url 'persons_list' %}">
+        <input class="form-control me-2" type="search" placeholder="Поиск человека" aria-label="Search" name="search_p">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{% csrf_token %}
+
+    {% block main_body %}{% endblock %}
+
+
+{% endblock %}
+</body>
+</html>

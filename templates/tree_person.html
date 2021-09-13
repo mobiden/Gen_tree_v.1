@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="tree_person">
+    <div class="tree_person__item">
+
+        <figure class="figure">
+            {% if person.mainPhoto.url %}
+    <img src= "{{person.mainPhoto.url}}" height="40" width="60" class="figure-img img-fluid rounded" alt="Тут что-то будет">
+            {% endif %}
+            <figcaption class="figure-caption">{{ person.last_name}}
+
+        {{ person.first_name }}
+        {{ person.middle_name }}
+
+    </figcaption>
+</figure>
+        </div>
+
+</div>

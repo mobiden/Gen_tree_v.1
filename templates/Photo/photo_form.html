@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Add a photo{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+{% endblock %}
+
+{% block main_body %}
+            <form method="post" enctype="multipart/form-data" action="{% url 'add_photo' %}">
+            {% csrf_token %}
+            <div class="container">
+                     <div class="row">
+                <div class="col-4">
+                {{ form.as_ul}}
+            <input id="form-submit" type="submit" value="Send">
+                </div>
+                 <div class="col-4">
+
+                    <p class="h3">{{ success }}</p>
+
+
+                </div>
+                     </div>
+            </div>
+            </form>
+{% endblock %}

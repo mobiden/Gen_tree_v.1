@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Django default">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.21">
+    <root id="1">
+      <ServerVersion>12.7</ServerVersion>
+      <StartupTime>1628571263</StartupTime>
+    </root>
+    <database id="2" parent="1" name="genetree">
+      <ObjectId>16385</ObjectId>
+      <Owner>superuser</Owner>
+      <Current>1</Current>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13366</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>Superuser</Owner>
+    </database>
+  </database-model>
+</dataSource>

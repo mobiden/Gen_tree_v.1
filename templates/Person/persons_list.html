@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Список людей{% endblock %}
+
+
+{% block main_body %}
+            <h2>Список</h2>
+            {% csrf_token %}
+            <div class="container">
+                     <div class="row">
+                <div class="col-8">
+
+                    <ul class="list-group">
+                       {% for person in object_list %}
+                        <li class="list-group-item">
+                         <a    href="{% url 'detailed_person' pk=person.id  %}">
+                      {{ person.last_name }}  {{ person.first_name}} {{ person.middle_name }}
+                        </a>
+                        </li>
+                       {% empty %}
+                        <li>Нет людей</li>
+                       {% endfor %}
+                    </ul>
+
+
+                </div>
+
+                     </div>
+            </div>
+            </form>
+{% endblock %}

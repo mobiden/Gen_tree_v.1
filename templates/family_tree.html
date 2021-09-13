@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block main_body %}
+{% csrf_token %}
+            <div class="container">
+                <div class="row">
+                {% for person in all_person %}
+                    <div class="col-1">
+               <a href="{% url 'detailed_person' pk=person.id%}">
+                {% include 'tree_person.html' %} </a>
+
+                    </div>
+
+                    {% endfor %}
+
+{% endblock %}
