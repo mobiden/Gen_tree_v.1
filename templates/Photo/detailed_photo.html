@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Фото с людьми{% endblock %}
+{% block main_body %}
+
+            {% csrf_token %}
+            <div class="container">
+                <div class="row">
+        <div class="col-4">
+<img src= "{{photo.photo.url}}" height="auto" width="400" alt="фото">
+                    {{ photo.comments }}
+        </div>
+        <div class="col-4">
+         {% for person in ph_persons %}
+                <div class="row">
+                    <a href="{% url 'detailed_person'  pk=person.id %}">
+                        {{person}}
+                    </a>
+                </div>
+
+                       {% empty %}
+                        <li>   Нет прикрепленных людей</li>
+                       {% endfor %}
+        </div>
+        <div class="col-4">
+                <p><a class="btn btn-primary"  href="#">Добавить человека к фото</a></p>
+        </div>
+                </div>
+
+            </div>
+{% endblock main_body %}

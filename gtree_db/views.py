@@ -192,11 +192,21 @@ class Photo_list(LoginRequiredMixin, ListView):
     def get_queryset(self):
            # if self.request.user.is_superuser:
             myquery = Photo.objects.all()
-            pk = self.request.GET.get('pk')
-            if pk is not None:
+            if 'pk' in self.kwargs:
+                pk = self.kwargs['pk']
                 myquery = myquery.filter(to_pers_photo__id=pk)
-
-            return myquery.values('photo', 'comments', 'id')
+            return myquery
 
     template_name = 'Photo/photo_list.html'
 
+@login_required
+def photo_detailed(request, pk):
+    photo = Photo.objects.get(id=pk)
+    ph_persons = Person.objects.filter(pers_photo=photo)
+    return render(request, "Photo/detailed_photo.html", context={
+        'photo': photo,
+        'ph_persons': ph_persons,
+    })
+
+def person_add_to_photo(request, pk):
+    pass
