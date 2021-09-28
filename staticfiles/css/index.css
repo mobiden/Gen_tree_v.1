@@ -1,0 +1,11 @@
+.navigation {
+    margin-bottom: 20px;
+}
+
+.topic-list__item {
+    margin: 50px;
+}
+.category {
+    background-color: #dc3545;
+    padding: 10px;
+}
