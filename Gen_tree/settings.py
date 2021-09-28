@@ -15,8 +15,11 @@ from django.apps import AppConfig
 import django_heroku
 from django.core.checks import database
 import dj_database_url
+import whitenoise
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -31,7 +34,7 @@ SECRET_KEY = 'django-insecure-n024y^s%+qk5&9^ry47_m!kvd36!tphz-4^o8h-o1o$%@&hr-o
 DEBUG = bool(os.getenv("DEBUG",True))
 
 ALLOWED_HOSTS = ['*']
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Application definition
 
@@ -53,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Gen_tree.urls'
@@ -131,7 +135,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 LOGIN_URL = '/login/'
 MEDIA_ROOT = BASE_DIR / 'media'
