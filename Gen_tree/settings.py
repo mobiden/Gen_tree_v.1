@@ -140,7 +140,7 @@ LOGIN_URL = '/login/'
 MEDIA_ROOT = BASE_DIR / 'media'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),   )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = "/media/"
 LOGIN_REDIRECT_URL = '/login/'
