@@ -31,6 +31,7 @@ SECRET_KEY = 'django-insecure-n024y^s%+qk5&9^ry47_m!kvd36!tphz-4^o8h-o1o$%@&hr-o
 
 DEBUG = bool(os.getenv("DEBUG",True))
 
+
 ALLOWED_HOSTS = ['*']
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
@@ -140,7 +141,6 @@ LOGIN_URL = '/login/'
 MEDIA_ROOT = BASE_DIR / 'media'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),   )
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = "/media/"
 LOGIN_REDIRECT_URL = '/login/'
