@@ -94,7 +94,11 @@ class Person(models.Model):
         ]
 
     def __str__(self):
-        name = self.last_name + " " + self.first_name + " " + self.middle_name
+
+        if self.middle_name is None:
+            name = self.last_name + " " + self.first_name
+        else:
+            name = self.last_name + " " + self.first_name + " " + self.middle_name
         return name
 
 
