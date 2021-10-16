@@ -14,11 +14,13 @@
             <img src= "/media/work/white.jpg" height="60" width="40" class="figure-img img-fluid rounded" alt="пусто">
                     {% else %}
                         {% if person.id %}
-               <a href="{% url 'detailed_person' pk=person.id%}">
-                {% include 'tree_person.html' %}
-               </a>
-                    {% else %}
-                        {% include 'tree_person.html' %}
+                            <a href="{% url 'detailed_person' pk=person.id%}">
+                            {% include 'tree_person.html' %}
+                            </a>
+                        {% else %}
+                            <a href="{% url 'create_person'%}">
+                            {% include 'tree_person.html' %}
+                            </a>
                     {% endif %}
                     {% endif %}
                     </div>

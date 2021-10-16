@@ -1,5 +1,5 @@
 from django.db import models
-
+import base64
 
 
 class Person(models.Model):
@@ -25,11 +25,11 @@ class Person(models.Model):
                                    null=True,
                                    blank=True,
                                    )
-    birth_date = models.DateTimeField('Дата рождения',
+    birth_date = models.DateField('Дата рождения',
                                       blank=True,
                                       null=True)
 
-    death_date = models.DateTimeField('Дата смерти, если была',
+    death_date = models.DateField('Дата смерти, если была',
                                       blank=True,
                                       null=True)
 
@@ -76,11 +76,18 @@ class Person(models.Model):
                                     upload_to='img/',
                                     default='work/Without photo.jpg',
                                 )
+    mainPhotofile = models.BinaryField(max_length=6000000,
+                                       blank=True,
+                                       null=True,
+                                       help_text='Максимум 5 мегабайт',
+                                       editable=True,
+                                       )
 
     pers_photo = models.ManyToManyField('Photo',
                                         verbose_name='На фото',
                                         related_name='to_pers_photo',
                                         blank=True,
+                                        help_text='фото крупным планом',
                                        )
 
     creating_date = models.DateTimeField(blank=True,
@@ -101,6 +108,32 @@ class Person(models.Model):
             name = self.last_name + " " + self.first_name + " " + self.middle_name
         return name
 
+    def save(self, *args, **kwargs):
+        if self.mainPhoto:
+            self.mainPhotofile = self.mainPhoto.file.read()
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
+    @classmethod
+    def from_db(cls, db, field_names, values):
+        import base64
+        import os
+ #       from django.core.files.base import ContentFile
+        instance = super().from_db(db, field_names, values)
+        ph_file = instance.mainPhoto
+        if not os.path.exists(ph_file.path):
+#           format, imgstr = (instance.mainPhotofile).split(';base64,')
+#           try:
+#               data = base64.b64decode(imgstr)
+            with open('temp11111111', 'wb') as ph:
+                enfile = base64.b64encode(instance.mainPhotofile)
+                ph.write(base64.b64decode(enfile))
+                ph.close()
+                os.rename('temp11111111', ph_file.path)
+ #          except:
+  #             pass
+
+        return instance
+
 
 class Photo(models.Model):
     photo = models.ImageField('Фото',
@@ -108,6 +141,12 @@ class Photo(models.Model):
                             null=True,
                             blank=True,
                                 )
+    Photofile = models.BinaryField(max_length=6000000,
+                                   blank=True,
+                                   null=True,
+                                   help_text='Максимум 5 мегабайт',
+                                   )
+
     comments = models.TextField('Комментарии',
                                 null=True,
                                 blank=True,
@@ -138,6 +177,12 @@ class Picture (models.Model):
                             null=True,
                             blank=True,
                                 )
+    picturefile = models.BinaryField(max_length=6000000,
+                                     blank=True,
+                                     null=True,
+                                     help_text='Максимум 5 мегабайт',
+                                     )
+
     def __str__(self):
         return self.picture_name
 
