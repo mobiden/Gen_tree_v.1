@@ -119,7 +119,7 @@ class Person(models.Model):
 
         instance = super().from_db(db, field_names, values)
         ph_file = instance.mainPhoto
-        if not os.path.exists(ph_file.path):
+        if not os.path.exists(ph_file.path) and instance.mainPhotofile:
 
             with open('temp11111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.mainPhotofile)
@@ -161,7 +161,7 @@ class Photo(models.Model):
     def from_db(cls, db, field_names, values):
         instance = super().from_db(db, field_names, values)
         ph_file = instance.photo
-        if not os.path.exists(ph_file.path):
+        if not os.path.exists(ph_file.path) and instance.photofile:
 
             with open('temp21111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.photofile)
@@ -209,7 +209,7 @@ class Picture (models.Model):
     def from_db(cls, db, field_names, values):
         instance = super().from_db(db, field_names, values)
         ph_file = instance.picture
-        if not os.path.exists(ph_file.path):
+        if not os.path.exists(ph_file.path) and instance.picturefile:
 
             with open('temp31111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.picturefile)
