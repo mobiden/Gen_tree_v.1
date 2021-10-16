@@ -1,5 +1,6 @@
 from django.db import models
 import base64
+import os
 
 
 class Person(models.Model):
@@ -115,22 +116,16 @@ class Person(models.Model):
 
     @classmethod
     def from_db(cls, db, field_names, values):
-        import base64
-        import os
- #       from django.core.files.base import ContentFile
+
         instance = super().from_db(db, field_names, values)
         ph_file = instance.mainPhoto
         if not os.path.exists(ph_file.path):
-#           format, imgstr = (instance.mainPhotofile).split(';base64,')
-#           try:
-#               data = base64.b64decode(imgstr)
+
             with open('temp11111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.mainPhotofile)
                 ph.write(base64.b64decode(enfile))
                 ph.close()
                 os.rename('temp11111111', ph_file.path)
- #          except:
-  #             pass
 
         return instance
 
@@ -141,7 +136,7 @@ class Photo(models.Model):
                             null=True,
                             blank=True,
                                 )
-    Photofile = models.BinaryField(max_length=6000000,
+    photofile = models.BinaryField(max_length=6000000,
                                    blank=True,
                                    null=True,
                                    help_text='Максимум 5 мегабайт',
@@ -154,8 +149,27 @@ class Photo(models.Model):
     creating_date = models.DateTimeField(blank=True,
                                          null=True,
                                          auto_now_add=True,
-
                                          )
+
+
+    def save(self, *args, **kwargs):
+        if self.photo:
+            self.photofile = self.photo.file.read()
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
+    @classmethod
+    def from_db(cls, db, field_names, values):
+        instance = super().from_db(db, field_names, values)
+        ph_file = instance.photo
+        if not os.path.exists(ph_file.path):
+
+            with open('temp21111111', 'wb') as ph:
+                enfile = base64.b64encode(instance.photofile)
+                ph.write(base64.b64decode(enfile))
+                ph.close()
+                os.rename('temp21111111', ph_file.path)
+
+        return instance
 
 class Empty_person(Person):
 
@@ -186,8 +200,23 @@ class Picture (models.Model):
     def __str__(self):
         return self.picture_name
 
-#    def __str__(self):
-#        return self.project_name
+    def save(self, *args, **kwargs):
+        if self.picture:
+            self.picturefile = self.picture.file.read()
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
+    @classmethod
+    def from_db(cls, db, field_names, values):
+        instance = super().from_db(db, field_names, values)
+        ph_file = instance.picture
+        if not os.path.exists(ph_file.path):
+
+            with open('temp31111111', 'wb') as ph:
+                enfile = base64.b64encode(instance.picturefile)
+                ph.write(base64.b64decode(enfile))
+                ph.close()
+                os.rename('temp31111111', ph_file.path)
+
 
 
 #    class Meta:
