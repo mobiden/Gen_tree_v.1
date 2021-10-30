@@ -25,6 +25,7 @@ class Person(models.Model):
                                    max_length=60,
                                    null=True,
                                    blank=True,
+                                   default=''
                                    )
     birth_date = models.DateField('Дата рождения',
                                       blank=True,

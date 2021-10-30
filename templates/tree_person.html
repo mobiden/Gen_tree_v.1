@@ -10,8 +10,9 @@
             <figcaption class="figure-caption">{{ person.last_name}}
 
         {{ person.first_name }}
-        {{ person.middle_name }}
-
+            {% if person.middle_name %}
+                {{ person.middle_name }}
+            {% endif %}
     </figcaption>
 </figure>
         </div>

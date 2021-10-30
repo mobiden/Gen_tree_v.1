@@ -11,10 +11,16 @@
                 <div class="col-4">
            <h1>{{ cur_person.last_name }}</h1>
            <h2>{{ cur_person.first_name }}</h2>
-           <h2>{{ cur_person.middle_name }}</h2>
-           <h6>{{cur_person.birth_date|date:"d.m.y"}} - {%if cur_person.death_date%}{{ cur_person.death_date|date:"d.m.y"}}
-           {% else %} настоящее время
-           {% endif %}</h6>
+           {%  if cur_person.middle_name %}
+                    <h2>{{ cur_person.middle_name }}</h2>
+           {% endif %}
+
+           {% if cur_person.birth_date %}
+                    <h6>{{cur_person.birth_date|date:"d.m.y"}} - {%if cur_person.death_date%}{{ cur_person.death_date|date:"d.m.y"}}
+                                                    {% else %} настоящее время
+                                                    {% endif %}
+                    </h6>
+           {% endif %}
 
             {% if cur_person.who_married %}
                     {%if cur_person.sex == 'M'%}Жена:
