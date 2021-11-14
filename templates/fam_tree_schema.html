@@ -6,17 +6,20 @@
 {% csrf_token %}
             <div class="container">
 
-                {% for line in lines %}
+                {% for lines, arrow_lines in mix_lines %}
                      <div class="row">
-                    {% for person in line %}
+                    {% for person in lines %}
                     <div class="col-1">
                     {% if person is None %}
-            <img src= "/media/work/white.jpg" height="60" width="40" class="figure-img img-fluid rounded" alt="пусто">
+            <img src= "/media/work/white.jpg" height="60" class="figure-img img-fluid rounded" alt="пусто">
+
                     {% else %}
                         {% if person.id %}
+
                             <a href="{% url 'detailed_person' pk=person.id%}">
                             {% include 'tree_person.html' %}
                             </a>
+
                         {% else %}
                             <a href="{% url 'create_person'%}">
                             {% include 'tree_person.html' %}
@@ -25,8 +28,15 @@
                     {% endif %}
                     </div>
                     {% endfor %}
-                </div>
+                   </div>
+
+                     <div class="row">
+                      {% for arrow, wi in arrow_lines %}
+                    <div class="col-{{ wi }}">
+            <img src="{{ arrow }}" height="20" width="auto" class="figure-img img-fluid rounded" alt="стрелка">
+                     </div>
                 {% endfor %}
+                     {% endfor %}
 
 
 

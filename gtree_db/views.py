@@ -1,3 +1,4 @@
+from itertools import zip_longest
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count, Q
@@ -31,22 +32,83 @@ def check_person(person):
                                     mainPhoto = '/work/Without photo.jpg')
         return null_person
 
-def get_lines(grandparents, parents, main_person, marr_person, children_of_person):
-    if marr_person:
-        pass
+
+def persons_in_center (persons, married):
+    if len(persons) > 8:
+# обрезает список детей до 8, чтобы поместились в одну строку
+        persons = persons[:8]
+    amount = len(persons)
+    if married:
+        first = int((9 - amount) / 2)
+        second = 8 - amount - first
+        first_list = []
+        for i in range(first):
+            first_list += [None]
+        second_list = []
+        for i in range(second):
+            second_list +=[None]
+        first_list += persons
+        first_list += second_list
+        return first_list
     else:
-        pass
+        if amount > 4:
+            second = 8 - amount
+            first_list = []
+            second_list = []
+            for i in range(second):
+                second_list += [None]
+            first_list += persons
+            first_list += second_list
+        else:
+            first = int((3 - amount) / 2)
+            second = 4 - amount - first
+            first_list = []
+            for i in range(first):
+                first_list += [None]
+            second_list = []
+            for i in range(second):
+                second_list += [None]
+            first_list += persons
+            first_list += second_list
+
+        return first_list
+
+
+def get_arrow(number):
+    if number == 100:
+        # white block
+        path_width = ("/media/work/whiteblock.jpg", 1)
+    elif number == 121:
+        path_width = ("/media/work/12-1arrow.jpg", 2)
+    elif number == 122:
+        path_width = ("/media/work/12-2arrow.jpg", 2)
+    elif number == 132:
+        path_width = ("/media/work/13-2arrow.jpg", 3)
+    elif number == 153:
+        path_width = ("/media/work/15-3arrow.jpg", 5)
+
+    else:
+        # change raise
+        raise Http404
+    return path_width
+
 
 @login_required
 def fam_tree_schema (request, pk):
     try:
-        main_person = Person.objects.get(pk = pk)
+        main_person = Person.objects.get(pk=pk)
         marr_person = None
         if main_person.who_married:
-            marr_person = check_person(main_person.who_married)
+            marr_person = main_person.who_married
 
-        children_of_person = check_person(Person.objects.filter(Q(mother=main_person)|
+        children_of_person = (Person.objects.filter(Q(mother=main_person)|
                                                                 Q(father=main_person)))
+        married = False
+        if marr_person:
+            married = True
+        children_of_person = persons_in_center(children_of_person, married)
+
+
 
         main_father = check_person(main_person.father)
         main_mother = check_person(main_person.mother)
@@ -76,18 +138,24 @@ def fam_tree_schema (request, pk):
                         m_grandmother_main,
                         ]
 
+        cur_fam = [None, None, main_person, None, None, None, marr_person, None]
 
-        cur_fam = [None, None, main_person, None, None, marr_person, None, None]
         lines = [grandparents,
                  parents,
                  cur_fam,
                  children_of_person,
                  ]
+
+        first_arrows = [get_arrow(122), get_arrow(122), get_arrow(122), get_arrow(122)]
+        second_arrows = [get_arrow(100), get_arrow(132), get_arrow(100), get_arrow(132)]
+        third_arrows = [get_arrow(100), get_arrow(100), get_arrow(153)]
+        arrow_lines = [first_arrows, second_arrows, third_arrows]
+        mix_lines = zip_longest(lines, arrow_lines)
     except Person.DoesNotExist:
         raise Http404
 
     return render(request, "fam_tree_schema.html", context={
-        'lines':lines,
+        'mix_lines':mix_lines,
     })
 
 
