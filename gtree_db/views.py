@@ -18,7 +18,7 @@ def main_page(request):
 @login_required
 def family_tree(request):
     all_person = Person.objects.all().annotate(Count('id'))
-    return render(request, "family_tree.html", context={
+    return render(request, "family_list.html", context={
         'all_person': all_person,
    })
 
@@ -32,6 +32,11 @@ def check_person(person):
                                     mainPhoto = '/work/Without photo.jpg')
         return null_person
 
+def get_person_or_default (person_id, pk):
+    if person_id:
+        return person_id
+    else:
+        return pk
 
 def persons_in_center (persons, married):
     if len(persons) > 8:
@@ -60,7 +65,7 @@ def persons_in_center (persons, married):
             first_list += persons
             first_list += second_list
         else:
-            first = int((3 - amount) / 2)
+            first = int((3 - amount) / 2) + 1
             second = 4 - amount - first
             first_list = []
             for i in range(first):
@@ -78,6 +83,8 @@ def get_arrow(number):
     if number == 100:
         # white block
         path_width = ("/media/work/whiteblock.jpg", 1)
+    elif number == 111:
+        path_width = ("/media/work/11-1arrow.jpg", 1)
     elif number == 121:
         path_width = ("/media/work/12-1arrow.jpg", 2)
     elif number == 122:
@@ -86,12 +93,18 @@ def get_arrow(number):
         path_width = ("/media/work/13-2arrow.jpg", 3)
     elif number == 153:
         path_width = ("/media/work/15-3arrow.jpg", 5)
+    elif number == 1524:
+        path_width = ("/media/work/15-24arrow.jpg", 5)
+    elif number == 15234:
+        path_width = ("/media/work/15-234arrow.jpg", 5)
 
     else:
         # change raise
-        raise Http404
+        raise Exception('Нет Стрелки').with_traceback()
     return path_width
 
+def num_of_children (cur_person):
+    return Person.objects.filter(Q(father=cur_person) | Q(mother=cur_person))
 
 @login_required
 def fam_tree_schema (request, pk):
@@ -103,6 +116,17 @@ def fam_tree_schema (request, pk):
 
         children_of_person = (Person.objects.filter(Q(mother=main_person)|
                                                                 Q(father=main_person)))
+
+        num_arr_for_child = len(children_of_person)
+        if num_arr_for_child == 1:
+            children_arrows = [get_arrow(100), get_arrow(100), get_arrow(153)]
+        elif num_arr_for_child == 2:
+            children_arrows = [get_arrow(100), get_arrow(100), get_arrow(1524)]
+        elif num_arr_for_child == 3:
+            children_arrows = [get_arrow(100), get_arrow(100), get_arrow(15234)]
+        else:
+            children_arrows = None
+
         married = False
         if marr_person:
             married = True
@@ -116,8 +140,10 @@ def fam_tree_schema (request, pk):
             marr_father = check_person(marr_person.father)
             marr_mother = check_person(marr_person.mother)
             parents = [None, main_father, None, main_mother, None, marr_father, None, marr_mother]
+            parents_arrows = [get_arrow(100), get_arrow(132), get_arrow(100), get_arrow(132)]
         else:
             parents = [None, main_father, None, main_mother,]
+            parents_arrows = [get_arrow(100), get_arrow(132), ]
 
         f_grandmother_main = check_person(main_father.mother)
         f_grandfather_main = check_person(main_father.father)
@@ -133,31 +159,61 @@ def fam_tree_schema (request, pk):
                             m_grandmother_main, f_grandfather_marr, f_grandmother_marr,
                             m_grandfather_marr, m_grandmother_marr,
                             ]
+            grandparents_arrows = [get_arrow(122), get_arrow(122),
+                                   get_arrow(122), get_arrow(122)]
+
         else:
             grandparents = [f_grandmother_main, f_grandfather_main, m_grandfather_main,
                         m_grandmother_main,
                         ]
+            grandparents_arrows = [get_arrow(122), get_arrow(122),]
+
 
         cur_fam = [None, None, main_person, None, None, None, marr_person, None]
 
-        lines = [grandparents,
-                 parents,
-                 cur_fam,
-                 children_of_person,
-                 ]
-
-        first_arrows = [get_arrow(122), get_arrow(122), get_arrow(122), get_arrow(122)]
-        second_arrows = [get_arrow(100), get_arrow(132), get_arrow(100), get_arrow(132)]
-        third_arrows = [get_arrow(100), get_arrow(100), get_arrow(153)]
-        arrow_lines = [first_arrows, second_arrows, third_arrows]
-        mix_lines = zip_longest(lines, arrow_lines)
     except Person.DoesNotExist:
+        # change raise
         raise Http404
 
-    return render(request, "fam_tree_schema.html", context={
-        'mix_lines':mix_lines,
+    lines = [grandparents, parents, cur_fam, children_of_person, ]
+
+    arrow_lines = [grandparents_arrows, parents_arrows, children_arrows]
+
+    mix_lines = zip_longest(lines, arrow_lines)
+
+    return render(request, "Tree/fam_tree_schema.html", context={
+        'mix_lines':mix_lines, 'id':pk,
     })
 
+
+
+def moving_by_arrows (request, pk, arrow):
+    # id = request.GET.get('id')
+    # num_of_arrow = request.GET.get('num_of_arrow')
+    cur_person = Person.objects.get(pk=pk)
+    new_pk = ""
+    arrow = int(arrow)
+    if arrow == 1:
+        # left
+        pass
+    elif arrow == 2:
+        # up
+        if cur_person.sex == 'M':
+            new_pk = get_person_or_default(cur_person.father_id, pk)
+        else:
+            new_pk = get_person_or_default(cur_person.mother_id, pk)
+
+    elif arrow == 3:
+        # right
+        new_pk = get_person_or_default(cur_person.who_married_id, pk)
+    elif arrow == 4:
+        # down
+        if num_of_children(cur_person):
+            new_pk = num_of_children(cur_person)[0].id
+        else:
+            new_pk = pk
+
+    return redirect('fam_tree_schema', pk= new_pk)
 
 
 class Create_person(LoginRequiredMixin, CreateView):
@@ -213,7 +269,7 @@ class Delete_person(LoginRequiredMixin, DeleteView):
 def detailed_person (request, pk):
     try:
         cur_person = Person.objects.get(pk = pk)
-        children = Person.objects.filter(Q(father=cur_person)|Q(mother=cur_person))
+        children = num_of_children(cur_person)
     except Person.DoesNotExist:
         raise Http404
 
@@ -247,7 +303,9 @@ class List_of_persons(LoginRequiredMixin, ListView):
                     myquery = myquery.filter(
                         Q(last_name__icontains=search_per[i])|
                         Q(first_name__icontains=search_per[i])|
-                        Q(middle_name__icontains=search_per[i]))
+                        Q(middle_name__icontains=search_per[i])|
+                        Q(previous_last_name__icontains=search_per[i]))
+
             return myquery.values('last_name', 'first_name', 'middle_name', 'id')
 
     template_name = 'Person/persons_list.html'

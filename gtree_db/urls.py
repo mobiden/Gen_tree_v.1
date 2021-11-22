@@ -6,6 +6,7 @@ urlpatterns = [
     path('', gtv.main_page, name='main_page'),
     path('family_tree/', gtv.family_tree, name='family_tree'),
     path('family_tree/<pk>/', gtv.fam_tree_schema, name='fam_tree_schema'),
+    path('family_tree/arrows/<pk>/<arrow>/', gtv.moving_by_arrows, name='fam_tree_arrows'),
     path('person/create/', gtv.Create_person.as_view(), name='create_person'),
     path('person/list/', gtv.List_of_persons.as_view(), name='persons_list'),
     path('person/get/<pk>/', gtv.detailed_person, name='detailed_person'),

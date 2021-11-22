@@ -4,10 +4,11 @@
 
 {% block main_body %}
 {% csrf_token %}
-            <div class="container">
+    <div class="container">
 
-                {% for lines, arrow_lines in mix_lines %}
-                     <div class="row">
+           {% for lines, arrow_lines in mix_lines %}
+               <div class="row">
+
                     {% for person in lines %}
                     <div class="col-1">
                     {% if person is None %}
@@ -17,18 +18,26 @@
                         {% if person.id %}
 
                             <a href="{% url 'detailed_person' pk=person.id%}">
-                            {% include 'tree_person.html' %}
+                            {% include 'Tree/tree_person.html' %}
                             </a>
 
                         {% else %}
                             <a href="{% url 'create_person'%}">
-                            {% include 'tree_person.html' %}
+                            {% include 'Tree/tree_person.html' %}
                             </a>
                     {% endif %}
                     {% endif %}
                     </div>
                     {% endfor %}
+
+                   {% if forloop.counter == 2 %}
+                     <div class="col-3">
+                    {% include 'Tree/button_for_move.html' %}
+                     </div>
+
+                   {% endif %}
                    </div>
+
 
                      <div class="row">
                       {% for arrow, wi in arrow_lines %}
@@ -37,9 +46,6 @@
                      </div>
                 {% endfor %}
                      {% endfor %}
-
-
-
 
             </div>
 

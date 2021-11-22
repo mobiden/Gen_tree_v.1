@@ -1,0 +1,13 @@
+{% load static %}
+
+
+<div class="button_for_move">
+    <div class="btn-group" role="group" aria-label="Arrows">
+  <a class="border border-success border-1 btn btn btn-primary" href="#">Left</a>
+  <div class="btn-group-vertical">
+        <a class="border border-success border-1 btn btn btn-primary" href="{% url 'fam_tree_arrows' pk=id arrow='2' %}"> Up </a>
+        <a class="border border-success border-1 btn btn btn-primary" href="{% url 'fam_tree_arrows' pk=id arrow='4' %}">Down</a>
+  </div>
+  <a class="border border-success border-1 btn btn btn-primary" href="{% url 'fam_tree_arrows' pk=id arrow='3' %}">Right</a>
+</div>
+    </div>

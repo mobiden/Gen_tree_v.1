@@ -51,14 +51,15 @@ class Person(models.Model):
                                related_name= 'father_name',
                                blank=True,
                                null=True,
-                               on_delete=models.PROTECT)
+                               on_delete=models.SET_NULL,
+                               )
 
     mother = models.ForeignKey('self',
                                verbose_name='Мать',
                                related_name='mother_name',
                                blank=True,
                                null=True,
-                               on_delete=models.PROTECT,
+                               on_delete=models.SET_NULL,
                                )
 
     who_married = models.ForeignKey('self',
@@ -66,7 +67,7 @@ class Person(models.Model):
                                related_name='married_name',
                                blank=True,
                                null=True,
-                               on_delete=models.PROTECT,
+                               on_delete=models.SET_NULL,
                                )
 
     comment = models.TextField('Комментарии',
