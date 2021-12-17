@@ -80,34 +80,99 @@ def persons_in_center (persons, married):
 
 
 def get_arrow(number):
-    if number == 100:
+    if number == '100':
         # white block
         path_width = ("/media/work/whiteblock.jpg", 1)
-    elif number == 111:
-        path_width = ("/media/work/11-1arrow.jpg", 1)
-    elif number == 121:
+    elif number == '1-1':
+        path_width = ("/media/work/1-1arrow.jpg", 1)
+    elif number == '1-12':
+        path_width = ("/media/work/1-12arrow.jpg", 2)
+    elif number == '2-12':
+        path_width = ("/media/work/2-12arrow.jpg", 2)
+    elif number == '2-13':
+        path_width = ("/media/work/2-13arrow.jpg", 3)
+    elif number == '2-123':
+        path_width = ("/media/work/2-123arrow.jpg", 3)
+    elif number == '12-1':
         path_width = ("/media/work/12-1arrow.jpg", 2)
-    elif number == 122:
+    elif number == '12-2':
         path_width = ("/media/work/12-2arrow.jpg", 2)
-    elif number == 132:
+    elif number == '13-2':
         path_width = ("/media/work/13-2arrow.jpg", 3)
-    elif number == 153:
+    elif number == '15-3':
         path_width = ("/media/work/15-3arrow.jpg", 5)
-    elif number == 1524:
-        path_width = ("/media/work/15-24arrow.jpg", 5)
-    elif number == 15234:
+    elif number == '15-23':
+        path_width = ("/media/work/15-23arrow.jpg", 5)
+    elif number == '15-234':
         path_width = ("/media/work/15-234arrow.jpg", 5)
-
+    elif number == '15-34':
+        path_width = ("/media/work/15-34arrow.jpg", 5)
+    elif number == '15-1234':
+        path_width = ("/media/work/15-1234arrow.jpg", 5)
+    elif number == '15-12345':
+        path_width = ("/media/work/15-12345arrow.jpg", 5)
     else:
         # change raise
         raise Exception('Нет Стрелки').with_traceback()
     return path_width
+
+
+def get_arrows_lines(persons_line):
+    if len(persons_line[0]) == 8:
+        grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'), get_arrow('12-2'), get_arrow('12-2'),]
+    else:
+        grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'), ]
+
+    if len(persons_line[1]) > 4:
+        parents_arrows = [get_arrow('100'), get_arrow('13-2'), get_arrow('100'), get_arrow('13-2')]
+    else:
+        parents_arrows = [get_arrow('100'), get_arrow('13-2'), ]
+
+    row1 = []
+    row2 = []
+
+    children_arrows = []
+    for person_num in range(len(persons_line[2])):
+        if persons_line[2][person_num] is not None:
+            row1 += [person_num + 1]
+        else:
+            row1 += [0]
+
+    for person_num in range(len(persons_line[3])):
+        if persons_line[3][person_num] is not None:
+            row2 += [person_num + 1]
+        else:
+            row2 += [0]
+
+    num_arrow1 = num_arrow2 = ''
+    empty_block = 0
+    end_of_empty_block = False
+    for i in range(len(persons_line[3])):
+        if row2[i] == 0 and row1[i] == 0:
+            if not end_of_empty_block:
+                children_arrows += [get_arrow('100')]
+                empty_block += 1
+        else:
+            end_of_empty_block = True
+            if row1[i] != 0:
+                num_arrow1 += str(i - empty_block + 1)
+            if row2[i] != 0:
+                num_arrow2 += str(i - empty_block + 1)
+    if num_arrow2 == '':
+        children_arrows = None
+    else:
+        whole_string = num_arrow1 + '-' + num_arrow2
+        children_arrows += [get_arrow(whole_string)]
+    return [grandparents_arrows, parents_arrows, children_arrows]
+
+
 
 def num_of_children (cur_person):
     return Person.objects.filter(Q(father=cur_person) | Q(mother=cur_person))
 
 @login_required
 def fam_tree_schema (request, pk):
+    pk = int(pk)
     try:
         main_person = Person.objects.get(pk=pk)
         marr_person = None
@@ -119,11 +184,11 @@ def fam_tree_schema (request, pk):
 
         num_arr_for_child = len(children_of_person)
         if num_arr_for_child == 1:
-            children_arrows = [get_arrow(100), get_arrow(100), get_arrow(153)]
+            children_arrows = [get_arrow('100'), get_arrow('100'), get_arrow('15-3')]
         elif num_arr_for_child == 2:
-            children_arrows = [get_arrow(100), get_arrow(100), get_arrow(1524)]
+            children_arrows = [get_arrow('100'), get_arrow('100'), get_arrow('15-23')]
         elif num_arr_for_child == 3:
-            children_arrows = [get_arrow(100), get_arrow(100), get_arrow(15234)]
+            children_arrows = [get_arrow('100'), get_arrow('100'), get_arrow('15-234')]
         else:
             children_arrows = None
 
@@ -140,10 +205,10 @@ def fam_tree_schema (request, pk):
             marr_father = check_person(marr_person.father)
             marr_mother = check_person(marr_person.mother)
             parents = [None, main_father, None, main_mother, None, marr_father, None, marr_mother]
-            parents_arrows = [get_arrow(100), get_arrow(132), get_arrow(100), get_arrow(132)]
+            parents_arrows = [get_arrow('100'), get_arrow('13-2'), get_arrow('100'), get_arrow('13-2')]
         else:
             parents = [None, main_father, None, main_mother,]
-            parents_arrows = [get_arrow(100), get_arrow(132), ]
+            parents_arrows = [get_arrow('100'), get_arrow('13-2'), ]
 
         f_grandmother_main = check_person(main_father.mother)
         f_grandfather_main = check_person(main_father.father)
@@ -159,14 +224,14 @@ def fam_tree_schema (request, pk):
                             m_grandmother_main, f_grandfather_marr, f_grandmother_marr,
                             m_grandfather_marr, m_grandmother_marr,
                             ]
-            grandparents_arrows = [get_arrow(122), get_arrow(122),
-                                   get_arrow(122), get_arrow(122)]
+            grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'),
+                                   get_arrow('12-2'), get_arrow('12-2')]
 
         else:
             grandparents = [f_grandmother_main, f_grandfather_main, m_grandfather_main,
                         m_grandmother_main,
                         ]
-            grandparents_arrows = [get_arrow(122), get_arrow(122),]
+            grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'),]
 
 
         cur_fam = [None, None, main_person, None, None, None, marr_person, None]
@@ -176,8 +241,8 @@ def fam_tree_schema (request, pk):
         raise Http404
 
     lines = [grandparents, parents, cur_fam, children_of_person, ]
-
-    arrow_lines = [grandparents_arrows, parents_arrows, children_arrows]
+    arrow_lines = get_arrows_lines(lines)
+    # arrow_lines = [grandparents_arrows, parents_arrows, children_arrows]
 
     mix_lines = zip_longest(lines, arrow_lines)
 
@@ -233,7 +298,10 @@ class Create_person(LoginRequiredMixin, CreateView):
             'death_date',
         ]
         template_name = 'Person/person_form.html'
-        success_url = "/tree/family_tree/"
+
+        def get_success_url(self):
+            pk = self.kwargs["pk"]
+            return reverse('detailed_person', kwargs={"pk": pk})
 
 #        def form_valid(self, form):
 #            self.object = form.save()
@@ -257,7 +325,11 @@ class Change_person(LoginRequiredMixin, UpdateView):
             'mainPhoto',
         ]
     template_name = 'Person/edit_of_person.html'
-    success_url = "/tree/family_tree/"
+
+    def get_success_url(self):
+        pk = self.kwargs["pk"]
+        return reverse('detailed_person', kwargs={"pk": pk})
+
 
 class Delete_person(LoginRequiredMixin, DeleteView):
     model = Person

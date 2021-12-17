@@ -4,8 +4,19 @@
     <div class="tree_person__item">
 
         <figure class="figure">
-            {% if person.mainPhoto.url %}
-                <img class="border border-success border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
+            {% if person.id is not None %}
+                    {% if person.id == id %}
+                        <img class="border border-info border-5" src= "{{person.mainPhoto.url}}"  width="65" class="figure-img img-fluid rounded" alt="фото">
+                    {%  elif person.death_date %}
+        <!-- изменить цвет рамки, когда будут заполнены даты смерти -->
+                        <img class="border border-success border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
+
+                    {% else %}
+                        <img class="border border-success border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
+                    {% endif %}
+
+            {% else  %}
+                <img class="border border-light border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
             {% endif %}
             <figcaption class="figure-caption">{{ person.last_name}}
 
