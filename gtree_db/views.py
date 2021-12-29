@@ -264,9 +264,9 @@ def moving_by_arrows (request, pk, arrow):
     elif arrow == 2:
         # up
         if cur_person.sex == 'M':
-            new_pk = get_person_or_default(cur_person.father_id, pk)
+            new_pk = get_person_or_default(cur_person.father_id, get_person_or_default(cur_person.mother_id, pk))
         else:
-            new_pk = get_person_or_default(cur_person.mother_id, pk)
+            new_pk = get_person_or_default(cur_person.mother_id, get_person_or_default (cur_person.father_id, pk))
 
     elif arrow == 3:
         # right
@@ -336,6 +336,13 @@ class Delete_person(LoginRequiredMixin, DeleteView):
 
     template_name = 'Person/delete_of_person.html'
     success_url = "/tree/family_tree/"
+
+    def get_object(self, queryset=None):
+        """ Hook to ensure object is owned by request.user. """
+        obj = super(Delete_person, self).get_object()
+        obj.empty_person = None
+
+        return obj
 
 @login_required
 def detailed_person (request, pk):

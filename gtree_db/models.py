@@ -51,7 +51,7 @@ class Person(models.Model):
                                related_name= 'father_name',
                                blank=True,
                                null=True,
-                               on_delete=models.SET_NULL,
+                               on_delete=models.DO_NOTHING,
                                )
 
     mother = models.ForeignKey('self',
@@ -59,7 +59,7 @@ class Person(models.Model):
                                related_name='mother_name',
                                blank=True,
                                null=True,
-                               on_delete=models.SET_NULL,
+                               on_delete=models.DO_NOTHING,
                                )
 
     who_married = models.ForeignKey('self',
@@ -67,7 +67,7 @@ class Person(models.Model):
                                related_name='married_name',
                                blank=True,
                                null=True,
-                               on_delete=models.SET_NULL,
+                               on_delete=models.DO_NOTHING,
                                )
 
     comment = models.TextField('Комментарии',
@@ -114,7 +114,15 @@ class Person(models.Model):
     def save(self, *args, **kwargs):
         if self.mainPhoto:
             self.mainPhotofile = self.mainPhoto.file.read()
+
         super().save(*args, **kwargs)  # Call the "real" save() method.
+        if self.who_married:
+            second_half = self.who_married
+            if not second_half.who_married:
+                second_half.who_married = self
+                second_half.save()
+        # add who_married
+
 
     @classmethod
     def from_db(cls, db, field_names, values):
