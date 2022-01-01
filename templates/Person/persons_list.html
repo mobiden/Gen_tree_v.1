@@ -14,7 +14,7 @@
                        {% for person in object_list %}
                         <li class="list-group-item">
                          <a    href="{% url 'detailed_person' pk=person.id  %}">
-                      {{ person.last_name }}  {{ person.first_name}} {{ person.middle_name }}
+                      {{ person.last_name }}  {{ person.first_name}}{% if person.middle_name%} {{person.middle_name}}{% endif %}
                         </a>
                         </li>
                        {% empty %}

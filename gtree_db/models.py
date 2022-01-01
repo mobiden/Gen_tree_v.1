@@ -141,12 +141,12 @@ class Person(models.Model):
 
 
 class Photo(models.Model):
-    photo = models.ImageField('Фото',
+    the_photo = models.ImageField('Фото',
                               upload_to='img/',
                             null=True,
                             blank=True,
                                 )
-    photofile = models.BinaryField(max_length=6000000,
+    photo_file = models.BinaryField(max_length=6000000,
                                    blank=True,
                                    null=True,
                                    help_text='Максимум 5 мегабайт',

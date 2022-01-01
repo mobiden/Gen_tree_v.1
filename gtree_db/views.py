@@ -1,6 +1,7 @@
 from itertools import zip_longest
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+
 from django.db.models import Count, Q
 from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
@@ -299,8 +300,9 @@ class Create_person(LoginRequiredMixin, CreateView):
         ]
         template_name = 'Person/person_form.html'
 
+
         def get_success_url(self):
-            pk = self.kwargs["pk"]
+            pk = self.object.id
             return reverse('detailed_person', kwargs={"pk": pk})
 
 #        def form_valid(self, form):
