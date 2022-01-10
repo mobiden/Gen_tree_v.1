@@ -2,7 +2,7 @@
 
 <div class="photo_item">
     <a href="{% url 'photo_detailed'  pk=photo.id %}">
-    <img src= "{{photo.photo.url}}" height="200" width="200" class="figure-img img-fluid rounded" alt="фото">
+    <img src= "{{photo.the_photo.url}}" height="200" width="200" class="figure-img img-fluid rounded" alt="фото">
                      <p> {{ photo.comments}}</p>
 </a>
 

@@ -163,22 +163,20 @@ class Photo(models.Model):
 
 
     def save(self, *args, **kwargs):
-        if self.photo:
-            self.photofile = self.photo.file.read()
+        if self.the_photo:
+            self.photo_file = self.the_photo.file.read()
         super().save(*args, **kwargs)  # Call the "real" save() method.
 
     @classmethod
     def from_db(cls, db, field_names, values):
         instance = super().from_db(db, field_names, values)
-        ph_file = instance.photo
-        if not os.path.exists(ph_file.path) and instance.photofile:
-
+        ph_file = instance.the_photo
+        if not os.path.exists(ph_file.path) and instance.photo_file:
             with open('temp21111111', 'wb') as ph:
-                enfile = base64.b64encode(instance.photofile)
+                enfile = base64.b64encode(instance.photo_file)
                 ph.write(base64.b64decode(enfile))
                 ph.close()
                 os.rename('temp21111111', ph_file.path)
-
         return instance
 
 class Empty_person(Person):

@@ -363,11 +363,14 @@ def detailed_person (request, pk):
 class Add_photo(LoginRequiredMixin, CreateView):
     model = Photo
     fields = [
-        'photo',
+        'the_photo',
         'comments',
     ]
     template_name = 'Photo/photo_form.html'
-    success_url = "/tree/family_tree/"
+
+    def get_success_url(self):
+        pk = self.object.id
+        return reverse('photo_detailed', kwargs={"pk": pk})
 
 
 class List_of_persons(LoginRequiredMixin, ListView):
@@ -394,8 +397,6 @@ class List_of_persons(LoginRequiredMixin, ListView):
 
 
 class Photo_list(LoginRequiredMixin, ListView):
-
-
     def get_queryset(self):
            # if self.request.user.is_superuser:
             myquery = Photo.objects.all()
