@@ -179,6 +179,7 @@ class Photo(models.Model):
                 os.rename('temp21111111', ph_file.path)
         return instance
 
+
 class Empty_person(Person):
 
     class Meta:
@@ -224,6 +225,46 @@ class Picture (models.Model):
                 ph.write(base64.b64decode(enfile))
                 ph.close()
                 os.rename('temp31111111', ph_file.path)
+
+
+class Arch_Photo(models.Model):
+    the_photo = models.ImageField('Фото',
+                              upload_to='img/',
+                            null=True,
+                            blank=True,
+                                )
+    photo_file = models.BinaryField(max_length=6000000,
+                                   blank=True,
+                                   null=True,
+                                   help_text='Максимум 5 мегабайт',
+                                   )
+
+    comments = models.TextField('Комментарии',
+                                null=True,
+                                blank=True,
+                                    )
+    creating_date = models.DateTimeField(blank=True,
+                                         null=True,
+                                         auto_now_add=True,
+                                         )
+
+
+    def save(self, *args, **kwargs):
+        if self.the_photo:
+            self.photo_file = self.the_photo.file.read()
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
+    @classmethod
+    def from_db(cls, db, field_names, values):
+        instance = super().from_db(db, field_names, values)
+        ph_file = instance.the_photo
+        if not os.path.exists(ph_file.path) and instance.photo_file:
+            with open('temp21111111', 'wb') as ph:
+                enfile = base64.b64encode(instance.photo_file)
+                ph.write(base64.b64decode(enfile))
+                ph.close()
+                os.rename('temp21111111', ph_file.path)
+        return instance
 
 
 
