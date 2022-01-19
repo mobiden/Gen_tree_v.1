@@ -11,10 +11,10 @@ class Person(models.Model):
                                  )
 
     previous_last_name = models.CharField('Предыдущая фамилия, если была',
-                                 max_length=60,
-                                 null=True,
-                                 blank=True,
-                                 )
+                                          max_length=60,
+                                          null=True,
+                                          blank=True,
+                                          )
 
     first_name = models.CharField('Имя',
                                   max_length=45,
@@ -28,27 +28,27 @@ class Person(models.Model):
                                    default=''
                                    )
     birth_date = models.DateField('Дата рождения',
-                                      blank=True,
-                                      null=True)
+                                  blank=True,
+                                  null=True)
 
     death_date = models.DateField('Дата смерти, если была',
-                                      blank=True,
-                                      null=True)
+                                  blank=True,
+                                  null=True)
 
     SEX_CHOISES = [
         ('F', 'Женский'),
         ('M', 'Мужской'),
-            ]
+    ]
     sex = models.CharField('Пол',
                            max_length=1,
                            choices=SEX_CHOISES,
                            blank=True,
                            null=True,
-                            )
+                           )
 
     father = models.ForeignKey('self',
-                               verbose_name= 'Отец',
-                               related_name= 'father_name',
+                               verbose_name='Отец',
+                               related_name='father_name',
                                blank=True,
                                null=True,
                                on_delete=models.DO_NOTHING,
@@ -63,22 +63,22 @@ class Person(models.Model):
                                )
 
     who_married = models.ForeignKey('self',
-                               verbose_name='Муж/Жена',
-                               related_name='married_name',
-                               blank=True,
-                               null=True,
-                               on_delete=models.DO_NOTHING,
-                               )
-
-    comment = models.TextField('Комментарии',
-                                null=True,
-                                blank=True,
+                                    verbose_name='Муж/Жена',
+                                    related_name='married_name',
+                                    blank=True,
+                                    null=True,
+                                    on_delete=models.DO_NOTHING,
                                     )
 
+    comment = models.TextField('Комментарии',
+                               null=True,
+                               blank=True,
+                               )
+
     mainPhoto = models.ImageField('Главное фото',
-                                    upload_to='img/',
-                                    default='work/Without photo.jpg',
-                                )
+                                  upload_to='img/',
+                                  default='work/Without photo.jpg',
+                                  )
     mainPhotofile = models.BinaryField(max_length=6000000,
                                        blank=True,
                                        null=True,
@@ -91,7 +91,7 @@ class Person(models.Model):
                                         related_name='to_pers_photo',
                                         blank=True,
                                         help_text='фото крупным планом',
-                                       )
+                                        )
 
     creating_date = models.DateTimeField(blank=True,
                                          null=True,
@@ -123,14 +123,12 @@ class Person(models.Model):
                 second_half.save()
         # add who_married
 
-
     @classmethod
     def from_db(cls, db, field_names, values):
 
         instance = super().from_db(db, field_names, values)
         ph_file = instance.mainPhoto
         if not os.path.exists(ph_file.path) and instance.mainPhotofile:
-
             with open('temp11111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.mainPhotofile)
                 ph.write(base64.b64decode(enfile))
@@ -142,25 +140,26 @@ class Person(models.Model):
 
 class Photo(models.Model):
     the_photo = models.ImageField('Фото',
-                              upload_to='img/',
-                            null=True,
-                            blank=True,
-                                )
+                                  upload_to='img/',
+                                  null=True,
+                                  blank=True,
+                                  )
     photo_file = models.BinaryField(max_length=6000000,
-                                   blank=True,
-                                   null=True,
-                                   help_text='Максимум 5 мегабайт',
-                                   )
+                                    blank=True,
+                                    null=True,
+                                    help_text='Максимум 5 мегабайт',
+                                    )
 
     comments = models.TextField('Комментарии',
                                 null=True,
                                 blank=True,
-                                    )
+                                )
     creating_date = models.DateTimeField(blank=True,
                                          null=True,
                                          auto_now_add=True,
                                          )
-
+    def __str__(self):
+        return self.the_photo.path
 
     def save(self, *args, **kwargs):
         if self.the_photo:
@@ -181,24 +180,23 @@ class Photo(models.Model):
 
 
 class Empty_person(Person):
-
     class Meta:
-       managed=False
+        managed = False
 
     def save(self, *args, **kwargs):
         pass
 
 
-class Picture (models.Model):
+class Picture(models.Model):
     picture_name = models.CharField('Имя служебных картинок',
                                     max_length=20,
-                                  primary_key=True,
-                                  unique=True,
+                                    primary_key=True,
+                                    unique=True,
                                     )
     picture = models.ImageField('Служебные картинки',
                                 upload_to='img/work/',
-                            null=True,
-                            blank=True,
+                                null=True,
+                                blank=True,
                                 )
     picturefile = models.BinaryField(max_length=6000000,
                                      blank=True,
@@ -219,7 +217,6 @@ class Picture (models.Model):
         instance = super().from_db(db, field_names, values)
         ph_file = instance.picture
         if not os.path.exists(ph_file.path) and instance.picturefile:
-
             with open('temp31111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.picturefile)
                 ph.write(base64.b64decode(enfile))
@@ -229,25 +226,24 @@ class Picture (models.Model):
 
 class Arch_Photo(models.Model):
     the_photo = models.ImageField('Фото',
-                              upload_to='img/',
-                            null=True,
-                            blank=True,
-                                )
+                                  upload_to='img/',
+                                  null=True,
+                                  blank=True,
+                                  )
     photo_file = models.BinaryField(max_length=6000000,
-                                   blank=True,
-                                   null=True,
-                                   help_text='Максимум 5 мегабайт',
-                                   )
+                                    blank=True,
+                                    null=True,
+                                    help_text='Максимум 5 мегабайт',
+                                    )
 
     comments = models.TextField('Комментарии',
                                 null=True,
                                 blank=True,
-                                    )
+                                )
     creating_date = models.DateTimeField(blank=True,
                                          null=True,
                                          auto_now_add=True,
                                          )
-
 
     def save(self, *args, **kwargs):
         if self.the_photo:
@@ -265,8 +261,6 @@ class Arch_Photo(models.Model):
                 ph.close()
                 os.rename('temp21111111', ph_file.path)
         return instance
-
-
 
 #    class Meta:
 #        constraints = [
