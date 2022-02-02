@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Родственники{% endblock %}
+{% block main_body %}
+
+            {% csrf_token %}
+    <h3> <a href="{% url 'detailed_person' pk=cur_person.id  %}"> {{ cur_person.last_name }} {{ cur_person.first_name }} {% if cur_person.middle_name %} {{cur_person.middle_name}}{% endif %}</a></h3>
+
+            <h4> Родственники:</h4>
+            <div class="container">
+                     <div class="row">
+
+                <div class="col-8">
+            {% for person, relate in kinfolks %}
+                <h5>
+                    <a    href="{% url 'detailed_person' pk=person.id  %}">
+                 {{ person }} </a>- {{ relate }}</h5>
+
+            {% empty %}
+                <h5>Нет людей</h5>
+            {% endfor %}
+
+                 </div>
+
+
+
+                      <div class="col-4">
+           <p><a class="btn btn-primary"  href="{% url 'fam_tree_schema' pk=cur_person.id%}">Древо человека</a></p>
+           <p><a class="btn btn-primary" href="{% url 'change_person' pk=cur_person.id%}">Изменить данные</a></p>
+           <p><a class="btn btn-primary" href="{% url 'photo_list_id' pk=cur_person.id%}">Человек на фото</a></p>
+
+                     </div>
+            </div>
+            </div>
+
+{% endblock %}

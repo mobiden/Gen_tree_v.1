@@ -11,7 +11,8 @@ urlpatterns = [
     path('person/list/', gtv.List_of_persons.as_view(), name='persons_list'),
     path('person/get/<pk>/', gtv.detailed_person, name='detailed_person'),
     path('person/delete/<pk>/', gtv.Delete_person.as_view(), name='delete_person'),
-    path('person/change/<pk>', gtv.Change_person.as_view(), name='change_person'),
+    path('person/change/<pk>/', gtv.Change_person.as_view(), name='change_person'),
+    path('person/kinfolk/<pk>/', gtv.get_Kinfolk_list, name='kinfolk_list'),
 
     path('photo/add/', gtv.Add_photo.as_view(), name='add_photo'),
     path('photo/list/', gtv.Photo_list.as_view(), name='photo_list'),

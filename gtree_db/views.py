@@ -394,6 +394,128 @@ class List_of_persons(LoginRequiredMixin, ListView):
 
     template_name = 'Person/persons_list.html'
 
+@login_required
+def get_Kinfolk_list(request, pk):
+    kinfolks = []
+
+    uncles_aunts = set()
+    cousins = set()
+    bro_sist = set()
+    nephew_niece = set()
+
+    try:
+        cur_person = Person.objects.get(pk=pk)
+    except Person.DoesNotExist:
+        raise Http404
+
+# братья/сестры дяди/тети
+    if cur_person.father:
+        bro_sist = set(num_of_children(cur_person.father))
+        bro_sist.discard(cur_person)
+        if cur_person.father.father:
+            uncles_aunts |= set(num_of_children(cur_person.father.father))
+            uncles_aunts.discard(cur_person.father)
+        if cur_person.father.mother:
+            uncles_aunts |= set(num_of_children(cur_person.father.mother))
+            uncles_aunts.discard(cur_person.father)
+
+    if cur_person.mother:
+        bro_sist = set(num_of_children(cur_person.mother))
+        bro_sist.discard(cur_person)
+
+        if cur_person.mother.father:
+            uncles_aunts |= set(num_of_children(cur_person.mother.father))
+            uncles_aunts.discard(cur_person.mother)
+        if cur_person.mother.mother:
+            uncles_aunts |= set(num_of_children(cur_person.mother.mother))
+            uncles_aunts.discard(cur_person.mother)
+
+    if bro_sist:
+        for person in bro_sist:
+            if person.sex == 'F':
+                kinfolks += [(person, 'сестра')]
+            else:
+                kinfolks += [(person, "брат")]
+            if person.who_married:
+                if person.who_married.sex == 'F':
+                    kinfolks += [(person.who_married), 'сноха']
+                else:
+                    kinfolks += [(person.who_married), 'зять']
+        nephew_niece |= set(num_of_children(person))
+
+# племянники
+    if nephew_niece:
+        for person in nephew_niece:
+            if person.sex == 'F':
+                kinfolks += [(person, 'племянница')]
+            else:
+                kinfolks += [(person, "племянник")]
+
+# дяди/тети
+
+    if uncles_aunts:
+        for person in uncles_aunts:
+            if person.sex == 'F':
+                kinfolks += [(person, 'тетя')]
+            else:
+                kinfolks += [(person, 'дядя')]
+            cousins |= set(num_of_children(person))
+
+    if cousins:
+        for person in cousins:
+            if person.sex == 'F':
+                kinfolks += [(person, 'кузина (двоюродная сестра)')]
+            else:
+                kinfolks += [(person, 'кузен (двоюродный брат)')]
+
+    b_s_inlaw = set()
+    if cur_person.who_married:
+        hus_wife = cur_person.who_married
+
+ # родители жены/мужа
+        if hus_wife.father:
+            b_s_inlaw |= set(num_of_children(hus_wife.father))
+            if hus_wife.sex == 'F':
+                kinfolks += [(hus_wife.father, 'тесть')]
+            else:
+                kinfolks += [(hus_wife.father, 'свёкор')]
+        if hus_wife.mother:
+            b_s_inlaw |= set(num_of_children(hus_wife.father))
+            if hus_wife.sex == 'F':
+                kinfolks += [(hus_wife.mother, 'тёща')]
+            else:
+                kinfolks += [(hus_wife.mother, 'свекровь')]
+        b_s_inlaw.discard(hus_wife)
+
+        if b_s_inlaw:
+            for person in b_s_inlaw:
+                if hus_wife.sex == "F":
+                    if person.sex == 'F':
+                        kinfolks += [(person, 'свояченица')]
+                    else:
+                        kinfolks += [(person, "шурин")]
+                else:
+                    if person.sex == "F":
+                        kinfolks += [(person, 'золовка')]
+                    else:
+                        kinfolks += [(person, 'деверь')]
+
+
+    if num_of_children(cur_person):
+        children = set(num_of_children(cur_person))
+        for person in children:
+            if person.who_married:
+                if person.who_married.sex == 'F':
+                    kinfolks += [(person.who_married, 'сноха')]
+                else:
+                    kinfolks += [(person.who_married, 'зять')]
+
+
+    return render(request, "Person/kinfolks_list.html", context={
+           'cur_person': cur_person,
+           'kinfolks': kinfolks,
+                  })
+
 
 
 class Photo_list(LoginRequiredMixin, ListView):

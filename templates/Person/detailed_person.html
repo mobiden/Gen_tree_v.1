@@ -72,6 +72,8 @@
            <p><a class="btn btn-primary"  href="{% url 'fam_tree_schema' pk=cur_person.id%}">Древо человека</a></p>
            <p><a class="btn btn-primary" href="{% url 'change_person' pk=cur_person.id%}">Изменить данные</a></p>
            <p><a class="btn btn-primary" href="{% url 'photo_list_id' pk=cur_person.id%}">Человек на фото</a></p>
+           <p><a class="btn btn-primary" href="{% url 'kinfolk_list' pk=cur_person.id%}">Родственники</a></p>
+
                      </div>
             </div>
             </div>
