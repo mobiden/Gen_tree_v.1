@@ -438,9 +438,9 @@ def get_Kinfolk_list(request, pk):
                 kinfolks += [(person, "брат")]
             if person.who_married:
                 if person.who_married.sex == 'F':
-                    kinfolks += [(person.who_married), 'сноха']
+                    kinfolks += [(person.who_married, 'сноха')]
                 else:
-                    kinfolks += [(person.who_married), 'зять']
+                    kinfolks += [(person.who_married, 'зять')]
         nephew_niece |= set(num_of_children(person))
 
 # племянники
@@ -510,7 +510,7 @@ def get_Kinfolk_list(request, pk):
                 else:
                     kinfolks += [(person.who_married, 'зять')]
 
-
+    kinfolks.sort()
     return render(request, "Person/kinfolks_list.html", context={
            'cur_person': cur_person,
            'kinfolks': kinfolks,
