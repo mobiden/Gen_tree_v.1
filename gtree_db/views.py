@@ -500,7 +500,7 @@ def get_Kinfolk_list(request, pk):
                     else:
                         kinfolks += [(person, 'деверь')]
 
-
+    # родственники через детей
     if num_of_children(cur_person):
         children = set(num_of_children(cur_person))
         for person in children:
@@ -509,11 +509,15 @@ def get_Kinfolk_list(request, pk):
                     kinfolks += [(person.who_married, 'сноха')]
                 else:
                     kinfolks += [(person.who_married, 'зять')]
+                if person.who_married.father:
+                    kinfolks +=[(person.who_married.father, 'сват')]
+                if person.who_married.mother:
+                    kinfolks += [(person.who_married.mother, 'сватья')]
 
-    kinfolks.sort()
+
     return render(request, "Person/kinfolks_list.html", context={
            'cur_person': cur_person,
-           'kinfolks': kinfolks,
+           'kinfolks': sorted(sorted(kinfolks, key = lambda x: x[0].first_name), key=lambda y: y[0].last_name),
                   })
 
 
@@ -532,10 +536,12 @@ class Photo_list(LoginRequiredMixin, ListView):
 @login_required
 def photo_detailed(request, pk):
     photo = Photo.objects.get(id=pk)
+    myquery = Person.objects.all()
     ph_persons = Person.objects.filter(pers_photo=photo)
     return render(request, "Photo/detailed_photo.html", context={
         'photo': photo,
         'ph_persons': ph_persons,
+        'myquery': myquery
     })
 
 def person_add_to_photo(request, pk):

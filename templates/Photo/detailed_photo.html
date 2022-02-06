@@ -24,7 +24,16 @@
                        {% endfor %}
         </div>
         <div class="col-4">
-                <p><a class="btn btn-primary"  href="#">Добавить человека к фото</a></p>
+        <form>
+               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+    <option selected>Добавить людей на фото</option>
+            {% for person in myquery  %}
+         <option value="{{ person.pk }}">{{person.last_name}} {{person.first_name}}
+         {% if person.middle_name %} {{ person.middle_name }}{% endif %}</option>
+             {% endfor %}
+                </select>
+        <button type="submit" class="btn btn-primary">Прикрепить к фото</button>
+        </form>
         </div>
                 </div>
 

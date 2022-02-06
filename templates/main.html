@@ -56,10 +56,12 @@
 
 
       </ul>
+     {%  block search_place %}
       <form class="d-flex" action="{% url 'persons_list' %}">
         <input class="form-control me-2" type="search" placeholder="Поиск человека" aria-label="Search" name="search_p">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
+      {% endblock search_place %}
     </div>
   </div>
 </nav>
