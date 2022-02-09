@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.db.models import Count, Q
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views import View
@@ -538,11 +538,22 @@ def photo_detailed(request, pk):
     photo = Photo.objects.get(id=pk)
     myquery = Person.objects.all()
     ph_persons = Person.objects.filter(pers_photo=photo)
-    return render(request, "Photo/detailed_photo.html", context={
-        'photo': photo,
-        'ph_persons': ph_persons,
-        'myquery': myquery
-    })
+    add_person_page = request.GET.get('add_per')
+    if not add_person_page:
+        return render(request, "Photo/detailed_photo.html", context={
+            'photo': photo,
+            'ph_persons': ph_persons,
+            })
+    else:
+        return render(request, "Photo/detailed_photo(add_person).html", context={
+            'photo': photo,
+            'ph_persons': ph_persons,
+            'myquery': myquery,
+            })
 
 def person_add_to_photo(request, pk):
-    pass
+    per_id = request.GET.get('per_id')
+    person = Person.objects.get(id=per_id)
+    photo= Photo.objects.get(id=pk)
+    person.pers_photo.add(photo)
+    return HttpResponseRedirect (reverse('photo_detailed', args=(photo.pk,)))

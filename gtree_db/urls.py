@@ -18,4 +18,5 @@ urlpatterns = [
     path('photo/list/', gtv.Photo_list.as_view(), name='photo_list'),
     path('photo/list/<pk>/', gtv.Photo_list.as_view(), name='photo_list_id'),
     path('photo/detail/<pk>/', gtv.photo_detailed, name='photo_detailed'),
+    path('photo/add_person/<pk>/', gtv.person_add_to_photo, name='person_add_to_photo'),
 ]

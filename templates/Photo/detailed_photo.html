@@ -7,11 +7,11 @@
             {% csrf_token %}
             <div class="container">
                 <div class="row">
-        <div class="col-4">
+        <div class="col-5">
 <img src= "{{photo.the_photo.url}}" height="auto" width="400" alt="фото">
                     {{ photo.comments }}
         </div>
-        <div class="col-4">
+        <div class="col-3">
          {% for person in ph_persons %}
                 <div class="row">
                     <a href="{% url 'detailed_person'  pk=person.id %}">
@@ -23,17 +23,10 @@
                         <li>   Нет прикрепленных людей</li>
                        {% endfor %}
         </div>
-        <div class="col-4">
-        <form>
-               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-    <option selected>Добавить людей на фото</option>
-            {% for person in myquery  %}
-         <option value="{{ person.pk }}">{{person.last_name}} {{person.first_name}}
-         {% if person.middle_name %} {{ person.middle_name }}{% endif %}</option>
-             {% endfor %}
-                </select>
-        <button type="submit" class="btn btn-primary">Прикрепить к фото</button>
-        </form>
+        <div class="col-3">
+     {% block bottoms %}
+      <p><a class="btn btn-primary"  href="{% url 'photo_detailed' pk=photo.pk %}?add_per=True">Добавить человека</a></p>
+     {% endblock bottoms %}
         </div>
                 </div>
 
