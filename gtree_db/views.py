@@ -1,6 +1,7 @@
+import os
 from itertools import zip_longest
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
 from django.db.models import Count, Q
 from django.http import Http404, HttpResponseRedirect
@@ -9,7 +10,11 @@ from django.urls import reverse
 from django.views import View
 from django.views.generic import CreateView, UpdateView, DetailView, DeleteView, ListView
 
+from PIL import Image, ImageDraw, ImageColor
+
+from Gen_tree.settings import BASE_DIR
 from gtree_db.models import Person, Photo, Empty_person
+
 
 
 @login_required
@@ -18,9 +23,9 @@ def main_page(request):
 
 @login_required
 def family_tree(request):
-    all_person = Person.objects.all().annotate(Count('id'))
+    all_person = Person.objects.all()
     return render(request, "family_list.html", context={
-        'all_person': all_person,
+        'all_person': sorted_person_list(all_person),
    })
 
 def check_person(person):
@@ -33,6 +38,9 @@ def check_person(person):
                                     mainPhoto = '/work/Without photo.jpg')
         return null_person
 
+def sorted_person_list(mylist):
+    return sorted(sorted(mylist, key=lambda x: x.first_name), key=lambda y: y.last_name)
+
 def get_person_or_default (person_id, pk):
     if person_id:
         return person_id
@@ -44,90 +52,109 @@ def persons_in_center (persons, married):
 # обрезает список детей до 8, чтобы поместились в одну строку
         persons = persons[:8]
     amount = len(persons)
-    if married:
-        first = int((9 - amount) / 2)
-        second = 8 - amount - first
-        first_list = []
-        for i in range(first):
-            first_list += [None]
-        second_list = []
-        for i in range(second):
-            second_list +=[None]
-        first_list += persons
-        first_list += second_list
-        return first_list
-    else:
-        if amount > 4:
-            second = 8 - amount
-            first_list = []
-            second_list = []
-            for i in range(second):
-                second_list += [None]
-            first_list += persons
-            first_list += second_list
-        else:
-            first = int((3 - amount) / 2) + 1
-            second = 4 - amount - first
-            first_list = []
-            for i in range(first):
-                first_list += [None]
-            second_list = []
-            for i in range(second):
-                second_list += [None]
-            first_list += persons
-            first_list += second_list
 
-        return first_list
+    first = int((8 - amount) / 2) + 1
+    second = 8 - amount - first
+    first_list = []
+    for i in range(first):
+        first_list += [None]
+    second_list = []
+    for i in range(second):
+        second_list +=[None]
+    first_list += persons
+    first_list += second_list
+    return first_list
+#    else:
+ #       if amount > 4:
+ #           second = 8 - amount
+ #           first_list = []
+ #           second_list = []
+ #           for i in range(second):
+ #               second_list += [None]
+ #           first_list += persons
+ #           first_list += second_list
+ #       else:
+ #           first = int((3 - amount) / 2) + 1
+ #           second = 4 - amount - first
+ #           first_list = []
+ #           for i in range(first):
+ #               first_list += [None]
+ #           second_list = []
+ #           for i in range(second):
+ #               second_list += [None]
+ #           first_list += persons
+ #           first_list += second_list
+
+    return first_list
+
+
+def arrows_create(number, path):
+    max_num = int(max(set(number)))
+    up_end = list(number.split('-')[0])
+    down_end = list(number.split('-')[1])
+    cell_size = 180
+    width = max_num * cell_size
+    height = 20
+    line_level = height - 15
+    line_width = 4 - 1
+    image = Image.new('RGBA', (width, height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(image)
+    startpoint = -1
+    endpoint = 0
+    for up_line in up_end:
+        up_line = int(up_line)
+        x = int((up_line - 0.5) * cell_size)
+        y1 = 0
+        y2 = line_level
+        draw.rectangle((x, y1, x + line_width, y2), fill='green')
+        if startpoint < 0 or startpoint > x:
+            startpoint = x
+        if endpoint < x:
+            endpoint = x
+
+    for down_line in down_end:
+        down_line = int(down_line)
+        x = int((down_line - 0.5) * cell_size)
+        y1 = height
+        y2 = line_level
+        draw.rectangle((x, y1, x + line_width, y2), fill='green')
+        if startpoint < 0 or startpoint > x:
+            startpoint = x
+        if endpoint < x:
+            endpoint = x
+        draw.polygon([(x, y1), (x + line_width, y1), (x - 5, y1 - 5), (x + line_width + 5, y1 - 5)], fill='green')
+
+    draw.rectangle((startpoint, line_level, endpoint + line_width, line_level + line_width), fill='green')
+
+    image.save(os.path.abspath(path))
 
 
 def get_arrow(number):
+    line_wid = int(max(set(number)))
+        # вставить создание стрелки
     if number == '100':
         # white block
-        path_width = ("/media/work/whiteblock.jpg", 1)
-    elif number == '1-1':
-        path_width = ("/media/work/1-1arrow.jpg", 1)
-    elif number == '1-12':
-        path_width = ("/media/work/1-12arrow.jpg", 2)
-    elif number == '2-12':
-        path_width = ("/media/work/2-12arrow.jpg", 2)
-    elif number == '2-13':
-        path_width = ("/media/work/2-13arrow.jpg", 3)
-    elif number == '2-123':
-        path_width = ("/media/work/2-123arrow.jpg", 3)
-    elif number == '12-1':
-        path_width = ("/media/work/12-1arrow.jpg", 2)
-    elif number == '12-2':
-        path_width = ("/media/work/12-2arrow.jpg", 2)
-    elif number == '13-2':
-        path_width = ("/media/work/13-2arrow.jpg", 3)
-    elif number == '15-3':
-        path_width = ("/media/work/15-3arrow.jpg", 5)
-    elif number == '15-23':
-        path_width = ("/media/work/15-23arrow.jpg", 5)
-    elif number == '15-234':
-        path_width = ("/media/work/15-234arrow.jpg", 5)
-    elif number == '15-34':
-        path_width = ("/media/work/15-34arrow.jpg", 5)
-    elif number == '15-1234':
-        path_width = ("/media/work/15-1234arrow.jpg", 5)
-    elif number == '15-12345':
-        path_width = ("/media/work/15-12345arrow.jpg", 5)
+        path_width = ("/media/work/transp.png", 1)
     else:
-        # change raise
-        raise Exception('Нет Стрелки').with_traceback()
+        path = str("/media/work/" + str(number) + "arrow.png")
+
+        if not os.path.exists(str(BASE_DIR) + str("\\media\\work\\" + str(number) + "arrow.png")):
+            arrows_create(number, (str(BASE_DIR) + str("\\media\\work\\" + str(number) + "arrow.png")))
+        path_width = (path, line_wid)
+
     return path_width
 
 
 def get_arrows_lines(persons_line):
     if len(persons_line[0]) == 8:
-        grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'), get_arrow('12-2'), get_arrow('12-2'),]
+        grandparents_arrows = [get_arrow('100'), get_arrow('13-2'), get_arrow('100'), get_arrow('13-2'),]
     else:
-        grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'), ]
+        grandparents_arrows = [get_arrow('13-2'), get_arrow('13-2'), ]
 
     if len(persons_line[1]) > 4:
-        parents_arrows = [get_arrow('100'), get_arrow('13-2'), get_arrow('100'), get_arrow('13-2')]
-    else:
-        parents_arrows = [get_arrow('100'), get_arrow('13-2'), ]
+        parents_arrows = [get_arrow('100'), get_arrow('100'), get_arrow('15-3'), get_arrow('100'), ]
+#   else:
+#        parents_arrows = [get_arrow('100'), get_arrow('13-2'), ]
 
     row1 = []
     row2 = []
@@ -183,15 +210,6 @@ def fam_tree_schema (request, pk):
         children_of_person = (Person.objects.filter(Q(mother=main_person)|
                                                                 Q(father=main_person)))
 
-        num_arr_for_child = len(children_of_person)
-        if num_arr_for_child == 1:
-            children_arrows = [get_arrow('100'), get_arrow('100'), get_arrow('15-3')]
-        elif num_arr_for_child == 2:
-            children_arrows = [get_arrow('100'), get_arrow('100'), get_arrow('15-23')]
-        elif num_arr_for_child == 3:
-            children_arrows = [get_arrow('100'), get_arrow('100'), get_arrow('15-234')]
-        else:
-            children_arrows = None
 
         married = False
         if marr_person:
@@ -202,14 +220,8 @@ def fam_tree_schema (request, pk):
 
         main_father = check_person(main_person.father)
         main_mother = check_person(main_person.mother)
-        if main_person.who_married:
-            marr_father = check_person(marr_person.father)
-            marr_mother = check_person(marr_person.mother)
-            parents = [None, main_father, None, main_mother, None, marr_father, None, marr_mother]
-            parents_arrows = [get_arrow('100'), get_arrow('13-2'), get_arrow('100'), get_arrow('13-2')]
-        else:
-            parents = [None, main_father, None, main_mother,]
-            parents_arrows = [get_arrow('100'), get_arrow('13-2'), ]
+        parents = [None, None, main_father, None, None, None, main_mother, None]
+
 
         f_grandmother_main = check_person(main_father.mother)
         f_grandfather_main = check_person(main_father.father)
@@ -217,25 +229,25 @@ def fam_tree_schema (request, pk):
         m_grandmother_main = check_person(main_mother.mother)
 
         if main_person.who_married:
-            f_grandfather_marr = check_person(marr_father.father)
-            f_grandmother_marr = check_person(marr_father.mother)
-            m_grandfather_marr = check_person(marr_mother.father)
-            m_grandmother_marr = check_person(marr_mother.mother)
-            grandparents = [f_grandmother_main, f_grandfather_main, m_grandfather_main,
-                            m_grandmother_main, f_grandfather_marr, f_grandmother_marr,
-                            m_grandfather_marr, m_grandmother_marr,
+#            f_grandfather_marr = check_person(marr_father.father)
+#            f_grandmother_marr = check_person(marr_father.mother)
+#            m_grandfather_marr = check_person(marr_mother.father)
+#            m_grandmother_marr = check_person(marr_mother.mother)
+            grandparents = [None, f_grandmother_main, None, f_grandfather_main,
+                            None, m_grandfather_main, None, m_grandmother_main,
+#                            f_grandfather_marr, f_grandmother_marr,
+#                            m_grandfather_marr, m_grandmother_marr,
                             ]
-            grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'),
-                                   get_arrow('12-2'), get_arrow('12-2')]
+
 
         else:
-            grandparents = [f_grandmother_main, f_grandfather_main, m_grandfather_main,
-                        m_grandmother_main,
+            grandparents = [None, f_grandmother_main, None, f_grandfather_main,
+                            None, m_grandfather_main, None, m_grandmother_main,
                         ]
-            grandparents_arrows = [get_arrow('12-2'), get_arrow('12-2'),]
 
 
-        cur_fam = [None, None, main_person, None, None, None, marr_person, None]
+
+        cur_fam = [None, None, None, None, main_person, None, marr_person, None]
 
     except Person.DoesNotExist:
         # change raise
@@ -243,7 +255,6 @@ def fam_tree_schema (request, pk):
 
     lines = [grandparents, parents, cur_fam, children_of_person, ]
     arrow_lines = get_arrows_lines(lines)
-    # arrow_lines = [grandparents_arrows, parents_arrows, children_arrows]
 
     mix_lines = zip_longest(lines, arrow_lines)
 
@@ -282,7 +293,9 @@ def moving_by_arrows (request, pk, arrow):
     return redirect('fam_tree_schema', pk= new_pk)
 
 
-class Create_person(LoginRequiredMixin, CreateView):
+class Create_person(PermissionRequiredMixin, CreateView):
+        permission_required = 'Gen_tree.can_edit'
+        permission_denied_message = 'доступ запрещен'
         model = Person
         fields = [
             'last_name',
@@ -309,7 +322,9 @@ class Create_person(LoginRequiredMixin, CreateView):
 #            self.object = form.save()
 
 
-class Change_person(LoginRequiredMixin, UpdateView):
+class Change_person(PermissionRequiredMixin, UpdateView):
+    permission_required = 'Gen_tree.can_edit'
+    permission_denied_message = 'доступ запрещен'
     model = Person
     fields = [
             'id',
@@ -333,7 +348,9 @@ class Change_person(LoginRequiredMixin, UpdateView):
         return reverse('detailed_person', kwargs={"pk": pk})
 
 
-class Delete_person(LoginRequiredMixin, DeleteView):
+class Delete_person(PermissionRequiredMixin, DeleteView):
+    permission_required = 'Gen_tree.can_edit'
+    permission_denied_message = 'доступ запрещен'
     model = Person
 
     template_name = 'Person/delete_of_person.html'
@@ -360,7 +377,9 @@ def detailed_person (request, pk):
     })
 
 
-class Add_photo(LoginRequiredMixin, CreateView):
+class Add_photo(PermissionRequiredMixin, CreateView):
+    permission_required = 'Gen_tree.can_edit'
+    permission_denied_message = 'доступ запрещен'
     model = Photo
     fields = [
         'the_photo',
@@ -457,8 +476,12 @@ def get_Kinfolk_list(request, pk):
         for person in uncles_aunts:
             if person.sex == 'F':
                 kinfolks += [(person, 'тетя')]
+                if person.who_married:
+                    kinfolks += [(person.who_married, 'дядя-свойственник')]
             else:
                 kinfolks += [(person, 'дядя')]
+                if person.who_married:
+                    kinfolks += [(person.who_married, 'тетя-свойственница')]
             cousins |= set(num_of_children(person))
 
     if cousins:
@@ -492,6 +515,8 @@ def get_Kinfolk_list(request, pk):
                 if hus_wife.sex == "F":
                     if person.sex == 'F':
                         kinfolks += [(person, 'свояченица')]
+                        if person.who_married:
+                            kinfolks +=[(person.who_married, 'свояк')]
                     else:
                         kinfolks += [(person, "шурин")]
                 else:
@@ -517,7 +542,7 @@ def get_Kinfolk_list(request, pk):
 
     return render(request, "Person/kinfolks_list.html", context={
            'cur_person': cur_person,
-           'kinfolks': sorted(sorted(kinfolks, key = lambda x: x[0].first_name), key=lambda y: y[0].last_name),
+           'kinfolks': sorted(sorted(kinfolks, key=lambda x: x[0].first_name), key=lambda y: y[0].last_name),
                   })
 
 
@@ -557,3 +582,5 @@ def person_add_to_photo(request, pk):
     photo= Photo.objects.get(id=pk)
     person.pers_photo.add(photo)
     return HttpResponseRedirect (reverse('photo_detailed', args=(photo.pk,)))
+
+

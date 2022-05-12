@@ -2,6 +2,7 @@
 {% load static %}
 
 
+
 {% block main_body %}
 {% csrf_token %}
     <div class="container">
@@ -12,17 +13,17 @@
                     {% for person in lines %}
                     <div class="col-1">
                     {% if person is None %}
-            <img src= "/media/work/white.jpg" height="60" class="figure-img img-fluid rounded" alt="пусто">
+            <img src= "/media/work/transp.png" height="60" class="figure-img img-fluid rounded" alt="пусто">
 
                     {% else %}
                         {% if person.id %}
 
-                            <a href="{% url 'detailed_person' pk=person.id%}">
+                            <a  style="color: #4f5050" href="{% url 'detailed_person' pk=person.id%}"   >
                             {% include 'Tree/tree_person.html' %}
                             </a>
 
                         {% else %}
-                            <a href="{% url 'create_person'%}">
+                            <a  style="color: #4f5050" href="{% url 'create_person'%}">
                             {% include 'Tree/tree_person.html' %}
                             </a>
                     {% endif %}
@@ -50,5 +51,5 @@
             </div>
 
 
-
-{% endblock %}
+    </div>
+    {% endblock main_body %}

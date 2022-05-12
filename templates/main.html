@@ -4,19 +4,35 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow" />
 
     <title> {% block title %}{% endblock%}</title>
 
 
 <link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.min.css"%}">
 
-    {% block styles %}{% endblock %}
+    {% block styles %}
+    <style>
+
+        body {
+ {% comment %}
+            background-image: url(/media/work/back.jpg);
+            background-repeat:no-repeat;
+            background-position:center 50px;
+            background-attachment:fixed;
+     {% endcomment %}
+
+        }
+
+    </style>
+    {% endblock styles %}
 
     <script type="text/javascript" src="{% static "jquery/jquery-3.6.0.min.js"%}"></script>
     <script type="text/javascript" src="{% static "bootstrap/js/bootstrap.bundle.min.js"%}"></script>
 
 
 </head>
+
 
 
 <body>
@@ -37,8 +53,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{% url 'create_person' %}">Добавить человека</a></li>
             <li><a class="dropdown-item" href="{% url 'persons_list'%}">Список людей</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Изменить данные</a></li>
+
           </ul>
         </li>
 
@@ -49,8 +64,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{% url 'add_photo'%}">Добавить фотографию</a></li>
             <li><a class="dropdown-item" href="{% url 'photo_list' %}">Посмотреть фотографии</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Изменить данные</a></li>
+
           </ul>
         </li>
 
