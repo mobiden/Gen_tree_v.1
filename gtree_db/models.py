@@ -102,6 +102,7 @@ class Person(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['last_name', 'first_name', 'birth_date'], name='unicue_person')
         ]
+        ordering = ['last_name', 'first_name', 'middle_name']
 
     def __str__(self):
 

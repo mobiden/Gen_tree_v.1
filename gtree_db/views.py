@@ -409,7 +409,10 @@ class List_of_persons(LoginRequiredMixin, ListView):
                         Q(middle_name__icontains=search_per[i])|
                         Q(previous_last_name__icontains=search_per[i]))
 
-            return myquery.values('last_name', 'first_name', 'middle_name', 'id')
+            return sorted_person_list(myquery.values('last_name',
+                                                     'first_name',
+                                                     'middle_name',
+                                                     'id'))
 
     template_name = 'Person/persons_list.html'
 
@@ -567,12 +570,12 @@ def photo_detailed(request, pk):
     if not add_person_page:
         return render(request, "Photo/detailed_photo.html", context={
             'photo': photo,
-            'ph_persons': ph_persons,
+            'ph_persons': sorted_person_list(ph_persons),
             })
     else:
         return render(request, "Photo/detailed_photo(add_person).html", context={
             'photo': photo,
-            'ph_persons': ph_persons,
+            'ph_persons': sorted_person_list(ph_persons),
             'myquery': myquery,
             })
 
