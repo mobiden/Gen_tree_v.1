@@ -409,10 +409,10 @@ class List_of_persons(LoginRequiredMixin, ListView):
                         Q(middle_name__icontains=search_per[i])|
                         Q(previous_last_name__icontains=search_per[i]))
 
-            return sorted_person_list(myquery.values('last_name',
+            return myquery.values('last_name',
                                                      'first_name',
                                                      'middle_name',
-                                                     'id'))
+                                                     'id')
 
     template_name = 'Person/persons_list.html'
 
