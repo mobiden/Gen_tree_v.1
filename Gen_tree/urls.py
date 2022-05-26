@@ -4,8 +4,9 @@ from django.contrib.auth import views as auth_views
 from django.contrib import admin
 from django.urls import path, include
 # from upload_app.views import home_page
+from django.views.generic import RedirectView
 
-import gtree_db.views as gtv
+import gtree_db.view as gtv
 from Gen_tree import settings
 
 urlpatterns = [
@@ -14,6 +15,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view()),
     path('tree/', include('gtree_db.urls')),
     path('', gtv.main_page),
+    path('favicon.ico', RedirectView.as_view(url='/media/work/favicon.ico')),
 ]
 
 if settings.DEBUG:

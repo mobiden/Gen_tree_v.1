@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import path
-import gtree_db.views as gtv
+import gtree_db.view as gtv
 
 urlpatterns = [
     path('', gtv.main_page, name='main_page'),
