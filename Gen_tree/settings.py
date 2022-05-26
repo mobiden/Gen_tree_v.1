@@ -132,7 +132,7 @@ STATICFILES_DIRS = (
 )
 
 STATIC_URL = '/static/'
-LOGIN_URL = 'login/'
+LOGIN_URL = '/login/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
