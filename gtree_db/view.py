@@ -125,9 +125,10 @@ def arrows_create(number, path):
         draw.polygon([(x, y1), (x + line_width, y1), (x - 5, y1 - 5), (x + line_width + 5, y1 - 5)], fill='green')
 
     draw.rectangle((startpoint, line_level, endpoint + line_width, line_level + line_width), fill='green')
-
-    image.save(os.path.abspath(path))
-
+    try:
+        image.save(os.path.abspath(path))
+    except:
+        print("Image can't save")
 
 def get_arrow(number):
     line_wid = int(max(set(number)))
