@@ -140,7 +140,7 @@ def get_arrow(number):
         path = str("/media/work/" + str(number) + "arrow.png")
 
  #       if not os.path.exists(str(BASE_DIR) + str("\\media\\work\\" + str(number) + "arrow.png")):
-        arrows_create(number, (str(BASE_DIR) + str("\\media\\work\\" + str(number) + "arrow.png")))
+        arrows_create(number, (str(BASE_DIR) + str("/media/work/" + str(number) + "arrow.png")))
         path_width = (path, line_wid)
 
     return path_width
