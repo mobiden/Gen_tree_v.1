@@ -1,14 +1,31 @@
 {% extends 'main.html' %}
 {% load static %}
 
+  {% block styles %}
+        <style type="text/css">
+   .main-title {
+    font-size: 100%;
+    font-family: Helvetica;
+    padding: 50px;
+    border-bottom-width: 50px
+   }
+   .name-list {
+       color: #6c757d;
+         }
+    a {
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   }
+  </style>
+    {% endblock styles %}
 
 {% block main_body %}
 {% csrf_token %}
+    <p><span class="main-title"> Список занесенных людей</span></p>
             <div class="container">
                 <div class="row">
                 {% for person in all_person %}
                     <div class="col-1">
-               <a href="{% url 'detailed_person' pk=person.id%}">
+               <a class="name-list" href="{% url 'detailed_person' pk=person.id%}">
                 {% include 'Tree/tree_person.html' %} </a>
 
                     </div>

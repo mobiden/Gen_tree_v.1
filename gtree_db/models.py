@@ -7,7 +7,8 @@ class Person(models.Model):
     last_name = models.CharField('Фамилия',
                                  max_length=60,
                                  null=True,
-                                 blank=True
+                                 blank=True,
+                                 default='',
                                  )
 
     previous_last_name = models.CharField('Предыдущая фамилия, если была',
@@ -105,12 +106,14 @@ class Person(models.Model):
         ordering = ['last_name', 'first_name', 'middle_name']
 
     def __str__(self):
-
+        last_name = self.last_name
+        if last_name is None:
+            last_name = ''
         if self.middle_name is None:
-            name = self.last_name + " " + self.first_name
+            name = last_name + " " + self.first_name
         else:
-            name = self.last_name + " " + self.first_name + " " + self.middle_name
-        return name
+            name = last_name + " " + self.first_name + " " + self.middle_name
+        return name.strip()
 
     def save(self, *args, **kwargs):
         if self.mainPhoto:

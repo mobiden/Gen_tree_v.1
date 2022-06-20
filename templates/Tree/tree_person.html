@@ -3,16 +3,17 @@
 <div class="tree_person">
     <div class="tree_person__item" >
 
+    {% if person.id is not None %}
 
-            {% if person.id is not None %}
-                    {% if person.id == id %}
+                {% if person.id == id %}
+        <!-- рамка человека в фокусе -->
                         <img class="border border-info border-5"  src= "{{person.mainPhoto.url}}"  width="65" class="figure-img img-fluid rounded" alt="фото">
-                    {%  elif person.death_date %}
+                {%  elif person.death_date %}
         <!-- изменить цвет рамки, когда будут заполнены даты смерти -->
                         <img class="border border-success border-3"  src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
-                    {% else %}
+                {% else %}
                         <img class="border border-success border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
-                    {% endif %}
+                {% endif %}
 
             {% else  %}
                 <img class="border border-light border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
