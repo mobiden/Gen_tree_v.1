@@ -2,6 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import path
 import gtree_db.view as gtv
 
+
 urlpatterns = [
     path('', gtv.main_page, name='main_page'),
     path('family_tree/', gtv.family_tree, name='family_tree'),

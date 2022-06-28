@@ -2,6 +2,9 @@ from django.db import models
 import base64
 import os
 
+# from Co_vision.views import traininig_new_model
+#  from Gen_tree.settings import BASE_DIR
+
 
 class Person(models.Model):
     last_name = models.CharField('Фамилия',
@@ -167,6 +170,8 @@ class Photo(models.Model):
 
     def save(self, *args, **kwargs):
         if self.the_photo:
+  #          trained_model_path = os.path.join(BASE_DIR, "Co_vision\\training_model.yml")
+   #         traininig_new_model(trained_model_path)
             self.photo_file = self.the_photo.file.read()
         super().save(*args, **kwargs)  # Call the "real" save() method.
 
