@@ -1,9 +1,20 @@
 {% extends 'Photo/detailed_photo.html' %}
 {% load static %}
 
+{% block style %}
+    .brd {
+        margin-top: 30%;
+        margin-bottom: 50%;
+
+   }
+{% endblock style %}
+
+
 {% block check_photo %}
-            {% if check_photo %}
-            <p >Возможно эти люди есть на фотографии:</p>
+            {% if check %}
+            <div style="font-weight: bold; margin-top: 30px">
+                Поиск совпадений:
+            </div>
             {% for id, name, conf in check_photo %}
                 <div class="row">
                     <a target="_blank" href="{% url 'detailed_person'  pk=id %}">
@@ -11,7 +22,7 @@
                     </a>
                 </div>
             {% empty %}
-              <p>новых совпадений не найдено</p>
+              <p>Новых совпадений не найдено</p>
             {% endfor %}
 
 

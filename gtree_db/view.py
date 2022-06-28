@@ -579,6 +579,7 @@ def photo_detailed(request, pk):
     elif check_people_on_photo:
         old_check = check_photo(os.path.join(MEDIA_ROOT, str(photo.the_photo)))
         new_check = []
+        check = True
         for id, conf in old_check:
             person = Person.objects.get(id=id)
             if person not in ph_persons:
@@ -588,7 +589,8 @@ def photo_detailed(request, pk):
             'photo': photo,
             'ph_persons': sorted_person_list(ph_persons),
             'myquery': myquery,
-            'check_photo': new_check
+            'check_photo': new_check,
+            'check': check
         })
     else:
         return render(request, "Photo/detailed_photo.html", context={
