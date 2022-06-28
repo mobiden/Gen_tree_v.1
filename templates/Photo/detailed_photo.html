@@ -20,12 +20,16 @@
                 </div>
 
                        {% empty %}
-                        <li>   Нет прикрепленных людей</li>
+             <p><span style="margin-bottom:30px">Нет прикрепленных людей</span> </p>
                        {% endfor %}
+
+         {% block check_photo %}
+         {% endblock check_photo %}
         </div>
         <div class="col-3">
      {% block bottoms %}
       <p><a class="btn btn-primary"  href="{% url 'photo_detailed' pk=photo.pk %}?add_per=True">Добавить человека</a></p>
+      <p><a class="btn btn-primary"  href="{% url 'photo_detailed' pk=photo.pk %}?ch_p=True">Найти людей на фото (займет некоторое время)</a></p>
      {% endblock bottoms %}
         </div>
                 </div>

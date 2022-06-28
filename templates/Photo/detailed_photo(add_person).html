@@ -1,10 +1,28 @@
 {% extends 'Photo/detailed_photo.html' %}
 {% load static %}
 
+{% block check_photo %}
+            {% if check_photo %}
+            <p >Возможно эти люди есть на фотографии:</p>
+            {% for id, name, conf in check_photo %}
+                <div class="row">
+                    <a target="_blank" href="{% url 'detailed_person'  pk=id %}">
+                        {{name}}
+                    </a>
+                </div>
+            {% empty %}
+              <p>новых совпадений не найдено</p>
+            {% endfor %}
+
+
+        {% endif%}
+         {% endblock check_photo %}
+
 {% block bottoms %}
         <form action="{% url 'person_add_to_photo' pk=photo.pk %}" >
-               <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example" name="per_id">
-    <option selected>Добавить людей на фото</option>
+               <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example"
+                       name="per_id" required="on" title="Добавить людей на фото">
+     <option value="" disabled selected>Добавить людей на фото</option>
             {% for person in myquery  %}
          <option value="{{ person.pk }}">{{person.last_name}} {{person.first_name}}
          {% if person.middle_name %} {{ person.middle_name }}{% endif %}</option>

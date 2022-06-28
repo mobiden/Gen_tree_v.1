@@ -12,7 +12,8 @@ from django.views.generic import CreateView, UpdateView, DetailView, DeleteView,
 
 from PIL import Image, ImageDraw, ImageColor
 
-from Gen_tree.settings import BASE_DIR
+from Co_vision.views import check_photo
+from Gen_tree.settings import BASE_DIR, MEDIA_ROOT
 from gtree_db.models import Person, Photo, Empty_person
 
 
@@ -568,17 +569,33 @@ def photo_detailed(request, pk):
     myquery = Person.objects.all()
     ph_persons = Person.objects.filter(pers_photo=photo)
     add_person_page = request.GET.get('add_per')
-    if not add_person_page:
-        return render(request, "Photo/detailed_photo.html", context={
-            'photo': photo,
-            'ph_persons': sorted_person_list(ph_persons),
-            })
-    else:
+    check_people_on_photo = request.GET.get('ch_p')
+    if add_person_page:
         return render(request, "Photo/detailed_photo(add_person).html", context={
             'photo': photo,
             'ph_persons': sorted_person_list(ph_persons),
             'myquery': myquery,
-            })
+        })
+    elif check_people_on_photo:
+        old_check = check_photo(os.path.join(MEDIA_ROOT, str(photo.the_photo)))
+        new_check = []
+        for id, conf in old_check:
+            person = Person.objects.get(id=id)
+            if person not in ph_persons:
+                new_check.append((person.id,  str(person), conf))
+
+        return render(request, "Photo/detailed_photo(add_person).html", context={
+            'photo': photo,
+            'ph_persons': sorted_person_list(ph_persons),
+            'myquery': myquery,
+            'check_photo': new_check
+        })
+    else:
+        return render(request, "Photo/detailed_photo.html", context={
+            'photo': photo,
+            'ph_persons': sorted_person_list(ph_persons),
+                    })
+
 
 def person_add_to_photo(request, pk):
     per_id = request.GET.get('per_id')

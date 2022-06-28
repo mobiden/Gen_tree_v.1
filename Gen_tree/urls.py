@@ -7,6 +7,7 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 import gtree_db.view as gtv
+import Co_vision.views as cvv
 from Gen_tree import settings
 
 urlpatterns = [
@@ -16,6 +17,7 @@ urlpatterns = [
     path('tree/', include('gtree_db.urls')),
     path('', gtv.main_page),
     path('favicon.ico', RedirectView.as_view(url='/media/work/favicon.ico')),
+#    path('co_vis/', cvv.check_photo(), name='check_photo'),
 ]
 
 if settings.DEBUG:
