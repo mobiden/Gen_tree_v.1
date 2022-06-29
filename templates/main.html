@@ -14,13 +14,13 @@
     {% block styles %}
     <style>
 
-        body {
- {% comment %}
-            background-image: url(/media/work/back.jpg);
+        .main_body_style {
+
+            background-image: url(/media/work/oak.png);
             background-repeat:no-repeat;
             background-position:center 50px;
             background-attachment:fixed;
-     {% endcomment %}
+
 
         }
 
@@ -79,11 +79,16 @@
     </div>
   </div>
 </nav>
-{% csrf_token %}
-
-    {% block main_body %}{% endblock %}
 
 
-{% endblock %}
+    {% block main_body %}
+
+
+    {% endblock main_body %}
+
+{% endblock body %}
+
+
+
 </body>
 </html>

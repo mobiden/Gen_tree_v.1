@@ -20,7 +20,7 @@ from gtree_db.models import Person, Photo, Empty_person
 
 @login_required
 def main_page(request):
-    return render(request, 'main.html')
+    return render(request, 'first_page.html')
 
 @login_required
 def family_tree(request):
