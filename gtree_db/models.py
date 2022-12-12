@@ -5,20 +5,21 @@ import os
 # from Co_vision.views import traininig_new_model
 #  from Gen_tree.settings import BASE_DIR
 
+SEX_CHOISES = [
+        ('F', 'Женский'),
+        ('M', 'Мужской'),
+        ('', '')
+    ]
 
-class Person(models.Model):
+
+
+class Abs_Person(models.Model):
     last_name = models.CharField('Фамилия',
                                  max_length=60,
                                  null=True,
                                  blank=True,
                                  default='',
                                  )
-
-    previous_last_name = models.CharField('Предыдущая фамилия, если была',
-                                          max_length=60,
-                                          null=True,
-                                          blank=True,
-                                          )
 
     first_name = models.CharField('Имя',
                                   max_length=45,
@@ -31,6 +32,17 @@ class Person(models.Model):
                                    blank=True,
                                    default=''
                                    )
+
+    mainPhoto = models.ImageField('Главное фото',
+                                  upload_to='img/',
+                                  default='work/Without photo.jpg',
+                                  )
+    class Meta:
+        abstract = True
+
+
+class Person(Abs_Person):
+
     birth_date = models.DateField('Дата рождения',
                                   blank=True,
                                   null=True)
@@ -39,10 +51,12 @@ class Person(models.Model):
                                   blank=True,
                                   null=True)
 
-    SEX_CHOISES = [
-        ('F', 'Женский'),
-        ('M', 'Мужской'),
-    ]
+    previous_last_name = models.CharField('Предыдущая фамилия, если была',
+                                          max_length=60,
+                                          null=True,
+                                          blank=True,
+                                          )
+
     sex = models.CharField('Пол',
                            max_length=1,
                            choices=SEX_CHOISES,
@@ -74,15 +88,12 @@ class Person(models.Model):
                                     on_delete=models.DO_NOTHING,
                                     )
 
+
     comment = models.TextField('Комментарии',
                                null=True,
                                blank=True,
                                )
 
-    mainPhoto = models.ImageField('Главное фото',
-                                  upload_to='img/',
-                                  default='work/Without photo.jpg',
-                                  )
     mainPhotofile = models.BinaryField(max_length=6000000,
                                        blank=True,
                                        null=True,
@@ -101,7 +112,6 @@ class Person(models.Model):
                                          null=True,
                                          auto_now_add=True,
                                          )
-
     class Meta:
         constraints = [
             models.UniqueConstraint(fields=['last_name', 'first_name', 'birth_date'], name='unicue_person')
@@ -130,6 +140,8 @@ class Person(models.Model):
                 second_half.save()
         # add who_married
 
+
+
     @classmethod
     def from_db(cls, db, field_names, values):
 
@@ -143,6 +155,8 @@ class Person(models.Model):
                 os.rename('temp11111111', ph_file.path)
 
         return instance
+
+
 
 
 class Photo(models.Model):
@@ -159,7 +173,7 @@ class Photo(models.Model):
 
     comments = models.TextField('Комментарии',
                                 null=True,
-                                blank=True,
+                            blank=True,
                                 )
     creating_date = models.DateTimeField(blank=True,
                                          null=True,
@@ -188,7 +202,7 @@ class Photo(models.Model):
         return instance
 
 
-class Empty_person(Person):
+class Empty_person(Abs_Person):
     class Meta:
         managed = False
 

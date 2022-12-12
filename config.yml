@@ -1,0 +1,43 @@
+
+
+
+admin:
+  email: admin@admin.com
+  password: adminadminadmin
+  debug: True
+
+django:
+  secret_key: django-insecure-n024y^s%+qk5&9^ry47_m!kvd36!tphz-4^o8h-o1o$%@&hr-o
+
+database:
+  db: postgresql12
+
+postgresql13:
+  host: localhost
+  port: 5433
+  user: postgres
+  password: postgresqlqweFv1pCoFx
+  database: mydump
+
+
+postgresql12:
+  host: localhost
+  port: 5432
+  user: Superuser
+  password: Fv1pCoFx
+  database: genetree
+
+
+MySQL:
+  host: localhost
+  port: 3306
+  user: s236085_root
+  password: mysqlqweFv1pCoFx
+  database: s236085_gentree
+
+
+
+API:
+  url: https://komlyakov.ru/genealogy/api/
+  token: AAHa40m7AutDRvcOkZ_p8NyNUStNfCYZLUk
+

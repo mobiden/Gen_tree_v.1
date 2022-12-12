@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+import logging
+import yaml
 from django.apps import AppConfig
 import django_heroku
 from django.core.checks import database
@@ -12,18 +14,32 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
+with open(os.path.join(
+       os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config.yml'), "r") as f:
+    RAW_CONFIG = yaml.safe_load(f)
+    secret_key = RAW_CONFIG['django']['secret_key']
+    current_db = RAW_CONFIG['database']['db']
+    db_config = RAW_CONFIG[current_db]
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n024y^s%+qk5&9^ry47_m!kvd36!tphz-4^o8h-o1o$%@&hr-o'
+SECRET_KEY = secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = bool(os.getenv("DEBUG",True))
 
+logging.basicConfig(level=logging.DEBUG, filename='GT.log', format='%(name)s - %(levelname)s - %(message)s')
+logging.debug('This will get logged')
 
 ALLOWED_HOSTS = ['*']
+FILE_UPLOAD_MAX_MEMORY_SIZE = 20621440
+DATA_UPLOAD_MAX_MEMORY_SIZE = 20621440
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Application definition
@@ -37,6 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gtree_db',
     'Co_vision',
+    'rest_framework',
+    'API',
 ]
 
 MIDDLEWARE = [
@@ -79,11 +97,11 @@ WSGI_APPLICATION = 'Gen_tree.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'genetree',
-        'USER' : 'Superuser',
-        'PASSWORD' : 'Fv1pCoFx',
-        'HOST' : 'localhost',
-        'PORT' : '5432',
+        'NAME': db_config['database'],
+        'USER' : db_config['user'],
+        'PASSWORD' : db_config['password'],
+        'HOST' : db_config['host'],
+        'PORT' : db_config['port'],
         'default-character-set': 'utf8'
     }
 }
