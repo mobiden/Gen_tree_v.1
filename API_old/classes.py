@@ -1,4 +1,4 @@
-import json
+
 
 from rest_framework.renderers import JSONRenderer
 
@@ -27,7 +27,7 @@ class UserJSONRenderer(JSONRenderer):
             data['token'] = token.encode('utf-8').decode('utf-8')
 
         # Наконец, мы можем отобразить наши данные в простанстве имен 'user'.
-       # return json.dumps({'status': status, 'data': data})
+        # return json.dumps({'status': status, 'data': data})
         return {'status': status, 'data': data}
 
 
@@ -37,5 +37,5 @@ class API_var():
         self.wrong_photo_records: list = []
         self.wrong_persons_record: list = []
         self.sent_photos: list = []
-        self.sent_persons: list = []
+        self.sent_persons: set = set()
         self.persons_set: set = set()

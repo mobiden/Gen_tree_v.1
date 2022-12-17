@@ -2,8 +2,6 @@ from rest_framework import serializers
 from django.contrib.auth import authenticate
 from rest_framework.relations import StringRelatedField
 
-from API.utils import create_logs
-from Gen_tree.settings import MEDIA_ROOT
 from gtree_db.models import SEX_CHOISES, Photo, Person, Picture
 import base64
 
@@ -30,31 +28,19 @@ class Int_to_Person(serializers.IntegerField):
         return Person.objects.get(pk= data)
 
 
-class Int_to_persPhoto(serializers.Field):
+class Int_to_Photo(serializers.Field):
     def to_representation(self, value: Photo) -> int:
         name = value.the_photo
-        name = name[name.rfind('/') + 1:]
-        photos_dict = self.context['photos']
-        id = photos_dict[name]
+        name = name[name.rfind('/'):]
+        photo_dict = self.context['photo_dict']
+        id = photo_dict[name]
         return id
 
     def to_internal_value(self, data: int):
         return Photo.objects.get(pk=data)
 
 class Int_to_Photo_class(serializers.Serializer):
-    photo = Int_to_persPhoto()
-
-
-class Int_to_mainPhoto(serializers.Field):
-    def to_representation(self, value: Person) -> str:
-        name = Person.mainPhoto.name
-        name = name[name.rfind('/') + 1:]
-        return name
-
-    def to_internal_value(self, data: str):
-        return Photo.objects.get(pk=data)
-
-
+    photo = Int_to_Photo()
 
 
 class PersonSerializer(serializers.ModelSerializer):
@@ -63,9 +49,7 @@ class PersonSerializer(serializers.ModelSerializer):
         father = Int_to_Person(required=False)
         who_married = Int_to_Person(required=False)
         pers_photo = Int_to_Photo_class(many=True, required=False)
-    #    mainPhoto_str = Int_to_mainPhoto(required=False)
-
-        mainPhotofile = Bytes_to_Str_Field(required=False)
+        mainPhoto = Bytes_to_Str_Field(required=False)
         model = Person
         fields = ('last_name', 'previous_last_name', 'first_name',
                   'middle_name', 'birth_date', 'death_date',
@@ -75,54 +59,42 @@ class PersonSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         from API.utils import _recovery_picture_from_bynaryfield
         pers_photo_data = validated_data.pop('pers_photo')
-        if validated_data['mainPhotofile'] and validated_data['mainPhoto']:
-            m_p_file = _recovery_picture_from_bynaryfield(
-                b_string= validated_data['mainPhotofile'],
-                file_path= 'img' + validated_data['mainPhoto'][validated_data['mainPhoto'].rfind('/'):]
+        if validated_data('mainPhotofile'):
+            _ = _recovery_picture_from_bynaryfield(
+                b_string= validated_data('mainPhotofile'),
+                file_path= 'img' + validated_data('mainPhoto')[validated_data('mainPhoto').rfind('/'):]
             )
-
         person = Person.objects.create(**validated_data)
-      #  person.mainPhoto = m_p_file
+
         for p_photo in pers_photo_data:
             person.pers_photo.update(Photo.objects.get(pk=p_photo))
         return person
 
-    def to_representation(self, instance):
-        instance.mother = None
-        instance.father = None
-        instance.who_married = None
+    def to_representation(self, instance:Person):
+        if self.context['mother']:
+            instance.mother = None
+        if self.context['father']:
+            instance.father = None
+        if self.context['who_married']:
+            instance.who_married = None
 
-        representation = super(PersonSerializer, self).to_representation(instance)
+        representation = super().to_representation(self, instance)
         if self.context['mother']:
             representation['mother'] = self.context['mother']
         if self.context['father']:
             representation['father'] = self.context['father']
-        if self.context['who_married']:
+        if self.context['mother']:
             representation['who_married'] = self.context['who_married']
         return representation
 
     def to_internal_value(self, data):
         if data['mother']:
-            data['mother'] = Person.objects.get(id = data['mother'])
+            data['mother'] = Person.objects.get(id=data['mother'])
         if data['father']:
-            data['father'] = Person.objects.get(id = data['father'])
+            data['father'] = Person.objects.get(id=data['father'])
         if data['who_married']:
-            data['who_married'] = Person.objects.get(id = data['who_married'])
+            data['who_married'] = Person.objects.get(id=data['who_married'])
         return data
-
-        
-    #    temp_mainPhoto = data.pop('mainPhoto')
-    #    create_logs(str(temp_mainPhoto) + '\n')
-    #    create_logs(str(data))
-    #    from API.utils import _recovery_picture_from_bynaryfield
-    #    mp_file = _recovery_picture_from_bynaryfield(
-    #        b_string=data.get('mainPhotofile'),
-    #        file_path= str(MEDIA_ROOT) + '/' + 'img' + temp_mainPhoto[temp_mainPhoto.rfind('/'):])
-    #    data['mainPhoto'] ='/media/img/' + temp_mainPhoto[temp_mainPhoto.rfind('/'):]
-   #     create_logs(data)
-        return super().to_internal_value(data)
-
-
 
 """
 class PostlikeSerializer(serializers.Serializer):

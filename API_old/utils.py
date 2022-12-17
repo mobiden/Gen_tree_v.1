@@ -47,7 +47,6 @@ def error_json_response(
     if data is None:
         data = {}
     return json_response(
-        json_status= 'error',
         status=http_status,
         data={
             "status": status,
@@ -57,7 +56,7 @@ def error_json_response(
     )
 
 
-def _recovery_picture_from_bynaryfield(b_string: bytes, file_path: str) -> str:
+def _recovery_picture_from_bynaryfield(b_string: bytes, file_path: str) -> int: # 0 - save, 1 - can't save, 2 - already exist :
     if not os.path.exists(file_path):
         try:
             with open('temp31111111', 'wb') as ph:
@@ -65,12 +64,12 @@ def _recovery_picture_from_bynaryfield(b_string: bytes, file_path: str) -> str:
                 ph.write(enfile)
                 ph.close()
                 os.rename('temp31111111', file_path)
-            return file_path
+            return  0
         except:
             logging.debug(msg=f"Can't save photo: {file_path}")
-            return "error"
+            return 1
     else:
-        return 'exist'
+        return 2
 
 def get_json_data(request: Request, token: typing.Optional[str] = None) -> json:
     try:
@@ -91,8 +90,7 @@ def get_json_data(request: Request, token: typing.Optional[str] = None) -> json:
 
 def person_sending(person: Person, context: dict) -> Response:
     from API.serializer import PersonSerializer
-    serializer = PersonSerializer(person, context=context)
-    data = serializer.data
+    data = PersonSerializer(person, context=context).data
     data['token'] = RAW_CONFIG['API']['token']
     json = UserJSONRenderer().render(data)
     response = send_request(json=json, ext='persons/')
@@ -117,7 +115,3 @@ def send_request(json: json, ext: str) -> Response:
     print('sending request', api_url)
     response = requests.post(url=api_url, json=json, headers=headers)
     return response
-
-def create_logs(string: str):
-    with open('logs.txt', 'a') as l:
-        l.write(str(string) + '\n')

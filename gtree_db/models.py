@@ -37,6 +37,22 @@ class Abs_Person(models.Model):
                                   upload_to='img/',
                                   default='work/Without photo.jpg',
                                   )
+    father = models.ForeignKey('self',
+                               verbose_name='Отец',
+                               related_name='father_name',
+                               blank=True,
+                               null=True,
+                               on_delete=models.SET_NULL,
+                               )
+
+    mother = models.ForeignKey('self',
+                               verbose_name='Мать',
+                               related_name='mother_name',
+                               blank=True,
+                               null=True,
+                               on_delete=models.SET_NULL,
+                               )
+
     class Meta:
         abstract = True
 
@@ -64,28 +80,13 @@ class Person(Abs_Person):
                            null=True,
                            )
 
-    father = models.ForeignKey('self',
-                               verbose_name='Отец',
-                               related_name='father_name',
-                               blank=True,
-                               null=True,
-                               on_delete=models.DO_NOTHING,
-                               )
-
-    mother = models.ForeignKey('self',
-                               verbose_name='Мать',
-                               related_name='mother_name',
-                               blank=True,
-                               null=True,
-                               on_delete=models.DO_NOTHING,
-                               )
 
     who_married = models.ForeignKey('self',
                                     verbose_name='Муж/Жена',
                                     related_name='married_name',
                                     blank=True,
                                     null=True,
-                                    on_delete=models.DO_NOTHING,
+                                    on_delete=models.SET_NULL,
                                     )
 
 

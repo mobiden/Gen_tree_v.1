@@ -4478,3 +4478,290 @@ Traceback (most recent call last):
   File "C:\Python\my_projects\Gen_tree\API\views.py", line 51, in photos_sending
     print(f'got json {json["status"]} for {photo.the_photo}')
 OSError: [Errno 22] Invalid argument
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.request - ERROR - Internal Server Error: /tree/family_tree/13/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python\my_projects\Gen_tree\gtree_db\views.py", line 228, in fam_tree_schema
+    f_grandmother_main = check_person(main_father.mother)
+AttributeError: 'Empty_person' object has no attribute 'mother'
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\gtree_db\models.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\gtree_db\models.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.request - WARNING - Not Found: /media/img/Without_photo_FTZll2n.jpg
+django.request - WARNING - Not Found: /media/img/Катя_на_паспорт.jpg
+django.request - WARNING - Not Found: /media/img/Without_photo_FTZll2n.jpg
+django.request - WARNING - Forbidden (Permission denied): /tree/person/change/7/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\contrib\auth\mixins.py", line 103, in dispatch
+    return self.handle_no_permission()
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\contrib\auth\mixins.py", line 46, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied: доступ запрещен
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.request - WARNING - Not Found: /media/img/Without_photo_FTZll2n.jpg
+django.request - WARNING - Not Found: /media/img/Катя_на_паспорт.jpg
+django.request - WARNING - Not Found: /media/img/Without_photo_FTZll2n.jpg
+django.request - WARNING - Not Found: /media/img/Катя_на_паспорт.jpg
+django.request - WARNING - Not Found: /media/img/Катя_на_паспорт.jpg
+django.request - WARNING - Not Found: /media/img/Катя_на_паспорт.jpg
+django.request - WARNING - Forbidden (Permission denied): /tree/person/change/10/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\contrib\auth\mixins.py", line 103, in dispatch
+    return self.handle_no_permission()
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\contrib\auth\mixins.py", line 46, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied: доступ запрещен
+django.request - WARNING - Not Found: /login/login/
+django.request - WARNING - Not Found: /media/img/Катя_на_паспорт.jpg
+django.request - WARNING - Not Found: /media/img/Катя_на_паспорт.jpg
+PIL.Image - DEBUG - Importing BlpImagePlugin
+PIL.Image - DEBUG - Importing BmpImagePlugin
+PIL.Image - DEBUG - Importing BufrStubImagePlugin
+PIL.Image - DEBUG - Importing CurImagePlugin
+PIL.Image - DEBUG - Importing DcxImagePlugin
+PIL.Image - DEBUG - Importing DdsImagePlugin
+PIL.Image - DEBUG - Importing EpsImagePlugin
+PIL.Image - DEBUG - Importing FitsStubImagePlugin
+PIL.Image - DEBUG - Importing FliImagePlugin
+PIL.Image - DEBUG - Importing FpxImagePlugin
+PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+PIL.Image - DEBUG - Importing FtexImagePlugin
+PIL.Image - DEBUG - Importing GbrImagePlugin
+PIL.Image - DEBUG - Importing GifImagePlugin
+PIL.Image - DEBUG - Importing GribStubImagePlugin
+PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+PIL.Image - DEBUG - Importing IcnsImagePlugin
+PIL.Image - DEBUG - Importing IcoImagePlugin
+PIL.Image - DEBUG - Importing ImImagePlugin
+PIL.Image - DEBUG - Importing ImtImagePlugin
+PIL.Image - DEBUG - Importing IptcImagePlugin
+PIL.Image - DEBUG - Importing JpegImagePlugin
+PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+PIL.Image - DEBUG - Importing McIdasImagePlugin
+PIL.Image - DEBUG - Importing MicImagePlugin
+PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+PIL.Image - DEBUG - Importing MpegImagePlugin
+PIL.Image - DEBUG - Importing MpoImagePlugin
+PIL.Image - DEBUG - Importing MspImagePlugin
+PIL.Image - DEBUG - Importing PalmImagePlugin
+PIL.Image - DEBUG - Importing PcdImagePlugin
+PIL.Image - DEBUG - Importing PcxImagePlugin
+PIL.Image - DEBUG - Importing PdfImagePlugin
+PIL.Image - DEBUG - Importing PixarImagePlugin
+PIL.Image - DEBUG - Importing PngImagePlugin
+PIL.Image - DEBUG - Importing PpmImagePlugin
+PIL.Image - DEBUG - Importing PsdImagePlugin
+PIL.Image - DEBUG - Importing SgiImagePlugin
+PIL.Image - DEBUG - Importing SpiderImagePlugin
+PIL.Image - DEBUG - Importing SunImagePlugin
+PIL.Image - DEBUG - Importing TgaImagePlugin
+PIL.Image - DEBUG - Importing TiffImagePlugin
+PIL.Image - DEBUG - Importing WebPImagePlugin
+PIL.Image - DEBUG - Importing WmfImagePlugin
+PIL.Image - DEBUG - Importing XbmImagePlugin
+PIL.Image - DEBUG - Importing XpmImagePlugin
+PIL.Image - DEBUG - Importing XVThumbImagePlugin
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\serializer.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/Without_photo_1IsbUgQ.jpg
+root - ERROR - Exception
+Traceback (most recent call last):
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 165, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 428, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 457, in run_validators
+    to_validate = self._read_only_defaults()
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 438, in _read_only_defaults
+    field for field in self.fields.values()
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `who_marriedmainPhoto` is not valid for model `Person`.
+django.request - ERROR - Internal Server Error: /api/persons/
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\serializer.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\utils.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/Without_photo_1IsbUgQ.jpg
+root - DEBUG - Can't save photo: img/Without_photo_1IsbUgQ.jpg
+root - DEBUG - КОМЛяков Александр Михайлович внесен
+root - INFO - request.data
+root - DEBUG - img/Without_photo_1IsbUgQ.jpg
+root - DEBUG - Can't save photo: img/Without_photo_1IsbUgQ.jpg
+root - DEBUG - КОМЛяков Александр Михайлович внесен
+django.request - WARNING - Not Found: /media/img/Without_photo_FTZll2n.jpg
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 77, in sending_person
+    temp_person = sending_person(person.mother, api_var=api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 88, in sending_person
+    temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 98, in sending_person
+    api_var.sent_persons.add(sent_person)
+TypeError: unhashable type: 'dict'
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\classes.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.request - WARNING - Not Found: /send_dataset/
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127976
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor

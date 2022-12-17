@@ -3,8 +3,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="robots" content="NONE,NOARCHIVE">
-  <title>UnicodeDecodeError
-          at /api/photos/</title>
+  <title>TypeError
+          at /api/persons/</title>
   <style type="text/css">
     html * { padding:0; margin:0; }
     body * { padding:10px 20px; }
@@ -105,9 +105,9 @@
 </head>
 <body>
 <div id="summary">
-  <h1>UnicodeDecodeError
-       at /api/photos/</h1>
-  <pre class="exception_value">&#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position 0: invalid start byte</pre>
+  <h1>TypeError
+       at /api/persons/</h1>
+  <pre class="exception_value">update() takes 1 positional argument but 2 were given</pre>
   <table class="meta">
 
     <tr>
@@ -116,7 +116,7 @@
     </tr>
     <tr>
       <th>Request URL:</th>
-      <td>https://komlyakov.ru/genealogy/api/photos/</td>
+      <td>https://komlyakov.ru/genealogy/api/persons/</td>
     </tr>
 
     <tr>
@@ -126,19 +126,19 @@
 
     <tr>
       <th>Exception Type:</th>
-      <td>UnicodeDecodeError</td>
+      <td>TypeError</td>
     </tr>
 
 
     <tr>
       <th>Exception Value:</th>
-      <td><pre>&#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position 0: invalid start byte</pre></td>
+      <td><pre>update() takes 1 positional argument but 2 were given</pre></td>
     </tr>
 
 
     <tr>
       <th>Exception Location:</th>
-      <td><span class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/utils/encoders.py</span>, line 50, in default</td>
+      <td><span class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/db/models/manager.py</span>, line 85, in manager_method</td>
     </tr>
 
     <tr>
@@ -161,14 +161,9 @@
     </tr>
     <tr>
       <th>Server time:</th>
-      <td>Thu, 08 Dec 2022 08:25:38 +0000</td>
+      <td>Fri, 16 Dec 2022 21:13:42 +0000</td>
     </tr>
   </table>
-</div>
-
-<div id="unicode-hint">
-    <h2>Unicode error hint</h2>
-    <p>The string that could not be encoded/decoded was: <strong>ï¿½ï¿½ï¿½ï¿½+ï¿½</strong></p>
 </div>
 
 
@@ -188,43 +183,43 @@
 
 
 
-            <div class="context" id="c22516048823744">
+            <div class="context" id="c22958213582144">
 
-                <ol start="40" class="pre-context" id="pre22516048823744">
+                <ol start="40" class="pre-context" id="pre22958213582144">
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>                response = await sync_to_async(response_for_exception, thread_sensitive=False)(request, exc)</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>                response = await sync_to_async(response_for_exception, thread_sensitive=False)(request, exc)</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>            return response</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            return response</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        return inner</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>    else:</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>    else:</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>        @wraps(get_response)</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        @wraps(get_response)</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>        def inner(request):</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        def inner(request):</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            try:</pre></li>
 
                 </ol>
 
               <ol start="47" class="context-line">
-                <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>                response = get_response(request)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>                response = get_response(request)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='48' class="post-context" id="post22516048823744">
+                <ol start='48' class="post-context" id="post22958213582144">
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>            except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            except Exception as exc:</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>                response = response_for_exception(request, exc)</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>                response = response_for_exception(request, exc)</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>            return response</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            return response</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        return inner</pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516048823744', 'post22516048823744')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre></pre></li>
 
               </ol>
 
@@ -234,10 +229,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22516048823744')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '22958213582144')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22516048823744">
+            <table class="vars" id="v22958213582144">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -248,17 +243,17 @@
 
                   <tr>
                     <td>exc</td>
-                    <td class="code"><pre>UnicodeDecodeError(&#x27;utf-8&#x27;, b&quot;\xff\xd8\xff\xe1+\xfeExif\x00\x00II*\x00\x08\x00\x00\x00\t\x00\x0f\x01\x02\x00\x06\x00\x00\x00z\x00\x00\x00\x10\x01\x02\x00\x19\x00\x00\x00\x80\x00\x00\x00\x12\x01\x03\x00\x01\x00\x00\x00\x01\x00\x00\x00\x1a\x01\x05\x00\x01\x00\x00\x00\xa0\x00\x00\x00\x1b\x01\x05\x00\x01\x00\x00\x00\xa8\x00\x00\x00(\x01\x03\x00\x01\x00\x00\x00\x02\x00\x00\x002\x01\x02\x00\x14\x00\x00\x00\xb0\x00\x00\x00\x13\x02\x03\x00\x01\x00\x00\x00\x01\x00\x00\x00i\x87\x04\x00\x01\x00\x00\x00\xc4\x00\x00\x00\xd0\x0c\x00\x00Canon\x00Canon DIGITAL IXUS 80 IS\x00\x00\x00\x00\x00\x00\x00\x00\xb4\x00\x00\x00\x01\x00\x00\x00\xb4\x00\x00\x00\x01\x00\x00\x002011:07:14 16:41:17\x00 \x00\x9a\x82\x05\x00\x01\x00\x00\x00J\x02\x00\x00\x9d\x82\x05\x00\x01\x00\x00\x00R\x02\x00\x00&#x27;\x88\x03\x00\x01\x00\x00\x00P\x00\x00\x00\x00\x90\x07\x00\x04\x00\x00\x000220\x03\x90\x02\x00\x14\x00\x00\x00Z\x02\x00\x00\x04\x90\x02\x00\x14\x00\x00\x00n\x02\x00\x00\x01\x91\x07\x00\x04\x00\x00\x00\x01\x02\x03\x00\x02\x91\x05\x00\x01\x00\x00\x00\x82\x02\x00\x00\x01\x92\n&quot;, 0, 1, &#x27;invalid start byte&#x27;)</pre></td>
+                    <td class="code"><pre>TypeError(&#x27;update() takes 1 positional argument but 2 were given&#x27;)</pre></td>
                   </tr>
 
                   <tr>
                     <td>get_response</td>
-                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x147a8f687f70&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x14e1823af040&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>request</td>
-                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/genealogy/api/photos/&#x27;&gt;</pre></td>
+                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/genealogy/api/persons/&#x27;&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -269,47 +264,47 @@
 
         <li class="frame django">
 
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/core/handlers/base.py</code>, line 204, in _get_response
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/core/handlers/base.py</code>, line 181, in _get_response
 
 
 
-            <div class="context" id="c22516048823680">
+            <div class="context" id="c22958213580992">
 
-                <ol start="197" class="pre-context" id="pre22516048823680">
+                <ol start="174" class="pre-context" id="pre22958213580992">
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                    response,</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                    middleware_method,</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>        if response is None:</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                    name=&#x27;%s.process_template_response&#x27; % (</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                        middleware_method.__self__.__class__.__name__,</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                    )</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            if asyncio.iscoroutinefunction(wrapped_callback):</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                )</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            try:</pre></li>
 
                 </ol>
 
-              <ol start="204" class="context-line">
-                <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                response = response.render()</pre> <span>â¦</span></li>
+              <ol start="181" class="context-line">
+                <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='205' class="post-context" id="post22516048823680">
+                <ol start='182' class="post-context" id="post22958213580992">
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>            except Exception as e:</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            except Exception as e:</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                if response is None:</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                if response is None:</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>                    raise</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                    raise</pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516048823680', 'post22516048823680')"><pre>        return response</pre></li>
+                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>        # Complain if the view returned None (a common error).</pre></li>
 
               </ol>
 
@@ -319,10 +314,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22516048823680')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '22958213580992')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22516048823680">
+            <table class="vars" id="v22958213580992">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -333,7 +328,7 @@
 
                   <tr>
                     <td>callback</td>
-                    <td class="code"><pre>&lt;function PhotoView at 0x147a8fea2040&gt;</pre></td>
+                    <td class="code"><pre>&lt;function PersonView at 0x14e1608ca820&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -348,12 +343,12 @@
 
                   <tr>
                     <td>middleware_method</td>
-                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x147a8f5e2ee0&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x14e18237cf70&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>request</td>
-                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/genealogy/api/photos/&#x27;&gt;</pre></td>
+                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/genealogy/api/persons/&#x27;&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -363,12 +358,12 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x147a8f687f70&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x14e1823af040&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>wrapped_callback</td>
-                    <td class="code"><pre>&lt;function PhotoView at 0x147a8fea2040&gt;</pre></td>
+                    <td class="code"><pre>&lt;function PersonView at 0x14e1608ca820&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -379,47 +374,39 @@
 
         <li class="frame django">
 
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/template/response.py</code>, line 105, in render
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/views/decorators/csrf.py</code>, line 54, in wrapped_view
 
 
 
-            <div class="context" id="c22516048823616">
+            <div class="context" id="c22958213582208">
 
-                <ol start="98" class="pre-context" id="pre22516048823616">
+                <ol start="47" class="pre-context" id="pre22958213582208">
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>        If the content has already been rendered, this is a no-op.</pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>def csrf_exempt(view_func):</pre></li>
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>        Return the baked response instance.</pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    &quot;&quot;&quot;Mark a view function as being exempt from the CSRF view protection.&quot;&quot;&quot;</pre></li>
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    # view_func.csrf_exempt = True would also work, but decorators are nicer</pre></li>
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>        retval = self</pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    # if they don&#x27;t have side effects, so return a new function.</pre></li>
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>        if not self._is_rendered:</pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    def wrapped_view(*args, **kwargs):</pre></li>
 
                 </ol>
 
-              <ol start="105" class="context-line">
-                <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>            self.content = self.rendered_content</pre> <span>â¦</span></li>
+              <ol start="54" class="context-line">
+                <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>        return view_func(*args, **kwargs)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='106' class="post-context" id="post22516048823616">
+                <ol start='55' class="post-context" id="post22958213582208">
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>            for post_callback in self._post_render_callbacks:</pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    wrapped_view.csrf_exempt = True</pre></li>
 
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>                newretval = post_callback(retval)</pre></li>
-
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>                if newretval is not None:</pre></li>
-
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>                    retval = newretval</pre></li>
-
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre>        return retval</pre></li>
-
-                  <li onclick="toggle('pre22516048823616', 'post22516048823616')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    return wraps(view_func)(wrapped_view)</pre></li>
 
               </ol>
 
@@ -429,303 +416,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22516048823616')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '22958213582208')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22516048823616">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                  <tr>
-                    <td>retval</td>
-                    <td class="code"><pre>&lt;Response status_code=200, &quot;application/json&quot;&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>&lt;Response status_code=200, &quot;application/json&quot;&gt;</pre></td>
-                  </tr>
-
-              </tbody>
-            </table>
-
-        </li>
-
-
-        <li class="frame user">
-
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/response.py</code>, line 70, in rendered_content
-
-
-
-            <div class="context" id="c22516053907072">
-
-                <ol start="63" class="pre-context" id="pre22516053907072">
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>        if content_type is None and charset is not None:</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>            content_type = &quot;{}; charset={}&quot;.format(media_type, charset)</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>        elif content_type is None:</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>            content_type = media_type</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>        self[&#x27;Content-Type&#x27;] = content_type</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre></pre></li>
-
-                </ol>
-
-              <ol start="70" class="context-line">
-                <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>        ret = renderer.render(self.data, accepted_media_type, context)</pre> <span>â¦</span></li>
-              </ol>
-
-                <ol start='71' class="post-context" id="post22516053907072">
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>        if isinstance(ret, str):</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>            assert charset, (</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>                &#x27;renderer returned unicode, and did not specify &#x27;</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>                &#x27;a charset value.&#x27;</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>            )</pre></li>
-
-                  <li onclick="toggle('pre22516053907072', 'post22516053907072')"><pre>            return ret.encode(charset)</pre></li>
-
-              </ol>
-
-            </div>
-
-
-
-            <div class="commands">
-
-                    <a href="#" onclick="return varToggle(this, '22516053907072')"><span>&#x25b6;</span> Local vars</a>
-
-            </div>
-            <table class="vars" id="v22516053907072">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                  <tr>
-                    <td>accepted_media_type</td>
-                    <td class="code"><pre>&#x27;application/json&#x27;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>charset</td>
-                    <td class="code"><pre>None</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>content_type</td>
-                    <td class="code"><pre>&#x27;application/json&#x27;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>context</td>
-                    <td class="code"><pre>{&#x27;args&#x27;: (),
- &#x27;kwargs&#x27;: {},
- &#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/genealogy/api/photos/&#x27;&gt;,
- &#x27;response&#x27;: &lt;Response status_code=200, &quot;application/json&quot;&gt;,
- &#x27;view&#x27;: &lt;API.views.PhotoView object at 0x147a6db587c0&gt;}</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>media_type</td>
-                    <td class="code"><pre>&#x27;application/json&#x27;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>renderer</td>
-                    <td class="code"><pre>&lt;rest_framework.renderers.JSONRenderer object at 0x147a6d64f460&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>&lt;Response status_code=200, &quot;application/json&quot;&gt;</pre></td>
-                  </tr>
-
-              </tbody>
-            </table>
-
-        </li>
-
-
-        <li class="frame user">
-
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/renderers.py</code>, line 99, in render
-
-
-
-            <div class="context" id="c22516053905728">
-
-                <ol start="92" class="pre-context" id="pre22516053905728">
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>        indent = self.get_indent(accepted_media_type, renderer_context)</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>        if indent is None:</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>            separators = SHORT_SEPARATORS if self.compact else LONG_SEPARATORS</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>        else:</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>            separators = INDENT_SEPARATORS</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre></pre></li>
-
-                </ol>
-
-              <ol start="99" class="context-line">
-                <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>        ret = json.dumps(</pre> <span>â¦</span></li>
-              </ol>
-
-                <ol start='100' class="post-context" id="post22516053905728">
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>            data, cls=self.encoder_class,</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>            indent=indent, ensure_ascii=self.ensure_ascii,</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>            allow_nan=not self.strict, separators=separators</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>        )</pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053905728', 'post22516053905728')"><pre>        # We always fully escape \u2028 and \u2029 to ensure we output JSON</pre></li>
-
-              </ol>
-
-            </div>
-
-
-
-            <div class="commands">
-
-                    <a href="#" onclick="return varToggle(this, '22516053905728')"><span>&#x25b6;</span> Local vars</a>
-
-            </div>
-            <table class="vars" id="v22516053905728">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                  <tr>
-                    <td>accepted_media_type</td>
-                    <td class="code"><pre>&#x27;application/json&#x27;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>data</td>
-                    <td class="code"><pre>{&#x27;data&#x27;: {&#x27;id&#x27;: 21, &#x27;photo&#x27;: &lt;ImageFieldFile: img/189.jpg&gt;}, &#x27;status&#x27;: &#x27;ok&#x27;}</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>indent</td>
-                    <td class="code"><pre>None</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>renderer_context</td>
-                    <td class="code"><pre>{&#x27;args&#x27;: (),
- &#x27;kwargs&#x27;: {},
- &#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/genealogy/api/photos/&#x27;&gt;,
- &#x27;response&#x27;: &lt;Response status_code=200, &quot;application/json&quot;&gt;,
- &#x27;view&#x27;: &lt;API.views.PhotoView object at 0x147a6db587c0&gt;}</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>&lt;rest_framework.renderers.JSONRenderer object at 0x147a6d64f460&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>separators</td>
-                    <td class="code"><pre>(&#x27;,&#x27;, &#x27;:&#x27;)</pre></td>
-                  </tr>
-
-              </tbody>
-            </table>
-
-        </li>
-
-
-        <li class="frame user">
-
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/utils/json.py</code>, line 25, in dumps
-
-
-
-            <div class="context" id="c22516053907008">
-
-                <ol start="18" class="pre-context" id="pre22516053907008">
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>    kwargs.setdefault(&#x27;allow_nan&#x27;, False)</pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>    return json.dump(*args, **kwargs)</pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>@functools.wraps(json.dumps)</pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>def dumps(*args, **kwargs):</pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>    kwargs.setdefault(&#x27;allow_nan&#x27;, False)</pre></li>
-
-                </ol>
-
-              <ol start="25" class="context-line">
-                <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>    return json.dumps(*args, **kwargs)</pre> <span>â¦</span></li>
-              </ol>
-
-                <ol start='26' class="post-context" id="post22516053907008">
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>@functools.wraps(json.load)</pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>def load(*args, **kwargs):</pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>    kwargs.setdefault(&#x27;parse_constant&#x27;, strict_constant)</pre></li>
-
-                  <li onclick="toggle('pre22516053907008', 'post22516053907008')"><pre>    return json.load(*args, **kwargs)</pre></li>
-
-              </ol>
-
-            </div>
-
-
-
-            <div class="commands">
-
-                    <a href="#" onclick="return varToggle(this, '22516053907008')"><span>&#x25b6;</span> Local vars</a>
-
-            </div>
-            <table class="vars" id="v22516053907008">
+            <table class="vars" id="v22958213582208">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -736,141 +430,17 @@
 
                   <tr>
                     <td>args</td>
-                    <td class="code"><pre>({&#x27;data&#x27;: {&#x27;id&#x27;: 21, &#x27;photo&#x27;: &lt;ImageFieldFile: img/189.jpg&gt;}, &#x27;status&#x27;: &#x27;ok&#x27;},)</pre></td>
+                    <td class="code"><pre>(&lt;WSGIRequest: POST &#x27;/genealogy/api/persons/&#x27;&gt;,)</pre></td>
                   </tr>
 
                   <tr>
                     <td>kwargs</td>
-                    <td class="code"><pre>{&#x27;allow_nan&#x27;: False,
- &#x27;cls&#x27;: &lt;class &#x27;rest_framework.utils.encoders.JSONEncoder&#x27;&gt;,
- &#x27;ensure_ascii&#x27;: False,
- &#x27;indent&#x27;: None,
- &#x27;separators&#x27;: (&#x27;,&#x27;, &#x27;:&#x27;)}</pre></td>
-                  </tr>
-
-              </tbody>
-            </table>
-
-        </li>
-
-
-        <li class="frame user">
-
-            <code class="fname">/opt/alt/python38/lib64/python3.8/json/__init__.py</code>, line 234, in dumps
-
-
-
-            <div class="context" id="c22516053906688">
-
-                <ol start="227" class="pre-context" id="pre22516053906688">
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>    if (not skipkeys and ensure_ascii and</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        check_circular and allow_nan and</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        cls is None and indent is None and separators is None and</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        default is None and not sort_keys and not kw):</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        return _default_encoder.encode(obj)</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>    if cls is None:</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        cls = JSONEncoder</pre></li>
-
-                </ol>
-
-              <ol start="234" class="context-line">
-                <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>    return cls(</pre> <span>â¦</span></li>
-              </ol>
-
-                <ol start='235' class="post-context" id="post22516053906688">
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        skipkeys=skipkeys, ensure_ascii=ensure_ascii,</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        check_circular=check_circular, allow_nan=allow_nan, indent=indent,</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        separators=separators, default=default, sort_keys=sort_keys,</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre>        **kw).encode(obj)</pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22516053906688', 'post22516053906688')"><pre></pre></li>
-
-              </ol>
-
-            </div>
-
-
-
-            <div class="commands">
-
-                    <a href="#" onclick="return varToggle(this, '22516053906688')"><span>&#x25b6;</span> Local vars</a>
-
-            </div>
-            <table class="vars" id="v22516053906688">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                  <tr>
-                    <td>allow_nan</td>
-                    <td class="code"><pre>False</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>check_circular</td>
-                    <td class="code"><pre>True</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>cls</td>
-                    <td class="code"><pre>&lt;class &#x27;rest_framework.utils.encoders.JSONEncoder&#x27;&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>default</td>
-                    <td class="code"><pre>None</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>ensure_ascii</td>
-                    <td class="code"><pre>False</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>indent</td>
-                    <td class="code"><pre>None</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>kw</td>
                     <td class="code"><pre>{}</pre></td>
                   </tr>
 
                   <tr>
-                    <td>obj</td>
-                    <td class="code"><pre>{&#x27;data&#x27;: {&#x27;id&#x27;: 21, &#x27;photo&#x27;: &lt;ImageFieldFile: img/189.jpg&gt;}, &#x27;status&#x27;: &#x27;ok&#x27;}</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>separators</td>
-                    <td class="code"><pre>(&#x27;,&#x27;, &#x27;:&#x27;)</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>skipkeys</td>
-                    <td class="code"><pre>False</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>sort_keys</td>
-                    <td class="code"><pre>False</pre></td>
+                    <td>view_func</td>
+                    <td class="code"><pre>&lt;function PersonView at 0x14e1608ca790&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -879,49 +449,49 @@
         </li>
 
 
-        <li class="frame user">
+        <li class="frame django">
 
-            <code class="fname">/opt/alt/python38/lib64/python3.8/json/encoder.py</code>, line 199, in encode
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/views/generic/base.py</code>, line 70, in view
 
 
 
-            <div class="context" id="c22516053906880">
+            <div class="context" id="c22958213789056">
 
-                <ol start="192" class="pre-context" id="pre22516053906880">
+                <ol start="63" class="pre-context" id="pre22958213789056">
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>            if self.ensure_ascii:</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            self = cls(**initkwargs)</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>                return encode_basestring_ascii(o)</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            self.setup(request, *args, **kwargs)</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            if not hasattr(self, &#x27;request&#x27;):</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>                return encode_basestring(o)</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                raise AttributeError(</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>        # This doesn&#x27;t pass the iterator directly to &#x27;&#x27;.join() because the</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                    &quot;%s instance has no &#x27;request&#x27; attribute. Did you override &quot;</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>        # exceptions aren&#x27;t as detailed.  The list call should be roughly</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                    &quot;setup() and forget to call super()?&quot; % cls.__name__</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>        # equivalent to the PySequence_Fast that &#x27;&#x27;.join() would do.</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                )</pre></li>
 
                 </ol>
 
-              <ol start="199" class="context-line">
-                <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>        chunks = self.iterencode(o, _one_shot=True)</pre> <span>â¦</span></li>
+              <ol start="70" class="context-line">
+                <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            return self.dispatch(request, *args, **kwargs)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='200' class="post-context" id="post22516053906880">
+                <ol start='71' class="post-context" id="post22958213789056">
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>        if not isinstance(chunks, (list, tuple)):</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        view.view_class = cls</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>            chunks = list(chunks)</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        view.view_initkwargs = initkwargs</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>        return &#x27;&#x27;.join(chunks)</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        # take name and docstring from class</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>    def iterencode(self, o, _one_shot=False):</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        update_wrapper(view, cls, updated=())</pre></li>
 
-                  <li onclick="toggle('pre22516053906880', 'post22516053906880')"><pre>        &quot;&quot;&quot;Encode the given object and yield each string</pre></li>
+                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre></pre></li>
 
               </ol>
 
@@ -931,10 +501,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22516053906880')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '22958213789056')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22516053906880">
+            <table class="vars" id="v22958213789056">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -944,13 +514,33 @@
               <tbody>
 
                   <tr>
-                    <td>o</td>
-                    <td class="code"><pre>{&#x27;data&#x27;: {&#x27;id&#x27;: 21, &#x27;photo&#x27;: &lt;ImageFieldFile: img/189.jpg&gt;}, &#x27;status&#x27;: &#x27;ok&#x27;}</pre></td>
+                    <td>args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>cls</td>
+                    <td class="code"><pre>&lt;class &#x27;API.views.PersonView&#x27;&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>initkwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/genealogy/api/persons/&#x27;&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;rest_framework.utils.encoders.JSONEncoder object at 0x147a6d64f220&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -961,47 +551,47 @@
 
         <li class="frame user">
 
-            <code class="fname">/opt/alt/python38/lib64/python3.8/json/encoder.py</code>, line 257, in iterencode
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py</code>, line 509, in dispatch
 
 
 
-            <div class="context" id="c22516053906560">
+            <div class="context" id="c22958213221888">
 
-                <ol start="250" class="pre-context" id="pre22516053906560">
+                <ol start="502" class="pre-context" id="pre22958213221888">
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>                self.key_separator, self.item_separator, self.sort_keys,</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>                                  self.http_method_not_allowed)</pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>                self.skipkeys, self.allow_nan)</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>            else:</pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>        else:</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>                handler = self.http_method_not_allowed</pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>            _iterencode = _make_iterencode(</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>                markers, self.default, _encoder, self.indent, floatstr,</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>            response = handler(request, *args, **kwargs)</pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>                self.key_separator, self.item_separator, self.sort_keys,</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>                self.skipkeys, _one_shot)</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        except Exception as exc:</pre></li>
 
                 </ol>
 
-              <ol start="257" class="context-line">
-                <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>        return _iterencode(o, 0)</pre> <span>â¦</span></li>
+              <ol start="509" class="context-line">
+                <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>            response = self.handle_exception(exc)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='258' class="post-context" id="post22516053906560">
+                <ol start='510' class="post-context" id="post22958213221888">
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre></pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>def _make_iterencode(markers, _default, _encoder, _indent, _floatstr,</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>        _key_separator, _item_separator, _sort_keys, _skipkeys, _one_shot,</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        return self.response</pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>        ## HACK: hand-optimized bytecode; turn globals into locals</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>        ValueError=ValueError,</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>    def options(self, request, *args, **kwargs):</pre></li>
 
-                  <li onclick="toggle('pre22516053906560', 'post22516053906560')"><pre>        dict=dict,</pre></li>
+                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        &quot;&quot;&quot;</pre></li>
 
               </ol>
 
@@ -1011,10 +601,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22516053906560')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '22958213221888')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22516053906560">
+            <table class="vars" id="v22958213221888">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1024,92 +614,316 @@
               <tbody>
 
                   <tr>
-                    <td>_encoder</td>
-                    <td class="code"><pre>&lt;built-in function encode_basestring&gt;</pre></td>
+                    <td>args</td>
+                    <td class="code"><pre>()</pre></td>
                   </tr>
 
                   <tr>
-                    <td>_iterencode</td>
-                    <td class="code"><pre>&lt;_json.Encoder object at 0x147a6d50cf40&gt;</pre></td>
+                    <td>handler</td>
+                    <td class="code"><pre>&lt;bound method PersonView.post of &lt;API.views.PersonView object at 0x14e16051d610&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
-                    <td>_one_shot</td>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: POST &#x27;/genealogy/api/persons/&#x27;&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                  </tr>
+
+              </tbody>
+            </table>
+
+        </li>
+
+
+        <li class="frame user">
+
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py</code>, line 469, in handle_exception
+
+
+
+            <div class="context" id="c22958213219456">
+
+                <ol start="462" class="pre-context" id="pre22958213219456">
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        exception_handler = self.get_exception_handler()</pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        context = self.get_exception_handler_context()</pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        response = exception_handler(exc, context)</pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        if response is None:</pre></li>
+
+                </ol>
+
+              <ol start="469" class="context-line">
+                <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>            self.raise_uncaught_exception(exc)</pre> <span>â¦</span></li>
+              </ol>
+
+                <ol start='470' class="post-context" id="post22958213219456">
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        response.exception = True</pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        return response</pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
+
+                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        if settings.DEBUG:</pre></li>
+
+              </ol>
+
+            </div>
+
+
+
+            <div class="commands">
+
+                    <a href="#" onclick="return varToggle(this, '22958213219456')"><span>&#x25b6;</span> Local vars</a>
+
+            </div>
+            <table class="vars" id="v22958213219456">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                  <tr>
+                    <td>context</td>
+                    <td class="code"><pre>{&#x27;args&#x27;: (),
+ &#x27;kwargs&#x27;: {},
+ &#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/genealogy/api/persons/&#x27;&gt;,
+ &#x27;view&#x27;: &lt;API.views.PersonView object at 0x14e16051d610&gt;}</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>exc</td>
+                    <td class="code"><pre>TypeError(&#x27;update() takes 1 positional argument but 2 were given&#x27;)</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>exception_handler</td>
+                    <td class="code"><pre>&lt;function exception_handler at 0x14e182c1b550&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>response</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                  </tr>
+
+              </tbody>
+            </table>
+
+        </li>
+
+
+        <li class="frame user">
+
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py</code>, line 480, in raise_uncaught_exception
+
+
+
+            <div class="context" id="c22958213219520">
+
+                <ol start="473" class="pre-context" id="pre22958213219520">
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>        if settings.DEBUG:</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            request = self.request</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            renderer_format = getattr(request.accepted_renderer, &#x27;format&#x27;)</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            use_plaintext_traceback = renderer_format not in (&#x27;html&#x27;, &#x27;api&#x27;, &#x27;admin&#x27;)</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            request.force_plaintext_errors(use_plaintext_traceback)</pre></li>
+
+                </ol>
+
+              <ol start="480" class="context-line">
+                <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>        raise exc</pre> <span>â¦</span></li>
+              </ol>
+
+                <ol start='481' class="post-context" id="post22958213219520">
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    # Note: Views are made CSRF exempt from within `as_view` as to prevent</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    # accidental removal of this exemption in cases where `dispatch` needs to</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    # be overridden.</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    def dispatch(self, request, *args, **kwargs):</pre></li>
+
+                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>        &quot;&quot;&quot;</pre></li>
+
+              </ol>
+
+            </div>
+
+
+
+            <div class="commands">
+
+                    <a href="#" onclick="return varToggle(this, '22958213219520')"><span>&#x25b6;</span> Local vars</a>
+
+            </div>
+            <table class="vars" id="v22958213219520">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                  <tr>
+                    <td>exc</td>
+                    <td class="code"><pre>TypeError(&#x27;update() takes 1 positional argument but 2 were given&#x27;)</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>renderer_format</td>
+                    <td class="code"><pre>&#x27;json&#x27;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: POST &#x27;/genealogy/api/persons/&#x27;&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>use_plaintext_traceback</td>
                     <td class="code"><pre>True</pre></td>
                   </tr>
 
+              </tbody>
+            </table>
+
+        </li>
+
+
+        <li class="frame user">
+
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py</code>, line 506, in dispatch
+
+
+
+            <div class="context" id="c22958213222336">
+
+                <ol start="499" class="pre-context" id="pre22958213222336">
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            # Get the appropriate handler method</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            if request.method.lower() in self.http_method_names:</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>                handler = getattr(self, request.method.lower(),</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>                                  self.http_method_not_allowed)</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            else:</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>                handler = self.http_method_not_allowed</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre></pre></li>
+
+                </ol>
+
+              <ol start="506" class="context-line">
+                <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            response = handler(request, *args, **kwargs)</pre> <span>â¦</span></li>
+              </ol>
+
+                <ol start='507' class="post-context" id="post22958213222336">
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>        except Exception as exc:</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            response = self.handle_exception(exc)</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
+
+                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>        return self.response</pre></li>
+
+              </ol>
+
+            </div>
+
+
+
+            <div class="commands">
+
+                    <a href="#" onclick="return varToggle(this, '22958213222336')"><span>&#x25b6;</span> Local vars</a>
+
+            </div>
+            <table class="vars" id="v22958213222336">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+
                   <tr>
-                    <td>floatstr</td>
-                    <td class="code"><pre>&lt;function JSONEncoder.iterencode.&lt;locals&gt;.floatstr at 0x147a6d5161f0&gt;</pre></td>
+                    <td>args</td>
+                    <td class="code"><pre>()</pre></td>
                   </tr>
 
                   <tr>
-                    <td>markers</td>
-                    <td class="code"><pre>{32110064: (b&#x27;\xff\xd8\xff\xe1+\xfeExif\x00\x00II*\x00\x08\x00\x00\x00&#x27;
-            b&#x27;\t\x00\x0f\x01\x02\x00\x06\x00\x00\x00z\x00\x00\x00\x10\x01&#x27;
-            b&#x27;\x02\x00\x19\x00\x00\x00\x80\x00\x00\x00\x12\x01\x03\x00\x01\x00&#x27;
-            b&#x27;\x00\x00\x01\x00\x00\x00\x1a\x01\x05\x00\x01\x00\x00\x00\xa0\x00&#x27;
-            b&#x27;\x00\x00\x1b\x01\x05\x00\x01\x00\x00\x00\xa8\x00\x00\x00(\x01&#x27;
-            b&#x27;\x03\x00\x01\x00\x00\x00\x02\x00\x00\x002\x01\x02\x00\x14\x00&#x27;
-            b&#x27;\x00\x00\xb0\x00\x00\x00\x13\x02\x03\x00\x01\x00\x00\x00\x01\x00&#x27;
-            b&#x27;\x00\x00i\x87\x04\x00\x01\x00\x00\x00\xc4\x00\x00\x00\xd0\x0c&#x27;
-            b&#x27;\x00\x00Canon\x00Canon DIGITAL IXUS 80 IS\x00\x00\x00\x00&#x27;
-            b&#x27;\x00\x00\x00\x00\xb4\x00\x00\x00\x01\x00\x00\x00\xb4\x00\x00\x00&#x27;
-            b&#x27;\x01\x00\x00\x002011:07:14 16:41:17\x00 \x00\x9a\x82&#x27;
-            b&#x27;\x05\x00\x01\x00\x00\x00J\x02\x00\x00\x9d\x82\x05\x00\x01\x00&#x27;
-            b&quot;\x00\x00R\x02\x00\x00&#x27;\x88\x03\x00\x01\x00\x00\x00P\x00&quot;
-            b&#x27;\x00\x00\x00\x90\x07\x00\x04\x00\x00\x000220\x03\x90&#x27;
-            b&#x27;\x02\x00\x14\x00\x00\x00Z\x02\x00\x00\x04\x90\x02\x00\x14\x00&#x27;
-            b&#x27;\x00\x00n\x02\x00\x00\x01\x91\x07\x00\x04\x00\x00\x00\x01\x02&#x27;
-            b&#x27;\x03\x00\x02\x91\x05\x00\x01\x00\x00\x00\x82\x02\x00\x00\x01\x92&#x27;
-            b&#x27;\n&#x27;,
-            b&#x27;\x00\x01\x00\x00\x00\x8a\x02\x00\x00\x02\x92\x05\x00\x01\x00\x00&#x27;
-            b&#x27;\x00\x92\x02\x00\x00\x04\x92\n&#x27;,
-            b&#x27;\x00\x01\x00\x00\x00\x9a\x02\x00\x00\x05\x92\x05\x00\x01\x00\x00&#x27;
-            b&#x27;\x00\xa2\x02\x00\x00\x07\x92\x03\x00\x01\x00\x00\x00\x05\x00\x00&#x27;
-            b&#x27;\x00\t\x92\x03\x00\x01\x00\x00\x00\x10\x00\x00\x00\n&#x27;,
-            b&#x27;\x92\x05\x00\x01\x00\x00\x00\xaa\x02\x00\x00|\x92\x07\x00\xc8&#x27;
-            b&#x27;\x08\x00\x00\xb2\x02\x00\x00\x86\x92\x07\x00\x08\x01\x00\x00z&#x27;
-            b&#x27;\x0b\x00\x00\x00\xa0\x07\x00\x04\x00\x00\x000100\x01&#x27;
-            b&#x27;\xa0\x03\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\xa0\x03\x00\x01&#x27;
-            b&#x27;\x00\x00\x00\xc0\x0c\x00\x00\x03\xa0\x03\x00\x01\x00\x00\x00\x90&#x27;
-            b&#x27;\t\x00\x00\x05\xa0\x04\x00\x01\x00\x00\x00\x82\x0c\x00\x00\x0e&#x27;
-            b&#x27;\xa2\x05\x00\x01\x00\x00\x00\xb8\x0c\x00\x00\x0f\xa2\x05\x00\x01&#x27;
-            b&#x27;\x00\x00\x00\xc0\x0c\x00\x00\x10\xa2\x03\x00\x01\x00\x00\x00\x02&#x27;
-            b&#x27;\x00\x00\x00\x17\xa2\x03\x00\x01\x00\x00\x00\x02\x00\x00\x00\x00&#x27;
-            b&#x27;\xa3\x07\x00\x01\x00\x00\x00\x03\x00\x00\x00\x01\xa4\x03\x00\x01&#x27;
-            b&#x27;\x00\x00\x00\x00\x00\x00\x00\x02\xa4\x03\x00\x01\x00\x00\x00\x00&#x27;
-            b&#x27;\x00\x00\x00\x03\xa4\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x04&#x27;
-            b&#x27;\xa4\x05\x00\x01\x00\x00\x00\xc8\x0c\x00\x00\x06\xa4\x03\x00\x01&#x27;
-            b&#x27;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x90&#x27;
-            b&#x27;\x01\x00\x00\x1c\x00\x00\x00\n&#x27;,
-            b&#x27;\x00\x00\x002011:07:14 16:41:17\x002011:07:14 16:41:17\x00\x05&#x27;
-            b&#x27;\x00\x00\x00\x01\x00\x00\x00\x15\x01\x00\x00 \x00\x00\x00_&#x27;
-            b&#x27;\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00_&#x27;
-            b&#x27;\x00\x00\x00 \x00\x00\x008\x18\x00\x00\xe8\x03\x00\x00\x1a&#x27;
-            b&#x27;\x00\x01\x00\x03\x000\x00\x00\x00\xf0\x03\x00\x00\x02\x00\x03&#x27;
-            b&#x27;\x00\x04\x00\x00\x00P\x04\x00\x00\x03\x00\x03\x00\x04\x00\x00&#x27;
-            b&#x27;\x00X\x04\x00\x00\x04\x00\x03\x00&quot;\x00\x00\x00`\x04\x00&#x27;
-            b&#x27;\x00\x00\x00\x03\x00\x06\x00\x00\x00\xa4\x04\x00\x00\x06\x00\x02&#x27;
-            b&#x27;\x00\x1c\x00\x00\x00\xb0\x04\x00\x00\x07\x00\x02\x00\x16\x00\x00&#x27;
-            b&#x27;\x00\xd0\x04\x00\x00\x08\x00\x04\x00\x01\x00\x00\x00\xa0L\x0f&#x27;
-            b&#x27;\x00\t\x00\x02\x00 \x00\x00\x00\xe8\x04\x00\x00\r&#x27;,
-            b&#x27;\x00\x04\x00\x9c\x00\x00\x00\x08\x05\x00\x00\x10\x00\x04\x00\x01&#x27;
-            b&#x27;\x00\x00\x00\x00\x00C\x02\x00\x00\x03\x00\x14\x00\x00\x00x&#x27;
-            b&#x27;\x07\x00\x00&amp;\x00\x03\x000\x00\x00\x00\xa0\x07\x00\x00\x13&#x27;
-            b&#x27;\x00\x03\x00\x04\x00\x00\x00\x00\x08\x00\x00\x18\x00\x01\x00\x00&#x27;
-            b&#x27;\x01\x00\x00\x08\x08\x00\x00\x19\x00\x03\x00\x01\x00\x00\x00\x01&#x27;
-            b&#x27;\x00\x00\x00\x1c\x00\x03\x00\x01\x00\x00\x00\x00\x00\x0â¦ &lt;trimmed 16161930 bytes string&gt;</pre></td>
+                    <td>handler</td>
+                    <td class="code"><pre>&lt;bound method PersonView.post of &lt;API.views.PersonView object at 0x14e16051d610&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
-                    <td>o</td>
-                    <td class="code"><pre>{&#x27;data&#x27;: {&#x27;id&#x27;: 21, &#x27;photo&#x27;: &lt;ImageFieldFile: img/189.jpg&gt;}, &#x27;status&#x27;: &#x27;ok&#x27;}</pre></td>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: POST &#x27;/genealogy/api/persons/&#x27;&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;rest_framework.utils.encoders.JSONEncoder object at 0x147a6d64f220&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -1120,47 +934,47 @@
 
         <li class="frame user">
 
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/utils/encoders.py</code>, line 50, in default
+            <code class="fname">/home/s236085/public_html/Genealogy_tree/API/views.py</code>, line 179, in post
 
 
 
-            <div class="context" id="c22516048823552">
+            <div class="context" id="c22958213443072">
 
-                <ol start="43" class="pre-context" id="pre22516048823552">
+                <ol start="172" class="pre-context" id="pre22958213443072">
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            return float(obj)</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                serializer.is_valid(raise_exception=True)</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>        elif isinstance(obj, uuid.UUID):</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                serializer.validated_data</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            return str(obj)</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            except Exception as exce:</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>        elif isinstance(obj, QuerySet):</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                logging.error(&quot;Exception&quot;, exc_info=True)</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            return tuple(obj)</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                return error_json_response(http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>        elif isinstance(obj, bytes):</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                                           message=f&#x27;Ð¾ÑÐ¸Ð±ÐºÐ° ÑÐµÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸, {exce.args}&#x27;, )</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            # Best-effort for binary blobs. See #4187.</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre></pre></li>
 
                 </ol>
 
-              <ol start="50" class="context-line">
-                <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            return obj.decode()</pre> <span>â¦</span></li>
+              <ol start="179" class="context-line">
+                <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            curPerson = serializer.save()</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='51' class="post-context" id="post22516048823552">
+                <ol start='180' class="post-context" id="post22958213443072">
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>        elif hasattr(obj, &#x27;tolist&#x27;):</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            curPerson.mainPhoto = file_path</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            # Numpy arrays and array scalars.</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            return obj.tolist()</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            logging.debug(msg=f&#x27;{str(curPerson)} Ð²Ð½ÐµÑÐµÐ½&#x27;)</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>        elif (coreapi is not None) and isinstance(obj, (coreapi.Document, coreapi.Error)):</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>            raise RuntimeError(</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            data = {&quot;id&quot;: curPerson.id,</pre></li>
 
-                  <li onclick="toggle('pre22516048823552', 'post22516048823552')"><pre>                &#x27;Cannot return a coreapi object from a JSON view. &#x27;</pre></li>
+                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                    &quot;person&quot;: str(curPerson),</pre></li>
 
               </ol>
 
@@ -1170,10 +984,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22516048823552')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '22958213443072')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22516048823552">
+            <table class="vars" id="v22958213443072">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1183,33 +997,404 @@
               <tbody>
 
                   <tr>
-                    <td>__class__</td>
-                    <td class="code"><pre>&lt;class &#x27;rest_framework.utils.encoders.JSONEncoder&#x27;&gt;</pre></td>
+                    <td>_</td>
+                    <td class="code"><pre>&#x27;AAHa40m7AutDRvcOkZ_p8NyNUStNfCYZLUk&#x27;</pre></td>
                   </tr>
 
                   <tr>
-                    <td>obj</td>
-                    <td class="code"><pre>(b&#x27;\xff\xd8\xff\xe1+\xfeExif\x00\x00II*\x00\x08\x00\x00\x00\t\x00\x0f\x01&#x27;
- b&#x27;\x02\x00\x06\x00\x00\x00z\x00\x00\x00\x10\x01\x02\x00\x19\x00&#x27;
- b&#x27;\x00\x00\x80\x00\x00\x00\x12\x01\x03\x00\x01\x00\x00\x00\x01\x00&#x27;
- b&#x27;\x00\x00\x1a\x01\x05\x00\x01\x00\x00\x00\xa0\x00\x00\x00\x1b\x01&#x27;
- b&#x27;\x05\x00\x01\x00\x00\x00\xa8\x00\x00\x00(\x01\x03\x00\x01\x00&#x27;
- b&#x27;\x00\x00\x02\x00\x00\x002\x01\x02\x00\x14\x00\x00\x00\xb0\x00&#x27;
- b&#x27;\x00\x00\x13\x02\x03\x00\x01\x00\x00\x00\x01\x00\x00\x00i\x87&#x27;
- b&#x27;\x04\x00\x01\x00\x00\x00\xc4\x00\x00\x00\xd0\x0c\x00\x00Canon\x00Canon DI&#x27;
- b&#x27;GITAL IXUS 80 IS\x00\x00\x00\x00\x00\x00\x00\x00\xb4\x00\x00\x00&#x27;
- b&#x27;\x01\x00\x00\x00\xb4\x00\x00\x00\x01\x00\x00\x002011:07:14 16:41:17\x00&#x27;
- b&#x27; \x00\x9a\x82\x05\x00\x01\x00\x00\x00J\x02\x00\x00\x9d\x82\x05\x00\x01\x00&#x27;
- b&quot;\x00\x00R\x02\x00\x00&#x27;\x88\x03\x00\x01\x00\x00\x00P\x00\x00\x00\x00\x90&quot;
- b&#x27;\x07\x00\x04\x00\x00\x000220\x03\x90\x02\x00\x14\x00\x00\x00Z\x02&#x27;
- b&#x27;\x00\x00\x04\x90\x02\x00\x14\x00\x00\x00n\x02\x00\x00\x01\x91&#x27;
- b&#x27;\x07\x00\x04\x00\x00\x00\x01\x02\x03\x00\x02\x91\x05\x00\x01\x00&#x27;
- b&#x27;\x00\x00\x82\x02\x00\x00\x01\x92\n&#x27;)</pre></td>
+                    <td>file_path</td>
+                    <td class="code"><pre>&#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>json_data</td>
+                    <td class="code"><pre>{&#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;,
+ &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;,
+ &#x27;death_date&#x27;: None,
+ &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;,
+ &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;,
+ &#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;,
+ &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;,
+ &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1340230 bytes string&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>my_the_photo</td>
+                    <td class="code"><pre>&#x27;img/100_0980_kKT3QPE.jpg&#x27;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>path_or_exist_or_error</td>
+                    <td class="code"><pre>&#x27;exist&#x27;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: POST &#x27;/genealogy/api/persons/&#x27;&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;rest_framework.utils.encoders.JSONEncoder object at 0x147a6d64f220&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>serializer</td>
+                    <td class="code"><pre>PersonSerializer(data={&#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;, &#x27;previous_last_name&#x27;: None, &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;, &#x27;middle_name&#x27;: &#x27;ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&#x27;, &#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;, &#x27;death_date&#x27;: None, &#x27;sex&#x27;: &#x27;M&#x27;, &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;, &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÐ¸Ð½Ð° ÐÐºÐ¸Ð¼Ð¾Ð²Ð½Ð°&gt;, &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;, &#x27;who_married&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;, &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;, &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1341975 bytes string&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>temp_photo_file</td>
+                    <td class="code"><pre>(b&#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAA&#x27;
+ b&#x27;ABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAA&#x27;
+ b&#x27;AgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+&#x27;
+ b&#x27;V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwr&#x27;
+ b&#x27;Z+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzyp&#x27;
+ b&#x27;Tu9h29nO8jsv////////////////////////////////////////////////////////////////&#x27;
+ b&#x27;/////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACM&#x27;
+ b&#x27;AAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEA&#x27;
+ b&#x27;AABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5ID&#x27;
+ b&#x27;AAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAw&#x27;
+ b&#x27;AaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+&#x27;
+ b&#x27;AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEA&#x27;
+ b&#x27;AAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QD&#x27;
+ b&#x27;AAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAA&#x27;
+ b&#x27;AAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABk&#x27;
+ b&#x27;AAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgCAABkAAAAjAAAAAEA&#x27;
+ b&#x27;AAAAAAAACgAAAEM2NDNFNDA4MjIwOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQXAgAAAAEAtHgB&#x27;
+ b&#x27;AAAAAQAAAAEAAAABAAAAAAAAAAAA8AgAAPAIAAAJPQAArwAAABEBjAABAQAAAAAAAQAAAABkAGQA&#x27;
+ b&#x27;AAB0DwIAzgAAAAAAAgBJSQAAAAAHAAAADAAAAB0AAADUAQAAKAAAABQAAAASAAAAFAAAACMAAACa&#x27;
+ b&#x27;AQAA+QAAABgAAAAXAAAAIgAAADIAAACBAQAAxwEAAFUAAAAvAAAAKwAAAJQAAABsAQAAQgEAAIkA&#x27;
+ b&#x27;AABtAAAACwAAAC8AAAAFBAAAQAAAABkAAAAZAAAAFgAAADYAAABeAwAADQIAAB0AAAAbAAAAMQAA&#x27;
+ b&#x27;AFAAAAABAwAA1wMAAJAAAAA9AAAASgAAAL4AAAAeAgAA2AEAAJoAAAB8AAAADQAAACkAAAALAwAA&#x27;
+ b&#x27;MgAAABYAAAAXAAAAEgAAACsAAACFAgAAkgEAABgAAAAWAAAAJgAAADsAAAAtAgAA5gIAAGoAAAAs&#x27;
+ b&#x27;AAAANgAAAIgAAABvAQAAPQEAAEwAAAA9AAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA&#x27;
+ b&#x27;AACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAA&#x27;
+ b&#x27;AIAAAACAAAAANAAAAAAAAABIAQAAAAAAAAAAAAAIAAAALAAAABgAAAAQAgAAmAEAACQAAAAIAAAA&#x27;
+ b&#x27;GAAAADAAAAD0AgAAhAAAADQAAAAMAAAAKAAAAKQAAACQAAAA1AAAAGQAAACMAAAAAAAAADAAAAB8&#x27;
+ b&#x27;AgAAJAAAAAAAAAAcAAAAHAAAAEgAAACIBAAADAQAAFAAAAAIAAAAfAAAADgAAAAgBgAAvAAAADQA&#x27;
+ b&#x27;AABIAAAAqAAAAKgAAADgAAAAjAAAAGAAAACYAAAAEAAAACQAAABMAQAAAAAAACgAAAAoAAAABAAA&#x27;
+ b&#x27;ADAAAABQAwAAoAIAABQAAAAQAAAATAAAAEgAAAB4BAAAhAAAAFAAAAAEAAAARAAAAGQAAABUAAAA&#x27;
+ b&#x27;WAAAADAAAABUAAAA4CUCAAAAAQDAZwEAAhIFAAAAIAECAAYAbAAJAAQAAwADAAcAYQA+AAQABAAH&#x27;
+ b&#x27;AAsAWgBpABIACAAJABsARwA/ABcAEgD///7/AQD///////////7/AAD///7//v////////8AAP7/&#x27;
+ b&#x27;/v////n/9//4//v//f///wAACQD/////AAD/////BgAHAP/////+//7/AQAIAP7//f////X/7//u&#x27;
+ b&#x27;//D/8/+AAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgABZACAA&#x27;
+ b&#x27;/wAaACUAGQAlACAACADxACgABABiAB0ACgD/AC0AdACZAEEAkQDQABAAGQAAAAAAAFBmAAAAAAAA&#x27;
+ b&#x27;AEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8t&#x27;
+ b&#x27;AAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAALDhfAPea///jkgMAAAABAFuAAABBtAAA+xUC&#x27;
+ b&#x27;AAAAAQDIdQEA4CUCAAAAAQDAZwEAIAAAAP8AAAAaAAAAJQAAABkAAAAlAAAAIAAAAAgAAADxAAAA&#x27;
+ b&#x27;KAAAAAQAAABiAAAAHQAAAAoAAAD/AAAALQAAAHQAAACZAAAAQQAAAJEAAADQAAAAEAAAABkAAAAA&#x27;
+ b&#x27;AAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA&#x27;
+ b&#x27;/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
+ b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAâ¦ &lt;trimmed 1427889 bytes string&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>temp_the_photo</td>
+                    <td class="code"><pre>&#x27;/media/img/100_0980_kKT3QPE.jpg&#x27;</pre></td>
+                  </tr>
+
+              </tbody>
+            </table>
+
+        </li>
+
+
+        <li class="frame user">
+
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/serializers.py</code>, line 212, in save
+
+
+
+            <div class="context" id="c22958213440320">
+
+                <ol start="205" class="pre-context" id="pre22958213440320">
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>        if self.instance is not None:</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            self.instance = self.update(self.instance, validated_data)</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            assert self.instance is not None, (</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>                &#x27;`update()` did not return an object instance.&#x27;</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            )</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>        else:</pre></li>
+
+                </ol>
+
+              <ol start="212" class="context-line">
+                <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            self.instance = self.create(validated_data)</pre> <span>â¦</span></li>
+              </ol>
+
+                <ol start='213' class="post-context" id="post22958213440320">
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            assert self.instance is not None, (</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>                &#x27;`create()` did not return an object instance.&#x27;</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            )</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>        return self.instance</pre></li>
+
+                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre></pre></li>
+
+              </ol>
+
+            </div>
+
+
+
+            <div class="commands">
+
+                    <a href="#" onclick="return varToggle(this, '22958213440320')"><span>&#x25b6;</span> Local vars</a>
+
+            </div>
+            <table class="vars" id="v22958213440320">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>PersonSerializer(data={&#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;, &#x27;previous_last_name&#x27;: None, &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;, &#x27;middle_name&#x27;: &#x27;ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&#x27;, &#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;, &#x27;death_date&#x27;: None, &#x27;sex&#x27;: &#x27;M&#x27;, &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;, &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÐ¸Ð½Ð° ÐÐºÐ¸Ð¼Ð¾Ð²Ð½Ð°&gt;, &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;, &#x27;who_married&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;, &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;, &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgCAABkAAAAjAAAAAEAAAAAAAAACgAAAEM2NDNFNDA4MjIwOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQXAgAAAAEAtHgBAAAAAQAAAAEAAAABAAAAAAAAAAAA8AgAAPAIAAAJPQAArwAAABEBjAABAQAAAAAAAQAAAABkAGQAAAB0DwIAzgAAAAAAAgBJSQAAAAAHAAAADAAAAB0AAADUAQAAKAAAABQAAAASAAAAFAAAACMAAACaAQAA+QAAABgAAAAXAAAAIgAAADIAAACBAQAAxwEAAFUAAAAvAAAAKwAAAJQAAABsAQAAQgEAAIkAAABtAAAACwAAAC8AAAAFBAAAQAAAABkAAAAZAAAAFgAAADYAAABeAwAADQIAAB0AAAAbAAAAMQAAAFAAAAABAwAA1wMAAJAAAAA9AAAASgAAAL4AAAAeAgAA2AEAAJoAAAB8AAAADQAAACkAAAALAwAAMgAAABYAAAAXAAAAEgAAACsAAACFAgAAkgEAABgAAAAWAAAAJgAAADsAAAAtAgAA5gIAAGoAAAAsAAAANgAAAIgAAABvAQAAPQEAAEwAAAA9AAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAANAAAAAAAAABIAQAAAAAAAAAAAAAIAAAALAAAABgAAAAQAgAAmAEAACQAAAAIAAAAGAAAADAAAAD0AgAAhAAAADQAAAAMAAAAKAAAAKQAAACQAAAA1AAAAGQAAACMAAAAAAAAADAAAAB8AgAAJAAAAAAAAAAcAAAAHAAAAEgAAACIBAAADAQAAFAAAAAIAAAAfAAAADgAAAAgBgAAvAAAADQAAABIAAAAqAAAAKgAAADgAAAAjAAAAGAAAACYAAAAEAAAACQAAABMAQAAAAAAACgAAAAoAAAABAAAADAAAABQAwAAoAIAABQAAAAQAAAATAAAAEgAAAB4BAAAhAAAAFAAAAAEAAAARAAAAGQAAABUAAAAWAAAADAAAABUAAAA4CUCAAAAAQDAZwEAAhIFAAAAIAECAAYAbAAJAAQAAwADAAcAYQA+AAQABAAHAAsAWgBpABIACAAJABsARwA/ABcAEgD///7/AQD///////////7/AAD///7//v////////8AAP7//v////n/9//4//v//f///wAACQD/////AAD/////BgAHAP/////+//7/AQAIAP7//f////X/7//u//D/8/+AAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgABZACAA/wAaACUAGQAlACAACADxACgABABiAB0ACgD/AC0AdACZAEEAkQDQABAAGQAAAAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAALDhfAPea///jkgMAAAABAFuAAABBtAAA+xUCAAAAAQDIdQEA4CUCAAAAAQDAZwEAIAAAAP8AAAAaAAAAJQAAABkAAAAlAAAAIAAAAAgAAADxAAAAKAAAAAQAAABiAAAAHQAAAAoAAAD/AAAALQAAAHQAAACZAAAAQQAAAJEAAADQAAAAEAAAABkAAAAAAAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAâ¦ &lt;trimmed 1341975 bytes string&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>validated_data</td>
+                    <td class="code"><pre>{&#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;,
+ &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;,
+ &#x27;death_date&#x27;: None,
+ &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;,
+ &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;,
+ &#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;,
+ &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;,
+ &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgCAABkAAAAjAAAAAEAAAAAAAAACgAAAEM2NDNFNDA4MjIwOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQXAgAAAAEAtHgBAAAAAQAAAAEAAAABAAAAAAAAAAAA8AgAAPAIAAAJPQAArwAAABEBjAABAQAAAAAAAQAAAABkAGQAAAB0DwIAzgAAAAAAAgBJSQAAAAAHAAAADAAAAB0AAADUAQAAKAAAABQAAAASAAAAFAAAACMAAACaAQAA+QAAABgAAAAXAAAAIgAAADIAAACBAQAAxwEAAFUAAAAvAAAAKwAAAJQAAABsAQAAQgEAAIkAAABtAAAACwAAAC8AAAAFBAAAQAAAABkAAAAZAAAAFgAAADYAAABeAwAADQIAAB0AAAAbAAAAMQAAAFAAAAABAwAA1wMAAJAAAAA9AAAASgAAAL4AAAAeAgAA2AEAAJoAAAB8AAAADQAAACkAAAALAwAAMgAAABYAAAAXAAAAEgAAACsAAACFAgAAkgEAABgAAAAWAAAAJgAAADsAAAAtAgAA5gIAAGoAAAAsAAAANgAAAIgAAABvAQAAPQEAAEwAAAA9AAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAANAAAAAAAAABIAQAAAAAAAAAAAAAIAAAALAAAABgAAAAQAgAAmAEAACQAAAAIAAAAGAAAADAAAAD0AgAAhAAAADQAAAAMAAAAKAAAAKQAAACQAAAA1AAAAGQAAACMAAAAAAAAADAAAAB8AgAAJAAAAAAAAAAcAAAAHAAAAEgAAACIBAAADAQAAFAAAAAIAAAAfAAAADgAAAAgBgAAvAAAADQAAABIAAAAqAAAAKgAAADgAAAAjAAAAGAAAACYAAAAEAAAACQAAABMAQAAAAAAACgAAAAoAAAABAAAADAAAABQAwAAoAIAABQAAAAQAAAATAAAAEgAAAB4BAAAhAAAAFAAAAAEAAAARAAAAGQAAABUAAAAWAAAADAAAABUAAAA4CUCAAAAAQDAZwEAAhIFAAAAIAECAAYAbAAJAAQAAwADAAcAYQA+AAQABAAHAAsAWgBpABIACAAJABsARwA/ABcAEgD///7/AQD///////////7/AAD///7//v////////8AAP7//v////n/9//4//v//f///wAACQD/////AAD/////BgAHAP/////+//7/AQAIAP7//f////X/7//u//D/8/+AAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgABZACAA/wAaACUAGQAlACAACADxACgABABiAB0ACgD/AC0AdACZAEEAkQDQABAAGQAAAAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAALDhfAPea///jkgMAAAABAFuAAABBtAAA+xUCAAAAAQDIdQEA4CUCAAAAAQDAZwEAIAAAAP8AAAAaAAAAJQAAABkAAAAlAAAAIAAAAAgAAADxAAAAKAAAAAQAAABiAAAAHQAAAAoAAAD/AAAALQAAAHQAAACZAAAAQQAAAJEAAADQAAAAEAAAABkAAAAAAAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAâ¦ &lt;trimmed 1340209 bytes string&gt;</pre></td>
+                  </tr>
+
+              </tbody>
+            </table>
+
+        </li>
+
+
+        <li class="frame user">
+
+            <code class="fname">/home/s236085/public_html/Genealogy_tree/API/serializer.py</code>, line 87, in create
+
+
+
+            <div class="context" id="c22958213442240">
+
+                <ol start="80" class="pre-context" id="pre22958213442240">
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>                b_string= validated_data[&#x27;mainPhotofile&#x27;],</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>                file_path= &#x27;img&#x27; + validated_data[&#x27;mainPhoto&#x27;][validated_data[&#x27;mainPhoto&#x27;].rfind(&#x27;/&#x27;):]</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>            )</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        person = Person.objects.create(**validated_data)</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>      #  person.mainPhoto = m_p_file</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        for p_photo in pers_photo_data:</pre></li>
+
+                </ol>
+
+              <ol start="87" class="context-line">
+                <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>            person.pers_photo.update(Photo.objects.get(pk=p_photo))</pre> <span>â¦</span></li>
+              </ol>
+
+                <ol start='88' class="post-context" id="post22958213442240">
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        return person</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>    def to_representation(self, instance):</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        instance.mother = None</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        instance.father = None</pre></li>
+
+                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        instance.who_married = None</pre></li>
+
+              </ol>
+
+            </div>
+
+
+
+            <div class="commands">
+
+                    <a href="#" onclick="return varToggle(this, '22958213442240')"><span>&#x25b6;</span> Local vars</a>
+
+            </div>
+            <table class="vars" id="v22958213442240">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                  <tr>
+                    <td>_recovery_picture_from_bynaryfield</td>
+                    <td class="code"><pre>&lt;function _recovery_picture_from_bynaryfield at 0x14e182c36a60&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>m_p_file</td>
+                    <td class="code"><pre>&#x27;error&#x27;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>p_photo</td>
+                    <td class="code"><pre>13</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>pers_photo_data</td>
+                    <td class="code"><pre>[13]</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>person</td>
+                    <td class="code"><pre>&lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ°Ð»ÐµÑÐ¸Ð¹ ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>PersonSerializer(data={&#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;, &#x27;previous_last_name&#x27;: None, &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;, &#x27;middle_name&#x27;: &#x27;ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&#x27;, &#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;, &#x27;death_date&#x27;: None, &#x27;sex&#x27;: &#x27;M&#x27;, &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;, &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÐ¸Ð½Ð° ÐÐºÐ¸Ð¼Ð¾Ð²Ð½Ð°&gt;, &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;, &#x27;who_married&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;, &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;, &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1341975 bytes string&gt;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>validated_data</td>
+                    <td class="code"><pre>{&#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;,
+ &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;,
+ &#x27;death_date&#x27;: None,
+ &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;,
+ &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;,
+ &#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;,
+ &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;,
+ &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1340209 bytes string&gt;</pre></td>
+                  </tr>
+
+              </tbody>
+            </table>
+
+        </li>
+
+
+        <li class="frame django">
+
+            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/db/models/manager.py</code>, line 85, in manager_method
+
+
+
+            <div class="context" id="c22958213440768">
+
+                <ol start="78" class="pre-context" id="pre22958213440768">
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>    def check(self, **kwargs):</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        return []</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>    @classmethod</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>    def _get_queryset_methods(cls, queryset_class):</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        def create_method(name, method):</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            def manager_method(self, *args, **kwargs):</pre></li>
+
+                </ol>
+
+              <ol start="85" class="context-line">
+                <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>                return getattr(self.get_queryset(), name)(*args, **kwargs)</pre> <span>â¦</span></li>
+              </ol>
+
+                <ol start='86' class="post-context" id="post22958213440768">
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            manager_method.__name__ = method.__name__</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            manager_method.__doc__ = method.__doc__</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            return manager_method</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre></pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        new_methods = {}</pre></li>
+
+                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        for name, method in inspect.getmembers(queryset_class, predicate=inspect.isfunction):</pre></li>
+
+              </ol>
+
+            </div>
+
+
+
+            <div class="commands">
+
+                    <a href="#" onclick="return varToggle(this, '22958213440768')"><span>&#x25b6;</span> Local vars</a>
+
+            </div>
+            <table class="vars" id="v22958213440768">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>(&lt;Photo: /home/s236085/public_html/Genealogy_tree/media/img/IMG_2352.JPG&gt;,)</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>name</td>
+                    <td class="code"><pre>&#x27;update&#x27;</pre></td>
+                  </tr>
+
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.&lt;locals&gt;.ManyRelatedManager object at 0x14e1602cdee0&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -1224,7 +1409,7 @@
   <div id="pastebinTraceback" class="pastebin">
     <input type="hidden" name="language" value="PythonConsole">
     <input type="hidden" name="title"
-      value="UnicodeDecodeError at /api/photos/">
+      value="TypeError at /api/persons/">
     <input type="hidden" name="source" value="Django Dpaste Agent">
     <input type="hidden" name="poster" value="Django">
     <textarea name="content" id="traceback_area" cols="140" rows="25">
@@ -1232,7 +1417,7 @@ Environment:
 
 
 Request Method: POST
-Request URL: https://komlyakov.ru/genealogy/api/photos/
+Request URL: https://komlyakov.ru/genealogy/api/persons/
 
 Django Version: 3.2.5
 Python Version: 3.8.12
@@ -1262,27 +1447,31 @@ Installed Middleware:
 Traceback (most recent call last):
   File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
     response = get_response(request)
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
-    response = response.render()
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/template/response.py", line 105, in render
-    self.content = self.rendered_content
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
-    ret = renderer.render(self.data, accepted_media_type, context)
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/renderers.py", line 99, in render
-    ret = json.dumps(
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
-    return json.dumps(*args, **kwargs)
-  File "/opt/alt/python38/lib64/python3.8/json/__init__.py", line 234, in dumps
-    return cls(
-  File "/opt/alt/python38/lib64/python3.8/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/opt/alt/python38/lib64/python3.8/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 50, in default
-    return obj.decode()
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/s236085/public_html/Genealogy_tree/API/views.py", line 179, in post
+    curPerson = serializer.save()
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/s236085/public_html/Genealogy_tree/API/serializer.py", line 87, in create
+    person.pers_photo.update(Photo.objects.get(pk=p_photo))
+  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
 
-Exception Type: UnicodeDecodeError at /api/photos/
-Exception Value: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position 0: invalid start byte
+Exception Type: TypeError at /api/persons/
+Exception Value: update() takes 1 positional argument but 2 were given
 </textarea>
   <br><br>
   <input type="submit" value="Share this traceback on a public website">
@@ -1333,7 +1522,7 @@ Exception Value: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position
 
         <tr>
           <td>CONTENT_LENGTH</td>
-          <td class="code"><pre>&#x27;5801191&#x27;</pre></td>
+          <td class="code"><pre>&#x27;1340322&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1388,7 +1577,7 @@ Exception Value: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position
 
         <tr>
           <td>PATH_INFO</td>
-          <td class="code"><pre>&#x27;/api/photos/&#x27;</pre></td>
+          <td class="code"><pre>&#x27;/api/persons/&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1403,7 +1592,7 @@ Exception Value: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position
 
         <tr>
           <td>REMOTE_PORT</td>
-          <td class="code"><pre>&#x27;50674&#x27;</pre></td>
+          <td class="code"><pre>&#x27;50006&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1413,7 +1602,7 @@ Exception Value: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position
 
         <tr>
           <td>REQUEST_URI</td>
-          <td class="code"><pre>&#x27;/genealogy/api/photos/&#x27;</pre></td>
+          <td class="code"><pre>&#x27;/genealogy/api/persons/&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1444,7 +1633,7 @@ Exception Value: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position
 
         <tr>
           <td>UNIQUE_ID</td>
-          <td class="code"><pre>&#x27;Y5GfgYgFGRX3P3caDt7CBgAAAAE&#x27;</pre></td>
+          <td class="code"><pre>&#x27;Y5zfhQFDHunfR5c6LEWVNwAAAAE&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1459,7 +1648,7 @@ Exception Value: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position
 
         <tr>
           <td>wsgi.input</td>
-          <td class="code"><pre>&lt;_io.BufferedReader name=8&gt;</pre></td>
+          <td class="code"><pre>&lt;_io.BufferedReader name=5&gt;</pre></td>
         </tr>
 
         <tr>

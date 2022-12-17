@@ -1,5 +1,7 @@
 import os
 from itertools import zip_longest
+from typing import Union
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
@@ -42,7 +44,7 @@ def check_person(person):
 def sorted_person_list(mylist):
     return sorted(sorted(mylist, key=lambda x: x.first_name), key=lambda y: y.last_name)
 
-def get_person_or_default (person_id, pk):
+def _get_pers_or_default_for_arrows (person_id, pk):
     if person_id:
         return person_id
     else:
@@ -218,8 +220,6 @@ def fam_tree_schema (request, pk):
             married = True
         children_of_person = persons_in_center(children_of_person, married)
 
-
-
         main_father = check_person(main_person.father)
         main_mother = check_person(main_person.mother)
         parents = [None, None, main_father, None, None, None, main_mother, None]
@@ -266,7 +266,7 @@ def fam_tree_schema (request, pk):
 
 
 
-def moving_by_arrows (request, pk, arrow):
+def moving_by_arrows (request, pk: Union[str, int], arrow: Union[str, int]):
     # id = request.GET.get('id')
     # num_of_arrow = request.GET.get('num_of_arrow')
     cur_person = Person.objects.get(pk=pk)
@@ -278,13 +278,13 @@ def moving_by_arrows (request, pk, arrow):
     elif arrow == 2:
         # up
         if cur_person.sex == 'M':
-            new_pk = get_person_or_default(cur_person.father_id, get_person_or_default(cur_person.mother_id, pk))
+            new_pk = _get_pers_or_default_for_arrows(cur_person.father_id, _get_pers_or_default_for_arrows(cur_person.mother_id, pk))
         else:
-            new_pk = get_person_or_default(cur_person.mother_id, get_person_or_default (cur_person.father_id, pk))
+            new_pk = _get_pers_or_default_for_arrows(cur_person.mother_id, _get_pers_or_default_for_arrows (cur_person.father_id, pk))
 
     elif arrow == 3:
         # right
-        new_pk = get_person_or_default(cur_person.who_married_id, pk)
+        new_pk = _get_pers_or_default_for_arrows(cur_person.who_married_id, pk)
     elif arrow == 4:
         # down
         if num_of_children(cur_person):
@@ -363,16 +363,24 @@ class Delete_person(PermissionRequiredMixin, View):
             'object': cur_person,
                 })
     def post(self, request, pk):
-            cur_person = Person.objects.get(id = pk)
-            cur_person.mother = None
-            cur_person.father = None
-            if cur_person.who_married:
-                cur_person.who_married.who_married = None
-                cur_person.who_married.save()
-            cur_person.who_married = None
-            #cur_person.save()
-            cur_person.delete()
-            return HttpResponseRedirect (reverse('persons_list'))
+        cur_person = Person.objects.get(id=pk)
+        childen = num_of_children(cur_person=cur_person)
+        for child in childen:
+            if child.mother == cur_person:
+                child.mother = None
+                child.save()
+            if child.father == cur_person:
+                child.father = None
+                child.save()
+
+        cur_person.mother = None
+        cur_person.father = None
+        if cur_person.who_married:
+            cur_person.who_married.who_married = None
+            cur_person.who_married.save()
+        cur_person.who_married = None
+        cur_person.delete()
+        return HttpResponseRedirect(reverse('persons_list'))
 
 
 """    

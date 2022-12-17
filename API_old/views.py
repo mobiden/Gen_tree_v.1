@@ -12,29 +12,22 @@ import logging
 from rest_framework.views import APIView as AV
 from rest_framework.generics import RetrieveUpdateAPIView, get_object_or_404
 # from .models import User, Users_likes, Posts
-from Gen_tree.settings import RAW_CONFIG, MEDIA_ROOT, DEBUG
+from Gen_tree.settings import RAW_CONFIG, MEDIA_ROOT
 from gtree_db.models import Photo, Person
 
 from .serializer import PhotoSerializer, PersonSerializer
 from .classes import UserJSONRenderer, API_var
 from .utils import json_response, error_json_response, _recovery_picture_from_bynaryfield, get_json_data, \
-    person_sending, check_person_in_sent, send_request, create_logs
+    person_sending, check_person_in_sent, send_request
+
+
+
 
 
 def send_dataset(request):
     api_var = API_var()
     # sending photo
-    if DEBUG:
-        debug_list = [{'img/189.jpg': 21}, {'img/FV4_8302.jpg': 7}, {'img/IMG_0322.JPG': 8},
-                  {'img/IMG_1885.JPG': 9}, {'img/07012009001.jpg': 10}, {'img/%D1%87-%D0%B1.jpg': 11},
-                  {'img/IMG_2204.JPG': 12}, {'img/IMG_2352.JPG': 13}, {'img/IMG_2367.JPG': 14},
-                  {'img/IMG_5899.JPG': 15}, {'img/IMG_6160.JPG': 16}, {'img/IMG_5463.JPG': 17},
-                  {'img/IMG_5793.JPG': 18}, {'img/IMG_1976.JPG': 19}, {'img/FV4_8305.jpg': 20}
-                  ]
-        api_var.sent_photos = debug_list
-    else:
-        photos_sending(api_var)
-
+    photos_sending(api_var)
     #sending persons
     api_var.persons_set = set(Person.objects.all())
     while len(api_var.persons_set) > 0:
@@ -45,7 +38,6 @@ def send_dataset(request):
 
 
 def photos_sending(api_var:API_var):
-
     for photo in Photo.objects.all():
         data = PhotoSerializer(photo).data
         data['token'] = RAW_CONFIG['API']['token']
@@ -84,8 +76,7 @@ def sending_person(person: Person, api_var: API_var, check_married:bool = True):
     if person.who_married and check_married:
         temp_person = check_person_in_sent(person.who_married, api_var)
         if not temp_person:
-            temporary_person = person.who_married
-            temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
+            temp_person = sending_person(person.who_married, api_var=api_var, check_married=False)
         cur_context.update({'who_married': int(temp_person['id'])})
 
     json = (person_sending(person, context=cur_context)).json()
@@ -95,7 +86,7 @@ def sending_person(person: Person, api_var: API_var, check_married:bool = True):
         api_var.wrong_persons_record.append(person)
     else:
         sent_person = {'id': json['data']['id'], 'person': person}
-        api_var.sent_persons.append(sent_person)
+        api_var.sent_persons.add(sent_person)
         if person in api_var.persons_set:
             api_var.persons_set.remove(person)
     return sent_person
@@ -122,14 +113,15 @@ class PhotoView(AV):
         temp_comments = json_data['comments']
         logging.debug(msg=my_the_photo)
 
-        path_or_exist_or_error = _recovery_picture_from_bynaryfield(b_string=temp_photo_file,
+        ans_0save1cant_save2already_exist = _recovery_picture_from_bynaryfield(b_string=temp_photo_file,
                                                file_path= str(MEDIA_ROOT) + '/' + my_the_photo,
                                                         )
-        if path_or_exist_or_error == "exist" and Photo.objects.filter(the_photo__exact=my_the_photo).first():
+        if ans_0save1cant_save2already_exist == 2 and Photo.objects.filter(the_photo__exact=my_the_photo).first():
             old_photo = Photo.objects.filter(the_photo__exact=my_the_photo).first()
-            create_logs(f'id: {old_photo.id}, photo: {old_photo.the_photo} \n')
+            with open('logs.txt', 'r') as l:
+                l.write(f'id: {old_photo.id}, photo: {old_photo.the_photo} \n')
             data = {"id": old_photo.id,
-                    "photo": my_the_photo,
+                    "photo": old_photo.the_photo,
                     }
 
         else:
@@ -152,7 +144,6 @@ class PersonView(AV):
 ##
         def post(self, request: Request):
             json_data = get_json_data(request=request, token=RAW_CONFIG['API']['token'])
-
             _ = json_data.pop('token', None)
             temp_the_photo = json_data['mainPhoto']
             json_data['mainPhoto'] = None
@@ -161,12 +152,14 @@ class PersonView(AV):
             logging.debug(msg=my_the_photo)
             file_path = str(MEDIA_ROOT) + '/' + my_the_photo
             path_or_exist_or_error = _recovery_picture_from_bynaryfield(
-                        b_string=temp_photo_file,
-                        file_path=file_path,
-                                                                 )
+                b_string=temp_photo_file,
+                file_path=file_path,
+            )
 
-           # json_data['path_to_file'] = file_path
+            # json_data['path_to_file'] = file_path
             json_data['mainPhoto'] = file_path
+
+
             serializer = PersonSerializer(data=json_data)
             try:
                 serializer.is_valid(raise_exception=True)
@@ -177,7 +170,6 @@ class PersonView(AV):
                                            message=f'ошибка сериализации, {exce.args}', )
 
             curPerson = serializer.save()
-            curPerson.mainPhoto = file_path
 
             logging.debug(msg=f'{str(curPerson)} внесен')
 
