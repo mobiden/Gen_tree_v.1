@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="robots" content="NONE,NOARCHIVE">
-  <title>TypeError
+  <title>UnboundLocalError
           at /api/persons/</title>
   <style type="text/css">
     html * { padding:0; margin:0; }
@@ -105,9 +105,9 @@
 </head>
 <body>
 <div id="summary">
-  <h1>TypeError
+  <h1>UnboundLocalError
        at /api/persons/</h1>
-  <pre class="exception_value">update() takes 1 positional argument but 2 were given</pre>
+  <pre class="exception_value">local variable &#x27;file_path&#x27; referenced before assignment</pre>
   <table class="meta">
 
     <tr>
@@ -126,19 +126,19 @@
 
     <tr>
       <th>Exception Type:</th>
-      <td>TypeError</td>
+      <td>UnboundLocalError</td>
     </tr>
 
 
     <tr>
       <th>Exception Value:</th>
-      <td><pre>update() takes 1 positional argument but 2 were given</pre></td>
+      <td><pre>local variable &#x27;file_path&#x27; referenced before assignment</pre></td>
     </tr>
 
 
     <tr>
       <th>Exception Location:</th>
-      <td><span class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/db/models/manager.py</span>, line 85, in manager_method</td>
+      <td><span class="fname">/home/s236085/public_html/Genealogy_tree/API/views.py</span>, line 184, in post</td>
     </tr>
 
     <tr>
@@ -161,7 +161,7 @@
     </tr>
     <tr>
       <th>Server time:</th>
-      <td>Fri, 16 Dec 2022 21:13:42 +0000</td>
+      <td>Thu, 22 Dec 2022 08:22:59 +0000</td>
     </tr>
   </table>
 </div>
@@ -183,43 +183,43 @@
 
 
 
-            <div class="context" id="c22958213582144">
+            <div class="context" id="c23060557376064">
 
-                <ol start="40" class="pre-context" id="pre22958213582144">
+                <ol start="40" class="pre-context" id="pre23060557376064">
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>                response = await sync_to_async(response_for_exception, thread_sensitive=False)(request, exc)</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>                response = await sync_to_async(response_for_exception, thread_sensitive=False)(request, exc)</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            return response</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>            return response</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>        return inner</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>    else:</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>    else:</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        @wraps(get_response)</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>        @wraps(get_response)</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        def inner(request):</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>        def inner(request):</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>            try:</pre></li>
 
                 </ol>
 
               <ol start="47" class="context-line">
-                <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>                response = get_response(request)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>                response = get_response(request)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='48' class="post-context" id="post22958213582144">
+                <ol start='48' class="post-context" id="post23060557376064">
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>            except Exception as exc:</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>                response = response_for_exception(request, exc)</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>                response = response_for_exception(request, exc)</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>            return response</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>            return response</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre>        return inner</pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213582144', 'post22958213582144')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557376064', 'post23060557376064')"><pre></pre></li>
 
               </ol>
 
@@ -229,10 +229,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213582144')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557376064')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213582144">
+            <table class="vars" id="v23060557376064">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -243,12 +243,12 @@
 
                   <tr>
                     <td>exc</td>
-                    <td class="code"><pre>TypeError(&#x27;update() takes 1 positional argument but 2 were given&#x27;)</pre></td>
+                    <td class="code"><pre>UnboundLocalError(&quot;local variable &#x27;file_path&#x27; referenced before assignment&quot;)</pre></td>
                   </tr>
 
                   <tr>
                     <td>get_response</td>
-                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x14e1823af040&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x14f956187f70&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -268,43 +268,43 @@
 
 
 
-            <div class="context" id="c22958213580992">
+            <div class="context" id="c23060557374656">
 
-                <ol start="174" class="pre-context" id="pre22958213580992">
+                <ol start="174" class="pre-context" id="pre23060557374656">
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>        if response is None:</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            if asyncio.iscoroutinefunction(wrapped_callback):</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>            if asyncio.iscoroutinefunction(wrapped_callback):</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>            try:</pre></li>
 
                 </ol>
 
               <ol start="181" class="context-line">
-                <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='182' class="post-context" id="post22958213580992">
+                <ol start='182' class="post-context" id="post23060557374656">
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>            except Exception as e:</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>            except Exception as e:</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                if response is None:</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>                if response is None:</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>                    raise</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>                    raise</pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213580992', 'post22958213580992')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  <li onclick="toggle('pre23060557374656', 'post23060557374656')"><pre>        # Complain if the view returned None (a common error).</pre></li>
 
               </ol>
 
@@ -314,10 +314,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213580992')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557374656')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213580992">
+            <table class="vars" id="v23060557374656">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -328,7 +328,7 @@
 
                   <tr>
                     <td>callback</td>
-                    <td class="code"><pre>&lt;function PersonView at 0x14e1608ca820&gt;</pre></td>
+                    <td class="code"><pre>&lt;function PersonView at 0x14f9346413a0&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -343,7 +343,7 @@
 
                   <tr>
                     <td>middleware_method</td>
-                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x14e18237cf70&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x14f9560ef280&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -358,12 +358,12 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x14e1823af040&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x14f956187f70&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>wrapped_callback</td>
-                    <td class="code"><pre>&lt;function PersonView at 0x14e1608ca820&gt;</pre></td>
+                    <td class="code"><pre>&lt;function PersonView at 0x14f9346413a0&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -378,35 +378,35 @@
 
 
 
-            <div class="context" id="c22958213582208">
+            <div class="context" id="c23060557376576">
 
-                <ol start="47" class="pre-context" id="pre22958213582208">
+                <ol start="47" class="pre-context" id="pre23060557376576">
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>def csrf_exempt(view_func):</pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>def csrf_exempt(view_func):</pre></li>
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    &quot;&quot;&quot;Mark a view function as being exempt from the CSRF view protection.&quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>    &quot;&quot;&quot;Mark a view function as being exempt from the CSRF view protection.&quot;&quot;&quot;</pre></li>
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    # view_func.csrf_exempt = True would also work, but decorators are nicer</pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>    # view_func.csrf_exempt = True would also work, but decorators are nicer</pre></li>
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    # if they don&#x27;t have side effects, so return a new function.</pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>    # if they don&#x27;t have side effects, so return a new function.</pre></li>
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    def wrapped_view(*args, **kwargs):</pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>    def wrapped_view(*args, **kwargs):</pre></li>
 
                 </ol>
 
               <ol start="54" class="context-line">
-                <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>        return view_func(*args, **kwargs)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>        return view_func(*args, **kwargs)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='55' class="post-context" id="post22958213582208">
+                <ol start='55' class="post-context" id="post23060557376576">
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    wrapped_view.csrf_exempt = True</pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>    wrapped_view.csrf_exempt = True</pre></li>
 
-                  <li onclick="toggle('pre22958213582208', 'post22958213582208')"><pre>    return wraps(view_func)(wrapped_view)</pre></li>
+                  <li onclick="toggle('pre23060557376576', 'post23060557376576')"><pre>    return wraps(view_func)(wrapped_view)</pre></li>
 
               </ol>
 
@@ -416,10 +416,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213582208')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557376576')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213582208">
+            <table class="vars" id="v23060557376576">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -440,7 +440,7 @@
 
                   <tr>
                     <td>view_func</td>
-                    <td class="code"><pre>&lt;function PersonView at 0x14e1608ca790&gt;</pre></td>
+                    <td class="code"><pre>&lt;function PersonView at 0x14f934641310&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -455,43 +455,43 @@
 
 
 
-            <div class="context" id="c22958213789056">
+            <div class="context" id="c23060557375040">
 
-                <ol start="63" class="pre-context" id="pre22958213789056">
+                <ol start="63" class="pre-context" id="pre23060557375040">
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            self = cls(**initkwargs)</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>            self = cls(**initkwargs)</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            self.setup(request, *args, **kwargs)</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>            self.setup(request, *args, **kwargs)</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            if not hasattr(self, &#x27;request&#x27;):</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>            if not hasattr(self, &#x27;request&#x27;):</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                raise AttributeError(</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>                raise AttributeError(</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                    &quot;%s instance has no &#x27;request&#x27; attribute. Did you override &quot;</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>                    &quot;%s instance has no &#x27;request&#x27; attribute. Did you override &quot;</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                    &quot;setup() and forget to call super()?&quot; % cls.__name__</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>                    &quot;setup() and forget to call super()?&quot; % cls.__name__</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>                )</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>                )</pre></li>
 
                 </ol>
 
               <ol start="70" class="context-line">
-                <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>            return self.dispatch(request, *args, **kwargs)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>            return self.dispatch(request, *args, **kwargs)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='71' class="post-context" id="post22958213789056">
+                <ol start='71' class="post-context" id="post23060557375040">
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        view.view_class = cls</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>        view.view_class = cls</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        view.view_initkwargs = initkwargs</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>        view.view_initkwargs = initkwargs</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        # take name and docstring from class</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>        # take name and docstring from class</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre>        update_wrapper(view, cls, updated=())</pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre>        update_wrapper(view, cls, updated=())</pre></li>
 
-                  <li onclick="toggle('pre22958213789056', 'post22958213789056')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557375040', 'post23060557375040')"><pre></pre></li>
 
               </ol>
 
@@ -501,10 +501,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213789056')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557375040')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213789056">
+            <table class="vars" id="v23060557375040">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -540,7 +540,7 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14f934541ee0&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -555,43 +555,43 @@
 
 
 
-            <div class="context" id="c22958213221888">
+            <div class="context" id="c23060557374144">
 
-                <ol start="502" class="pre-context" id="pre22958213221888">
+                <ol start="502" class="pre-context" id="pre23060557374144">
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>                                  self.http_method_not_allowed)</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>                                  self.http_method_not_allowed)</pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>            else:</pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>                handler = self.http_method_not_allowed</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>                handler = self.http_method_not_allowed</pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>            response = handler(request, *args, **kwargs)</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>            response = handler(request, *args, **kwargs)</pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>        except Exception as exc:</pre></li>
 
                 </ol>
 
               <ol start="509" class="context-line">
-                <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>            response = self.handle_exception(exc)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>            response = self.handle_exception(exc)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='510' class="post-context" id="post22958213221888">
+                <ol start='510' class="post-context" id="post23060557374144">
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        return self.response</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>        return self.response</pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>    def options(self, request, *args, **kwargs):</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>    def options(self, request, *args, **kwargs):</pre></li>
 
-                  <li onclick="toggle('pre22958213221888', 'post22958213221888')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre23060557374144', 'post23060557374144')"><pre>        &quot;&quot;&quot;</pre></li>
 
               </ol>
 
@@ -601,10 +601,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213221888')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557374144')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213221888">
+            <table class="vars" id="v23060557374144">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -620,7 +620,7 @@
 
                   <tr>
                     <td>handler</td>
-                    <td class="code"><pre>&lt;bound method PersonView.post of &lt;API.views.PersonView object at 0x14e16051d610&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method PersonView.post of &lt;API.views.PersonView object at 0x14f934541ee0&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -635,7 +635,7 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14f934541ee0&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -650,43 +650,43 @@
 
 
 
-            <div class="context" id="c22958213219456">
+            <div class="context" id="c23060557349376">
 
-                <ol start="462" class="pre-context" id="pre22958213219456">
+                <ol start="462" class="pre-context" id="pre23060557349376">
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        exception_handler = self.get_exception_handler()</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>        exception_handler = self.get_exception_handler()</pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        context = self.get_exception_handler_context()</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>        context = self.get_exception_handler_context()</pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        response = exception_handler(exc, context)</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>        response = exception_handler(exc, context)</pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>        if response is None:</pre></li>
 
                 </ol>
 
               <ol start="469" class="context-line">
-                <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>            self.raise_uncaught_exception(exc)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>            self.raise_uncaught_exception(exc)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='470' class="post-context" id="post22958213219456">
+                <ol start='470' class="post-context" id="post23060557349376">
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        response.exception = True</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>        response.exception = True</pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        return response</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>        return response</pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
 
-                  <li onclick="toggle('pre22958213219456', 'post22958213219456')"><pre>        if settings.DEBUG:</pre></li>
+                  <li onclick="toggle('pre23060557349376', 'post23060557349376')"><pre>        if settings.DEBUG:</pre></li>
 
               </ol>
 
@@ -696,10 +696,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213219456')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557349376')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213219456">
+            <table class="vars" id="v23060557349376">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -713,17 +713,17 @@
                     <td class="code"><pre>{&#x27;args&#x27;: (),
  &#x27;kwargs&#x27;: {},
  &#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/genealogy/api/persons/&#x27;&gt;,
- &#x27;view&#x27;: &lt;API.views.PersonView object at 0x14e16051d610&gt;}</pre></td>
+ &#x27;view&#x27;: &lt;API.views.PersonView object at 0x14f934541ee0&gt;}</pre></td>
                   </tr>
 
                   <tr>
                     <td>exc</td>
-                    <td class="code"><pre>TypeError(&#x27;update() takes 1 positional argument but 2 were given&#x27;)</pre></td>
+                    <td class="code"><pre>UnboundLocalError(&quot;local variable &#x27;file_path&#x27; referenced before assignment&quot;)</pre></td>
                   </tr>
 
                   <tr>
                     <td>exception_handler</td>
-                    <td class="code"><pre>&lt;function exception_handler at 0x14e182c1b550&gt;</pre></td>
+                    <td class="code"><pre>&lt;function exception_handler at 0x14f95697f5e0&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -733,7 +733,7 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14f934541ee0&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -748,43 +748,43 @@
 
 
 
-            <div class="context" id="c22958213219520">
+            <div class="context" id="c23060557350912">
 
-                <ol start="473" class="pre-context" id="pre22958213219520">
+                <ol start="473" class="pre-context" id="pre23060557350912">
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>        if settings.DEBUG:</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>        if settings.DEBUG:</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            request = self.request</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>            request = self.request</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            renderer_format = getattr(request.accepted_renderer, &#x27;format&#x27;)</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>            renderer_format = getattr(request.accepted_renderer, &#x27;format&#x27;)</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            use_plaintext_traceback = renderer_format not in (&#x27;html&#x27;, &#x27;api&#x27;, &#x27;admin&#x27;)</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>            use_plaintext_traceback = renderer_format not in (&#x27;html&#x27;, &#x27;api&#x27;, &#x27;admin&#x27;)</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>            request.force_plaintext_errors(use_plaintext_traceback)</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>            request.force_plaintext_errors(use_plaintext_traceback)</pre></li>
 
                 </ol>
 
               <ol start="480" class="context-line">
-                <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>        raise exc</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>        raise exc</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='481' class="post-context" id="post22958213219520">
+                <ol start='481' class="post-context" id="post23060557350912">
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    # Note: Views are made CSRF exempt from within `as_view` as to prevent</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>    # Note: Views are made CSRF exempt from within `as_view` as to prevent</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    # accidental removal of this exemption in cases where `dispatch` needs to</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>    # accidental removal of this exemption in cases where `dispatch` needs to</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    # be overridden.</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>    # be overridden.</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>    def dispatch(self, request, *args, **kwargs):</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>    def dispatch(self, request, *args, **kwargs):</pre></li>
 
-                  <li onclick="toggle('pre22958213219520', 'post22958213219520')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre23060557350912', 'post23060557350912')"><pre>        &quot;&quot;&quot;</pre></li>
 
               </ol>
 
@@ -794,10 +794,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213219520')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557350912')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213219520">
+            <table class="vars" id="v23060557350912">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -808,7 +808,7 @@
 
                   <tr>
                     <td>exc</td>
-                    <td class="code"><pre>TypeError(&#x27;update() takes 1 positional argument but 2 were given&#x27;)</pre></td>
+                    <td class="code"><pre>UnboundLocalError(&quot;local variable &#x27;file_path&#x27; referenced before assignment&quot;)</pre></td>
                   </tr>
 
                   <tr>
@@ -823,7 +823,7 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14f934541ee0&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -843,43 +843,43 @@
 
 
 
-            <div class="context" id="c22958213222336">
+            <div class="context" id="c23060557450112">
 
-                <ol start="499" class="pre-context" id="pre22958213222336">
+                <ol start="499" class="pre-context" id="pre23060557450112">
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            # Get the appropriate handler method</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>            # Get the appropriate handler method</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            if request.method.lower() in self.http_method_names:</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>            if request.method.lower() in self.http_method_names:</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>                handler = getattr(self, request.method.lower(),</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>                handler = getattr(self, request.method.lower(),</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>                                  self.http_method_not_allowed)</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>                                  self.http_method_not_allowed)</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>            else:</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>                handler = self.http_method_not_allowed</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>                handler = self.http_method_not_allowed</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre></pre></li>
 
                 </ol>
 
               <ol start="506" class="context-line">
-                <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            response = handler(request, *args, **kwargs)</pre> <span>â¦</span></li>
+                <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>            response = handler(request, *args, **kwargs)</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='507' class="post-context" id="post22958213222336">
+                <ol start='507' class="post-context" id="post23060557450112">
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>        except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>        except Exception as exc:</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>            response = self.handle_exception(exc)</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>            response = self.handle_exception(exc)</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
 
-                  <li onclick="toggle('pre22958213222336', 'post22958213222336')"><pre>        return self.response</pre></li>
+                  <li onclick="toggle('pre23060557450112', 'post23060557450112')"><pre>        return self.response</pre></li>
 
               </ol>
 
@@ -889,10 +889,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213222336')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557450112')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213222336">
+            <table class="vars" id="v23060557450112">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -908,7 +908,7 @@
 
                   <tr>
                     <td>handler</td>
-                    <td class="code"><pre>&lt;bound method PersonView.post of &lt;API.views.PersonView object at 0x14e16051d610&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method PersonView.post of &lt;API.views.PersonView object at 0x14f934541ee0&gt;&gt;</pre></td>
                   </tr>
 
                   <tr>
@@ -923,7 +923,7 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14f934541ee0&gt;</pre></td>
                   </tr>
 
               </tbody>
@@ -934,47 +934,47 @@
 
         <li class="frame user">
 
-            <code class="fname">/home/s236085/public_html/Genealogy_tree/API/views.py</code>, line 179, in post
+            <code class="fname">/home/s236085/public_html/Genealogy_tree/API/views.py</code>, line 184, in post
 
 
 
-            <div class="context" id="c22958213443072">
+            <div class="context" id="c23060557449792">
 
-                <ol start="172" class="pre-context" id="pre22958213443072">
+                <ol start="177" class="pre-context" id="pre23060557449792">
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                serializer.is_valid(raise_exception=True)</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>                serializer.validated_data</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                serializer.validated_data</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>            except Exception as exce:</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            except Exception as exce:</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>                logging.error(&quot;Exception&quot;, exc_info=True)</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                logging.error(&quot;Exception&quot;, exc_info=True)</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>                return error_json_response(http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                return error_json_response(http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>                                           message=f&#x27;Ð¾ÑÐ¸Ð±ÐºÐ° ÑÐµÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸, {exce.args}&#x27;, )</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                                           message=f&#x27;Ð¾ÑÐ¸Ð±ÐºÐ° ÑÐµÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸, {exce.args}&#x27;, )</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>            curPerson = serializer.save()</pre></li>
 
                 </ol>
 
-              <ol start="179" class="context-line">
-                <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            curPerson = serializer.save()</pre> <span>â¦</span></li>
+              <ol start="184" class="context-line">
+                <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>            curPerson.mainPhoto = file_path</pre> <span>â¦</span></li>
               </ol>
 
-                <ol start='180' class="post-context" id="post22958213443072">
+                <ol start='185' class="post-context" id="post23060557449792">
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            curPerson.mainPhoto = file_path</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>            logging.debug(msg=f&#x27;{str(curPerson)} Ð²Ð½ÐµÑÐµÐ½&#x27;)</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            logging.debug(msg=f&#x27;{str(curPerson)} Ð²Ð½ÐµÑÐµÐ½&#x27;)</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre></pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre></pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>            data = {&quot;id&quot;: curPerson.id,</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>            data = {&quot;id&quot;: curPerson.id,</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>                    &quot;person&quot;: str(curPerson),</pre></li>
 
-                  <li onclick="toggle('pre22958213443072', 'post22958213443072')"><pre>                    &quot;person&quot;: str(curPerson),</pre></li>
+                  <li onclick="toggle('pre23060557449792', 'post23060557449792')"><pre>                    }</pre></li>
 
               </ol>
 
@@ -984,10 +984,10 @@
 
             <div class="commands">
 
-                    <a href="#" onclick="return varToggle(this, '22958213443072')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '23060557449792')"><span>&#x25b6;</span> Local vars</a>
 
             </div>
-            <table class="vars" id="v22958213443072">
+            <table class="vars" id="v23060557449792">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1002,30 +1002,31 @@
                   </tr>
 
                   <tr>
-                    <td>file_path</td>
-                    <td class="code"><pre>&#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;</pre></td>
+                    <td>curPerson</td>
+                    <td class="code"><pre>&lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ¼Ð¸ÑÑÐ¸Ð¹ ÐÐ°Ð»ÐµÑÑÐµÐ²Ð¸Ñ&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>json_data</td>
-                    <td class="code"><pre>{&#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;,
- &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;,
+                    <td class="code"><pre>{&#x27;birth_date&#x27;: &#x27;1979-12-09&#x27;,
+ &#x27;comment&#x27;: &#x27;&#x27;,
  &#x27;death_date&#x27;: None,
- &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;,
- &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;,
+ &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ°Ð»ÐµÑÐ¸Ð¹ ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&gt;,
+ &#x27;first_name&#x27;: &#x27;ÐÐ¼Ð¸ÑÑÐ¸Ð¹&#x27;,
  &#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;,
- &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;,
- &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1340230 bytes string&gt;</pre></td>
+ &#x27;mainPhoto&#x27;: &#x27;img/Without%20photo.jpg&#x27;,
+ &#x27;mainPhotofile&#x27;: None,
+ &#x27;middle_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÑÐµÐ²Ð¸Ñ&#x27;,
+ &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;,
+ &#x27;pers_photo&#x27;: [],
+ &#x27;previous_last_name&#x27;: None,
+ &#x27;sex&#x27;: &#x27;M&#x27;,
+ &#x27;who_married&#x27;: None}</pre></td>
                   </tr>
 
                   <tr>
                     <td>my_the_photo</td>
-                    <td class="code"><pre>&#x27;img/100_0980_kKT3QPE.jpg&#x27;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>path_or_exist_or_error</td>
-                    <td class="code"><pre>&#x27;exist&#x27;</pre></td>
+                    <td class="code"><pre>&#x27;img/Without%20photo.jpg&#x27;</pre></td>
                   </tr>
 
                   <tr>
@@ -1035,366 +1036,31 @@
 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14e16051d610&gt;</pre></td>
+                    <td class="code"><pre>&lt;API.views.PersonView object at 0x14f934541ee0&gt;</pre></td>
                   </tr>
 
                   <tr>
                     <td>serializer</td>
-                    <td class="code"><pre>PersonSerializer(data={&#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;, &#x27;previous_last_name&#x27;: None, &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;, &#x27;middle_name&#x27;: &#x27;ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&#x27;, &#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;, &#x27;death_date&#x27;: None, &#x27;sex&#x27;: &#x27;M&#x27;, &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;, &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÐ¸Ð½Ð° ÐÐºÐ¸Ð¼Ð¾Ð²Ð½Ð°&gt;, &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;, &#x27;who_married&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;, &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;, &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1341975 bytes string&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>temp_photo_file</td>
-                    <td class="code"><pre>(b&#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAA&#x27;
- b&#x27;ABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAA&#x27;
- b&#x27;AgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+&#x27;
- b&#x27;V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwr&#x27;
- b&#x27;Z+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzyp&#x27;
- b&#x27;Tu9h29nO8jsv////////////////////////////////////////////////////////////////&#x27;
- b&#x27;/////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACM&#x27;
- b&#x27;AAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEA&#x27;
- b&#x27;AABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5ID&#x27;
- b&#x27;AAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAw&#x27;
- b&#x27;AaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+&#x27;
- b&#x27;AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEA&#x27;
- b&#x27;AAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QD&#x27;
- b&#x27;AAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAA&#x27;
- b&#x27;AAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABk&#x27;
- b&#x27;AAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgCAABkAAAAjAAAAAEA&#x27;
- b&#x27;AAAAAAAACgAAAEM2NDNFNDA4MjIwOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQXAgAAAAEAtHgB&#x27;
- b&#x27;AAAAAQAAAAEAAAABAAAAAAAAAAAA8AgAAPAIAAAJPQAArwAAABEBjAABAQAAAAAAAQAAAABkAGQA&#x27;
- b&#x27;AAB0DwIAzgAAAAAAAgBJSQAAAAAHAAAADAAAAB0AAADUAQAAKAAAABQAAAASAAAAFAAAACMAAACa&#x27;
- b&#x27;AQAA+QAAABgAAAAXAAAAIgAAADIAAACBAQAAxwEAAFUAAAAvAAAAKwAAAJQAAABsAQAAQgEAAIkA&#x27;
- b&#x27;AABtAAAACwAAAC8AAAAFBAAAQAAAABkAAAAZAAAAFgAAADYAAABeAwAADQIAAB0AAAAbAAAAMQAA&#x27;
- b&#x27;AFAAAAABAwAA1wMAAJAAAAA9AAAASgAAAL4AAAAeAgAA2AEAAJoAAAB8AAAADQAAACkAAAALAwAA&#x27;
- b&#x27;MgAAABYAAAAXAAAAEgAAACsAAACFAgAAkgEAABgAAAAWAAAAJgAAADsAAAAtAgAA5gIAAGoAAAAs&#x27;
- b&#x27;AAAANgAAAIgAAABvAQAAPQEAAEwAAAA9AAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA&#x27;
- b&#x27;AACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAA&#x27;
- b&#x27;AIAAAACAAAAANAAAAAAAAABIAQAAAAAAAAAAAAAIAAAALAAAABgAAAAQAgAAmAEAACQAAAAIAAAA&#x27;
- b&#x27;GAAAADAAAAD0AgAAhAAAADQAAAAMAAAAKAAAAKQAAACQAAAA1AAAAGQAAACMAAAAAAAAADAAAAB8&#x27;
- b&#x27;AgAAJAAAAAAAAAAcAAAAHAAAAEgAAACIBAAADAQAAFAAAAAIAAAAfAAAADgAAAAgBgAAvAAAADQA&#x27;
- b&#x27;AABIAAAAqAAAAKgAAADgAAAAjAAAAGAAAACYAAAAEAAAACQAAABMAQAAAAAAACgAAAAoAAAABAAA&#x27;
- b&#x27;ADAAAABQAwAAoAIAABQAAAAQAAAATAAAAEgAAAB4BAAAhAAAAFAAAAAEAAAARAAAAGQAAABUAAAA&#x27;
- b&#x27;WAAAADAAAABUAAAA4CUCAAAAAQDAZwEAAhIFAAAAIAECAAYAbAAJAAQAAwADAAcAYQA+AAQABAAH&#x27;
- b&#x27;AAsAWgBpABIACAAJABsARwA/ABcAEgD///7/AQD///////////7/AAD///7//v////////8AAP7/&#x27;
- b&#x27;/v////n/9//4//v//f///wAACQD/////AAD/////BgAHAP/////+//7/AQAIAP7//f////X/7//u&#x27;
- b&#x27;//D/8/+AAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgABZACAA&#x27;
- b&#x27;/wAaACUAGQAlACAACADxACgABABiAB0ACgD/AC0AdACZAEEAkQDQABAAGQAAAAAAAFBmAAAAAAAA&#x27;
- b&#x27;AEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8t&#x27;
- b&#x27;AAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAALDhfAPea///jkgMAAAABAFuAAABBtAAA+xUC&#x27;
- b&#x27;AAAAAQDIdQEA4CUCAAAAAQDAZwEAIAAAAP8AAAAaAAAAJQAAABkAAAAlAAAAIAAAAAgAAADxAAAA&#x27;
- b&#x27;KAAAAAQAAABiAAAAHQAAAAoAAAD/AAAALQAAAHQAAACZAAAAQQAAAJEAAADQAAAAEAAAABkAAAAA&#x27;
- b&#x27;AAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA&#x27;
- b&#x27;/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#x27;
- b&#x27;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAâ¦ &lt;trimmed 1427889 bytes string&gt;</pre></td>
+                    <td class="code"><pre>PersonSerializer(data={&#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;, &#x27;previous_last_name&#x27;: None, &#x27;first_name&#x27;: &#x27;ÐÐ¼Ð¸ÑÑÐ¸Ð¹&#x27;, &#x27;middle_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÑÐµÐ²Ð¸Ñ&#x27;, &#x27;birth_date&#x27;: &#x27;1979-12-09&#x27;, &#x27;death_date&#x27;: None, &#x27;sex&#x27;: &#x27;M&#x27;, &#x27;comment&#x27;: &#x27;&#x27;, &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;, &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ°Ð»ÐµÑÐ¸Ð¹ ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&gt;, &#x27;who_married&#x27;: None, &#x27;mainPhoto&#x27;: &#x27;img/Without%20photo.jpg&#x27;, &#x27;mainPhotofile&#x27;: None, &#x27;pers_photo&#x27;: []}):
+    last_name = CharField(allow_blank=True, allow_null=True, label=&#x27;Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ&#x27;, max_length=60, required=False)
+    previous_last_name = CharField(allow_blank=True, allow_null=True, label=&#x27;ÐÑÐµÐ´ÑÐ´ÑÑÐ°Ñ ÑÐ°Ð¼Ð¸Ð»Ð¸Ñ, ÐµÑÐ»Ð¸ Ð±ÑÐ»Ð°&#x27;, max_length=60, required=False)
+    first_name = CharField(allow_null=True, label=&#x27;ÐÐ¼Ñ&#x27;, max_length=45, required=False)
+    middle_name = CharField(allow_blank=True, allow_null=True, label=&#x27;ÐÑÑÐµÑÑÐ²Ð¾&#x27;, max_length=60, required=False)
+    birth_date = DateField(allow_null=True, label=&#x27;ÐÐ°ÑÐ° ÑÐ¾Ð¶Ð´ÐµÐ½Ð¸Ñ&#x27;, required=False)
+    death_date = DateField(allow_null=True, label=&#x27;ÐÐ°ÑÐ° ÑÐ¼ÐµÑÑÐ¸, ÐµÑÐ»Ð¸ Ð±ÑÐ»Ð°&#x27;, required=False)
+    sex = ChoiceField(allow_blank=True, allow_null=True, choices=[(&#x27;F&#x27;, &#x27;ÐÐµÐ½ÑÐºÐ¸Ð¹&#x27;), (&#x27;M&#x27;, &#x27;ÐÑÐ¶ÑÐºÐ¾Ð¹&#x27;), (&#x27;&#x27;, &#x27;&#x27;)], label=&#x27;ÐÐ¾Ð»&#x27;, required=False)
+    comment = CharField(allow_blank=True, allow_null=True, label=&#x27;ÐÐ¾Ð¼Ð¼ÐµÐ½ÑÐ°ÑÐ¸Ð¸&#x27;, required=False, style={&#x27;base_template&#x27;: &#x27;textarea.html&#x27;})
+    mother = PrimaryKeyRelatedField(allow_null=True, label=&#x27;ÐÐ°ÑÑ&#x27;, queryset=Person.objects.all(), required=False)
+    father = PrimaryKeyRelatedField(allow_null=True, label=&#x27;ÐÑÐµÑ&#x27;, queryset=Person.objects.all(), required=False)
+    who_married = PrimaryKeyRelatedField(allow_null=True, label=&#x27;ÐÑÐ¶/ÐÐµÐ½Ð°&#x27;, queryset=Person.objects.all(), required=False)
+    mainPhoto = ImageField(label=&#x27;ÐÐ»Ð°Ð²Ð½Ð¾Ðµ ÑÐ¾ÑÐ¾&#x27;, max_length=100, required=False)
+    mainPhotofile = ModelField(allow_null=True, help_text=&#x27;ÐÐ°ÐºÑÐ¸Ð¼ÑÐ¼ 5 Ð¼ÐµÐ³Ð°Ð±Ð°Ð¹Ñ&#x27;, label=&#x27;MainPhotofile&#x27;, model_field=&lt;django.db.models.fields.BinaryField: mainPhotofile&gt;, required=False, validators=[&lt;django.core.validators.MaxLengthValidator object&gt;])
+    pers_photo = PrimaryKeyRelatedField(help_text=&#x27;ÑÐ¾ÑÐ¾ ÐºÑÑÐ¿Ð½ÑÐ¼ Ð¿Ð»Ð°Ð½Ð¾Ð¼&#x27;, label=&#x27;ÐÐ° ÑÐ¾ÑÐ¾&#x27;, many=True, queryset=Photo.objects.all(), required=False)</pre></td>
                   </tr>
 
                   <tr>
                     <td>temp_the_photo</td>
-                    <td class="code"><pre>&#x27;/media/img/100_0980_kKT3QPE.jpg&#x27;</pre></td>
-                  </tr>
-
-              </tbody>
-            </table>
-
-        </li>
-
-
-        <li class="frame user">
-
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/serializers.py</code>, line 212, in save
-
-
-
-            <div class="context" id="c22958213440320">
-
-                <ol start="205" class="pre-context" id="pre22958213440320">
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>        if self.instance is not None:</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            self.instance = self.update(self.instance, validated_data)</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            assert self.instance is not None, (</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>                &#x27;`update()` did not return an object instance.&#x27;</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            )</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>        else:</pre></li>
-
-                </ol>
-
-              <ol start="212" class="context-line">
-                <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            self.instance = self.create(validated_data)</pre> <span>â¦</span></li>
-              </ol>
-
-                <ol start='213' class="post-context" id="post22958213440320">
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            assert self.instance is not None, (</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>                &#x27;`create()` did not return an object instance.&#x27;</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>            )</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre>        return self.instance</pre></li>
-
-                  <li onclick="toggle('pre22958213440320', 'post22958213440320')"><pre></pre></li>
-
-              </ol>
-
-            </div>
-
-
-
-            <div class="commands">
-
-                    <a href="#" onclick="return varToggle(this, '22958213440320')"><span>&#x25b6;</span> Local vars</a>
-
-            </div>
-            <table class="vars" id="v22958213440320">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                  <tr>
-                    <td>kwargs</td>
-                    <td class="code"><pre>{}</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>PersonSerializer(data={&#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;, &#x27;previous_last_name&#x27;: None, &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;, &#x27;middle_name&#x27;: &#x27;ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&#x27;, &#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;, &#x27;death_date&#x27;: None, &#x27;sex&#x27;: &#x27;M&#x27;, &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;, &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÐ¸Ð½Ð° ÐÐºÐ¸Ð¼Ð¾Ð²Ð½Ð°&gt;, &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;, &#x27;who_married&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;, &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;, &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1341975 bytes string&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>validated_data</td>
-                    <td class="code"><pre>{&#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;,
- &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;,
- &#x27;death_date&#x27;: None,
- &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;,
- &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;,
- &#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;,
- &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;,
- &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1340209 bytes string&gt;</pre></td>
-                  </tr>
-
-              </tbody>
-            </table>
-
-        </li>
-
-
-        <li class="frame user">
-
-            <code class="fname">/home/s236085/public_html/Genealogy_tree/API/serializer.py</code>, line 87, in create
-
-
-
-            <div class="context" id="c22958213442240">
-
-                <ol start="80" class="pre-context" id="pre22958213442240">
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>                b_string= validated_data[&#x27;mainPhotofile&#x27;],</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>                file_path= &#x27;img&#x27; + validated_data[&#x27;mainPhoto&#x27;][validated_data[&#x27;mainPhoto&#x27;].rfind(&#x27;/&#x27;):]</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>            )</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        person = Person.objects.create(**validated_data)</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>      #  person.mainPhoto = m_p_file</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        for p_photo in pers_photo_data:</pre></li>
-
-                </ol>
-
-              <ol start="87" class="context-line">
-                <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>            person.pers_photo.update(Photo.objects.get(pk=p_photo))</pre> <span>â¦</span></li>
-              </ol>
-
-                <ol start='88' class="post-context" id="post22958213442240">
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        return person</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>    def to_representation(self, instance):</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        instance.mother = None</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        instance.father = None</pre></li>
-
-                  <li onclick="toggle('pre22958213442240', 'post22958213442240')"><pre>        instance.who_married = None</pre></li>
-
-              </ol>
-
-            </div>
-
-
-
-            <div class="commands">
-
-                    <a href="#" onclick="return varToggle(this, '22958213442240')"><span>&#x25b6;</span> Local vars</a>
-
-            </div>
-            <table class="vars" id="v22958213442240">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                  <tr>
-                    <td>_recovery_picture_from_bynaryfield</td>
-                    <td class="code"><pre>&lt;function _recovery_picture_from_bynaryfield at 0x14e182c36a60&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>m_p_file</td>
-                    <td class="code"><pre>&#x27;error&#x27;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>p_photo</td>
-                    <td class="code"><pre>13</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>pers_photo_data</td>
-                    <td class="code"><pre>[13]</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>person</td>
-                    <td class="code"><pre>&lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ°Ð»ÐµÑÐ¸Ð¹ ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>PersonSerializer(data={&#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;, &#x27;previous_last_name&#x27;: None, &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;, &#x27;middle_name&#x27;: &#x27;ÐÐ»ÐµÐºÑÐ°Ð½Ð´ÑÐ¾Ð²Ð¸Ñ&#x27;, &#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;, &#x27;death_date&#x27;: None, &#x27;sex&#x27;: &#x27;M&#x27;, &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;, &#x27;mother&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÐ¸Ð½Ð° ÐÐºÐ¸Ð¼Ð¾Ð²Ð½Ð°&gt;, &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;, &#x27;who_married&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²Ð° ÐÑÐ´Ð¼Ð¸Ð»Ð° Ð¥Ð°Ð¹ÑÑÐ»Ð¾Ð²Ð½Ð°&gt;, &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;, &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgC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â¦ &lt;trimmed 1341975 bytes string&gt;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>validated_data</td>
-                    <td class="code"><pre>{&#x27;birth_date&#x27;: &#x27;1953-05-23&#x27;,
- &#x27;comment&#x27;: &#x27;Ð¼Ð¾Ð¹ Ð¿Ð°Ð¿Ð°&#x27;,
- &#x27;death_date&#x27;: None,
- &#x27;father&#x27;: &lt;Person: ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð² ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ¸ÑÐ°Ð¹Ð»Ð¾Ð²Ð¸Ñ&gt;,
- &#x27;first_name&#x27;: &#x27;ÐÐ°Ð»ÐµÑÐ¸Ð¹&#x27;,
- &#x27;last_name&#x27;: &#x27;ÐÐ¾Ð¼Ð»ÑÐºÐ¾Ð²&#x27;,
- &#x27;mainPhoto&#x27;: &#x27;/home/s236085/public_html/Genealogy_tree/media/img/100_0980_kKT3QPE.jpg&#x27;,
- &#x27;mainPhotofile&#x27;: &#x27;/9j/4R8gRXhpZgAASUkqAAgAAAAJAA8BAgAWAAAAegAAABABAgApAAAAqgAAABIBAwABAAAAAQAAABoBBQABAAAA2gAAABsBBQABAAAA4gAAACgBAwABAAAAAgAAADEBAgAPAAAA6gAAABMCAwABAAAAAgAAAGmHBAABAAAAVAEAAKwSAABFQVNUTUFOIEtPREFLIENPTVBBTlkAC58v5mJHR8dPX86cJSi+V7MuNdxbjJaM961LT0RBSyBFQVNZU0hBUkUgQzY0MyBaT09NIERJR0lUQUwgQ0FNRVJBALb5yZwrZ+jmAAAAAQAAAOYAAAABAAAAVmVyc2lvbiAxLjIwMDAAvHGg/wBtaMQNVtgNzhMM6gc9vbHFTzypTu9h29nO8jsv/////////////////////////////////////////////////////////////////////////////yUAmoIFAAEAAAA+AwAAnYIFAAEAAABGAwAAIogDAAEAAAACAAAAJ4gDAAEAAACMAAAAAJAHAAQAAAAwMjIxA5ACABQAAAAWAwAABJACABQAAAAqAwAAAZEHAAQAAAABAgMAApEFAAEAAABOAwAAAZIKAAEAAABWAwAAApIFAAEAAABeAwAABJIKAAEAAABmAwAABZIFAAEAAABuAwAAB5IDAAEAAAACAAAACZIDAAEAAAAZAAAACpIFAAEAAAB2AwAAfJIHAJQLAACOAwAAAKAHAAQAAAAwMTAwAaADAAEAAAABAAAAAqAEAAEAAAAgCwAAA6AEAAEAAABWCAAABaAEAAEAAABUEwAAFaIFAAEAAAB+AwAAF6IDAAEAAAACAAAAAKMHAAEAAAADAAAAAaMHAAEAAAABAAAAAaQDAAEAAAAAAAAAAqQDAAEAAAAAAAAAA6QDAAEAAAAAAAAABKQFAAEAAACGAwAABaQDAAEAAAAkAAAABqQDAAEAAAAAAAAAB6QDAAEAAAABAAAACKQDAAEAAAAAAAAACaQDAAEAAAAAAAAACqQDAAEAAAAAAAAADKQDAAEAAAAAAAAAAAAAADIwMDc6MDg6MjQgMDA6MTc6MTQAMjAwNzowODoyNCAwMDoxNzoxNAAJPQAAQEIPAA4BAABkAAAAQAEAAGQAAABXAgAAZAAAAB4BAABkAAAAAAAAAAoAAAAeAQAAZAAAAFgCAABkAAAAjAAAAAEAAAAAAAAACgAAAEM2NDNFNDA4MjIwOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQXAgAAAAEAtHgBAAAAAQAAAAEAAAABAAAAAAAAAAAA8AgAAPAIAAAJPQAArwAAABEBjAABAQAAAAAAAQAAAABkAGQAAAB0DwIAzgAAAAAAAgBJSQAAAAAHAAAADAAAAB0AAADUAQAAKAAAABQAAAASAAAAFAAAACMAAACaAQAA+QAAABgAAAAXAAAAIgAAADIAAACBAQAAxwEAAFUAAAAvAAAAKwAAAJQAAABsAQAAQgEAAIkAAABtAAAACwAAAC8AAAAFBAAAQAAAABkAAAAZAAAAFgAAADYAAABeAwAADQIAAB0AAAAbAAAAMQAAAFAAAAABAwAA1wMAAJAAAAA9AAAASgAAAL4AAAAeAgAA2AEAAJoAAAB8AAAADQAAACkAAAALAwAAMgAAABYAAAAXAAAAEgAAACsAAACFAgAAkgEAABgAAAAWAAAAJgAAADsAAAAtAgAA5gIAAGoAAAAsAAAANgAAAIgAAABvAQAAPQEAAEwAAAA9AAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAANAAAAAAAAABIAQAAAAAAAAAAAAAIAAAALAAAABgAAAAQAgAAmAEAACQAAAAIAAAAGAAAADAAAAD0AgAAhAAAADQAAAAMAAAAKAAAAKQAAACQAAAA1AAAAGQAAACMAAAAAAAAADAAAAB8AgAAJAAAAAAAAAAcAAAAHAAAAEgAAACIBAAADAQAAFAAAAAIAAAAfAAAADgAAAAgBgAAvAAAADQAAABIAAAAqAAAAKgAAADgAAAAjAAAAGAAAACYAAAAEAAAACQAAABMAQAAAAAAACgAAAAoAAAABAAAADAAAABQAwAAoAIAABQAAAAQAAAATAAAAEgAAAB4BAAAhAAAAFAAAAAEAAAARAAAAGQAAABUAAAAWAAAADAAAABUAAAA4CUCAAAAAQDAZwEAAhIFAAAAIAECAAYAbAAJAAQAAwADAAcAYQA+AAQABAAHAAsAWgBpABIACAAJABsARwA/ABcAEgD///7/AQD///////////7/AAD///7//v////////8AAP7//v////n/9//4//v//f///wAACQD/////AAD/////BgAHAP/////+//7/AQAIAP7//f////X/7//u//D/8/+AAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgABZACAA/wAaACUAGQAlACAACADxACgABABiAB0ACgD/AC0AdACZAEEAkQDQABAAGQAAAAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAALDhfAPea///jkgMAAAABAFuAAABBtAAA+xUCAAAAAQDIdQEA4CUCAAAAAQDAZwEAIAAAAP8AAAAaAAAAJQAAABkAAAAlAAAAIAAAAAgAAADxAAAAKAAAAAQAAABiAAAAHQAAAAoAAAD/AAAALQAAAHQAAACZAAAAQQAAAJEAAADQAAAAEAAAABkAAAAAAAAAAFBmAAAAAAAAAEkAAMAGAAAAAAAAuP//AAAAAABA//8AgP7/AAAAAADMAwAAAAAAAOACAAAA/v8AuAAAAAABAP8tAAAAAAEAAAAAAAAAAADACwAAAAAAAMADAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAâ¦ &lt;trimmed 1340209 bytes string&gt;</pre></td>
-                  </tr>
-
-              </tbody>
-            </table>
-
-        </li>
-
-
-        <li class="frame django">
-
-            <code class="fname">/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/db/models/manager.py</code>, line 85, in manager_method
-
-
-
-            <div class="context" id="c22958213440768">
-
-                <ol start="78" class="pre-context" id="pre22958213440768">
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>    def check(self, **kwargs):</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        return []</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>    @classmethod</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>    def _get_queryset_methods(cls, queryset_class):</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        def create_method(name, method):</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            def manager_method(self, *args, **kwargs):</pre></li>
-
-                </ol>
-
-              <ol start="85" class="context-line">
-                <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>                return getattr(self.get_queryset(), name)(*args, **kwargs)</pre> <span>â¦</span></li>
-              </ol>
-
-                <ol start='86' class="post-context" id="post22958213440768">
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            manager_method.__name__ = method.__name__</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            manager_method.__doc__ = method.__doc__</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>            return manager_method</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre></pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        new_methods = {}</pre></li>
-
-                  <li onclick="toggle('pre22958213440768', 'post22958213440768')"><pre>        for name, method in inspect.getmembers(queryset_class, predicate=inspect.isfunction):</pre></li>
-
-              </ol>
-
-            </div>
-
-
-
-            <div class="commands">
-
-                    <a href="#" onclick="return varToggle(this, '22958213440768')"><span>&#x25b6;</span> Local vars</a>
-
-            </div>
-            <table class="vars" id="v22958213440768">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                  <tr>
-                    <td>args</td>
-                    <td class="code"><pre>(&lt;Photo: /home/s236085/public_html/Genealogy_tree/media/img/IMG_2352.JPG&gt;,)</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>kwargs</td>
-                    <td class="code"><pre>{}</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>name</td>
-                    <td class="code"><pre>&#x27;update&#x27;</pre></td>
-                  </tr>
-
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>&lt;django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.&lt;locals&gt;.ManyRelatedManager object at 0x14e1602cdee0&gt;</pre></td>
+                    <td class="code"><pre>&#x27;/media/work/Without%20photo.jpg&#x27;</pre></td>
                   </tr>
 
               </tbody>
@@ -1409,7 +1075,7 @@
   <div id="pastebinTraceback" class="pastebin">
     <input type="hidden" name="language" value="PythonConsole">
     <input type="hidden" name="title"
-      value="TypeError at /api/persons/">
+      value="UnboundLocalError at /api/persons/">
     <input type="hidden" name="source" value="Django Dpaste Agent">
     <input type="hidden" name="poster" value="Django">
     <textarea name="content" id="traceback_area" cols="140" rows="25">
@@ -1461,17 +1127,11 @@ Traceback (most recent call last):
     raise exc
   File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
     response = handler(request, *args, **kwargs)
-  File "/home/s236085/public_html/Genealogy_tree/API/views.py", line 179, in post
-    curPerson = serializer.save()
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
-    self.instance = self.create(validated_data)
-  File "/home/s236085/public_html/Genealogy_tree/API/serializer.py", line 87, in create
-    person.pers_photo.update(Photo.objects.get(pk=p_photo))
-  File "/home/s236085/virtualenv/public_html/Genealogy_tree/3.8/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/s236085/public_html/Genealogy_tree/API/views.py", line 184, in post
+    curPerson.mainPhoto = file_path
 
-Exception Type: TypeError at /api/persons/
-Exception Value: update() takes 1 positional argument but 2 were given
+Exception Type: UnboundLocalError at /api/persons/
+Exception Value: local variable &#x27;file_path&#x27; referenced before assignment
 </textarea>
   <br><br>
   <input type="submit" value="Share this traceback on a public website">
@@ -1522,7 +1182,7 @@ Exception Value: update() takes 1 positional argument but 2 were given
 
         <tr>
           <td>CONTENT_LENGTH</td>
-          <td class="code"><pre>&#x27;1340322&#x27;</pre></td>
+          <td class="code"><pre>&#x27;521&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1592,7 +1252,7 @@ Exception Value: update() takes 1 positional argument but 2 were given
 
         <tr>
           <td>REMOTE_PORT</td>
-          <td class="code"><pre>&#x27;50006&#x27;</pre></td>
+          <td class="code"><pre>&#x27;39550&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1633,7 +1293,7 @@ Exception Value: update() takes 1 positional argument but 2 were given
 
         <tr>
           <td>UNIQUE_ID</td>
-          <td class="code"><pre>&#x27;Y5zfhQFDHunfR5c6LEWVNwAAAAE&#x27;</pre></td>
+          <td class="code"><pre>&#x27;Y6QT47aLCCuOXMuOJs44ygAAABI&#x27;</pre></td>
         </tr>
 
         <tr>
@@ -1648,7 +1308,7 @@ Exception Value: update() takes 1 positional argument but 2 were given
 
         <tr>
           <td>wsgi.input</td>
-          <td class="code"><pre>&lt;_io.BufferedReader name=5&gt;</pre></td>
+          <td class="code"><pre>&lt;_io.BufferedReader name=15&gt;</pre></td>
         </tr>
 
         <tr>

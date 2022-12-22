@@ -2,6 +2,8 @@ import base64
 import logging
 import os
 import typing
+import webbrowser
+
 from rest_framework import status
 import requests
 from django.core.serializers import json
@@ -96,6 +98,15 @@ def person_sending(person: Person, context: dict) -> Response:
     data['token'] = RAW_CONFIG['API']['token']
     json = UserJSONRenderer().render(data)
     response = send_request(json=json, ext='persons/')
+    if response.status_code == 500:
+        try:
+            with open('temp.html', 'w', encoding='utf-8') as t:
+                text = str(response.text)
+                t.write(text)
+                t.close()
+        except Exception as e:
+            print(e)
+        webbrowser.open_new_tab('file://' + os.path.realpath(t.name))
     return response
 
 def check_person_in_sent(person: Person, api_var):

@@ -4765,3 +4765,2122 @@ urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru
 urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
 asyncio - DEBUG - Using proactor: IocpProactor
 asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.request - WARNING - Not Found: /send_dataset/
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127977
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 91, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Users\Пользователь\venv\lib\site-packages\requests\models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.request - WARNING - Not Found: /send_dataset/
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127977
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127976
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Users\Пользователь\venv\lib\site-packages\requests\models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 377971
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 88, in sending_person
+    temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Users\Пользователь\venv\lib\site-packages\requests\models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 191605
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 77, in sending_person
+    temp_person = sending_person(person.mother, api_var=api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 88, in sending_person
+    temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Users\Пользователь\venv\lib\site-packages\requests\models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 191605
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127977
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Users\Пользователь\venv\lib\site-packages\requests\models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\views.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127975
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\utils.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127975
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127975
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127946
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 8478-8479: character maps to <undefined>
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 377983
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 88, in sending_person
+    temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 4822-4828: character maps to <undefined>
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 127982
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 8478-8479: character maps to <undefined>
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+root - ERROR - Exception
+Traceback (most recent call last):
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 172, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Python\my_projects\Gen_tree\API\serializer.py", line 107, in to_internal_value
+    data['mother'] = Person.objects.get(id = data['mother'])
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+gtree_db.models.Person.DoesNotExist: Person matching query does not exist.
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+root - DEBUG - Can't save photo: img/100_0980_kKT3QPE.jpg
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\serializer.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+root - DEBUG - Can't save photo: img/100_0980_kKT3QPE.jpg
+django.request - ERROR - Internal Server Error: /api/persons/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "unicue_person"
+DETAIL:  Ключ "(last_name, first_name, birth_date)=(Комкъков, Валерий, 1953-05-23)" уже существует.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 179, in post
+    curPerson = serializer.save()
+  File "C:\Users\Пользователь\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Python\my_projects\Gen_tree\API\serializer.py", line 84, in create
+    person = Person.objects.create(**validated_data)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python\my_projects\Gen_tree\gtree_db\models.py", line 136, in save
+    super().save(*args, **kwargs)  # Call the "real" save() method.
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\base.py", line 906, in _do_insert
+    return manager._insert(
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "unicue_person"
+DETAIL:  Ключ "(last_name, first_name, birth_date)=(Комкъков, Валерий, 1953-05-23)" уже существует.
+
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - INFO - request.data
+root - DEBUG - img/100_0980_kKT3QPE.jpg
+root - DEBUG - Can't save photo: img/100_0980_kKT3QPE.jpg
+root - DEBUG - Комкъков Валерий Александрович внесен
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 377835
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 88, in sending_person
+    temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 4822-4828: character maps to <undefined>
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 83464
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 8446-8447: character maps to <undefined>
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 378719
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 83464
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 92, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 104, in person_sending
+    webbrowser.open_new_tab('file://' + os.path.realpath(t))
+  File "C:\Python\Python38\lib\ntpath.py", line 626, in realpath
+    path = normpath(path)
+  File "C:\Python\Python38\lib\ntpath.py", line 452, in normpath
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not _io.TextIOWrapper
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 83465
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 83290
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 129515
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\utils.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.request - WARNING - Not Found: /media/img/Without_photo_FTZll2n.jpg
+django.request - WARNING - Forbidden (Permission denied): /tree/person/change/7/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\contrib\auth\mixins.py", line 103, in dispatch
+    return self.handle_no_permission()
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\contrib\auth\mixins.py", line 46, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied: доступ запрещен
+django.request - WARNING - Not Found: /login/login/
+django.request - WARNING - Not Found: /login/login/
+django.request - WARNING - Not Found: /media/img/Without_photo_FTZll2n.jpg
+PIL.Image - DEBUG - Importing BlpImagePlugin
+PIL.Image - DEBUG - Importing BmpImagePlugin
+PIL.Image - DEBUG - Importing BufrStubImagePlugin
+PIL.Image - DEBUG - Importing CurImagePlugin
+PIL.Image - DEBUG - Importing DcxImagePlugin
+PIL.Image - DEBUG - Importing DdsImagePlugin
+PIL.Image - DEBUG - Importing EpsImagePlugin
+PIL.Image - DEBUG - Importing FitsStubImagePlugin
+PIL.Image - DEBUG - Importing FliImagePlugin
+PIL.Image - DEBUG - Importing FpxImagePlugin
+PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+PIL.Image - DEBUG - Importing FtexImagePlugin
+PIL.Image - DEBUG - Importing GbrImagePlugin
+PIL.Image - DEBUG - Importing GifImagePlugin
+PIL.Image - DEBUG - Importing GribStubImagePlugin
+PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+PIL.Image - DEBUG - Importing IcnsImagePlugin
+PIL.Image - DEBUG - Importing IcoImagePlugin
+PIL.Image - DEBUG - Importing ImImagePlugin
+PIL.Image - DEBUG - Importing ImtImagePlugin
+PIL.Image - DEBUG - Importing IptcImagePlugin
+PIL.Image - DEBUG - Importing JpegImagePlugin
+PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+PIL.Image - DEBUG - Importing McIdasImagePlugin
+PIL.Image - DEBUG - Importing MicImagePlugin
+PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+PIL.Image - DEBUG - Importing MpegImagePlugin
+PIL.Image - DEBUG - Importing MpoImagePlugin
+PIL.Image - DEBUG - Importing MspImagePlugin
+PIL.Image - DEBUG - Importing PalmImagePlugin
+PIL.Image - DEBUG - Importing PcdImagePlugin
+PIL.Image - DEBUG - Importing PcxImagePlugin
+PIL.Image - DEBUG - Importing PdfImagePlugin
+PIL.Image - DEBUG - Importing PixarImagePlugin
+PIL.Image - DEBUG - Importing PngImagePlugin
+PIL.Image - DEBUG - Importing PpmImagePlugin
+PIL.Image - DEBUG - Importing PsdImagePlugin
+PIL.Image - DEBUG - Importing SgiImagePlugin
+PIL.Image - DEBUG - Importing SpiderImagePlugin
+PIL.Image - DEBUG - Importing SunImagePlugin
+PIL.Image - DEBUG - Importing TgaImagePlugin
+PIL.Image - DEBUG - Importing TiffImagePlugin
+PIL.Image - DEBUG - Importing WebPImagePlugin
+PIL.Image - DEBUG - Importing WmfImagePlugin
+PIL.Image - DEBUG - Importing XbmImagePlugin
+PIL.Image - DEBUG - Importing XpmImagePlugin
+PIL.Image - DEBUG - Importing XVThumbImagePlugin
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'list' object has no attribute 'get'
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\views.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\views.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 86853
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 94, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 8459-8460: character maps to <undefined>
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 377269
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 42, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 94, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 4822-4828: character maps to <undefined>
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/photos/ HTTP/1.1" 200 None
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\views.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 86853
+django.request - ERROR - Internal Server Error: /api/send_dataset/
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Пользователь\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 45, in send_dataset
+    _ = sending_person(person, api_var)
+  File "C:\Python\my_projects\Gen_tree\API\views.py", line 97, in sending_person
+    json = (person_sending(person, context=cur_context)).json()
+  File "C:\Python\my_projects\Gen_tree\API\utils.py", line 103, in person_sending
+    t.write(str(response.text))
+  File "C:\Python\Python38\lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 8459-8460: character maps to <undefined>
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 86853
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 377270
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\utils.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\utils.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 86853
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 377269
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 86853
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 377274
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+django.utils.autoreload - INFO - C:\Python\my_projects\Gen_tree\API\views.py changed, reloading.
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 500 86853
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+PIL.Image - DEBUG - Importing BlpImagePlugin
+PIL.Image - DEBUG - Importing BmpImagePlugin
+PIL.Image - DEBUG - Importing BufrStubImagePlugin
+PIL.Image - DEBUG - Importing CurImagePlugin
+PIL.Image - DEBUG - Importing DcxImagePlugin
+PIL.Image - DEBUG - Importing DdsImagePlugin
+PIL.Image - DEBUG - Importing EpsImagePlugin
+PIL.Image - DEBUG - Importing FitsStubImagePlugin
+PIL.Image - DEBUG - Importing FliImagePlugin
+PIL.Image - DEBUG - Importing FpxImagePlugin
+PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+PIL.Image - DEBUG - Importing FtexImagePlugin
+PIL.Image - DEBUG - Importing GbrImagePlugin
+PIL.Image - DEBUG - Importing GifImagePlugin
+PIL.Image - DEBUG - Importing GribStubImagePlugin
+PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+PIL.Image - DEBUG - Importing IcnsImagePlugin
+PIL.Image - DEBUG - Importing IcoImagePlugin
+PIL.Image - DEBUG - Importing ImImagePlugin
+PIL.Image - DEBUG - Importing ImtImagePlugin
+PIL.Image - DEBUG - Importing IptcImagePlugin
+PIL.Image - DEBUG - Importing JpegImagePlugin
+PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+PIL.Image - DEBUG - Importing McIdasImagePlugin
+PIL.Image - DEBUG - Importing MicImagePlugin
+PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+PIL.Image - DEBUG - Importing MpegImagePlugin
+PIL.Image - DEBUG - Importing MpoImagePlugin
+PIL.Image - DEBUG - Importing MspImagePlugin
+PIL.Image - DEBUG - Importing PalmImagePlugin
+PIL.Image - DEBUG - Importing PcdImagePlugin
+PIL.Image - DEBUG - Importing PcxImagePlugin
+PIL.Image - DEBUG - Importing PdfImagePlugin
+PIL.Image - DEBUG - Importing PixarImagePlugin
+PIL.Image - DEBUG - Importing PngImagePlugin
+PIL.Image - DEBUG - Importing PpmImagePlugin
+PIL.Image - DEBUG - Importing PsdImagePlugin
+PIL.Image - DEBUG - Importing SgiImagePlugin
+PIL.Image - DEBUG - Importing SpiderImagePlugin
+PIL.Image - DEBUG - Importing SunImagePlugin
+PIL.Image - DEBUG - Importing TgaImagePlugin
+PIL.Image - DEBUG - Importing TiffImagePlugin
+PIL.Image - DEBUG - Importing WebPImagePlugin
+PIL.Image - DEBUG - Importing WmfImagePlugin
+PIL.Image - DEBUG - Importing XbmImagePlugin
+PIL.Image - DEBUG - Importing XpmImagePlugin
+PIL.Image - DEBUG - Importing XVThumbImagePlugin
+asyncio - DEBUG - Using proactor: IocpProactor
+asyncio - DEBUG - Using proactor: IocpProactor
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+root - DEBUG - This will get logged
+django_heroku.core - INFO - $DATABASE_URL not found, falling back to previous settings!
+django_heroku.core - INFO - Applying Heroku Staticfiles configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+django_heroku.core - INFO - Applying Heroku logging configuration to Django settings.
+django.utils.autoreload - INFO - Watching for file changes with StatReloader
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): komlyakov.ru:443
+urllib3.connectionpool - DEBUG - https://komlyakov.ru:443 "POST /genealogy/api/persons/ HTTP/1.1" 200 None
+django.request - WARNING - Bad Request: /api/send_dataset/

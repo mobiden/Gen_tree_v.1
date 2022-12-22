@@ -27,7 +27,9 @@ class UserJSONRenderer(JSONRenderer):
             data['token'] = token.encode('utf-8').decode('utf-8')
 
         # Наконец, мы можем отобразить наши данные в простанстве имен 'user'.
-       # return json.dumps({'status': status, 'data': data})
+
+  #      if data['last_name'] == 'Комляков' and data['first_name'] == 'Валерий':
+   #         return json.dumps({'status': status, 'data': data})
         return {'status': status, 'data': data}
 
 

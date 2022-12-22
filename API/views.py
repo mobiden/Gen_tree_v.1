@@ -25,12 +25,15 @@ def send_dataset(request):
     api_var = API_var()
     # sending photo
     if DEBUG:
-        debug_list = [{'img/189.jpg': 21}, {'img/FV4_8302.jpg': 7}, {'img/IMG_0322.JPG': 8},
-                  {'img/IMG_1885.JPG': 9}, {'img/07012009001.jpg': 10}, {'img/%D1%87-%D0%B1.jpg': 11},
-                  {'img/IMG_2204.JPG': 12}, {'img/IMG_2352.JPG': 13}, {'img/IMG_2367.JPG': 14},
-                  {'img/IMG_5899.JPG': 15}, {'img/IMG_6160.JPG': 16}, {'img/IMG_5463.JPG': 17},
-                  {'img/IMG_5793.JPG': 18}, {'img/IMG_1976.JPG': 19}, {'img/FV4_8305.jpg': 20}
-                  ]
+        debug_list = [{'img/%D1%87-%D0%B1_8xbTSVd.jpg': 23}, {'img/scan-0001.jpg': 24}, {'img/scan-0002.jpg': 25},
+                      {'img/scan-0003.jpg': 26}, {'img/scan-0013.jpg': 27}, {'img/scan-0004_3qgcSHW.jpg': 28},
+                      {'img/scan-0005.jpg': 29}, {'img/scan-0006.jpg': 30}, {'img/scan-0007.jpg': 31},
+                      {'img/scan-0008.jpg': 32}, {'img/scan-0009.jpg': 33}, {'img/scan-0010.jpg': 34},
+                      {'img/scan-0011.jpg': 35}, {'img/scan-0012.jpg': 36}, {'img/scan-0014.jpg': 37},
+                      {'img/scan-0015.jpg': 38}, {'img/scan-0016.jpg': 39}, {'img/scan-0017.jpg': 40},
+                      {'img/scan-0018.jpg': 41}, {'img/scan-0019.jpg': 42}, {'img/scan-0020.jpg': 43},
+                      {'img/scan-0021.jpg': 44}, {'img/scan-0022.jpg': 45}, {'img/scan-0023.jpg': 46},
+                      {'img/scan-0024.jpg': 47}, {'img/scan-0025.jpg': 48}, {'img/scan-0026.jpg': 49}]
         api_var.sent_photos = debug_list
     else:
         photos_sending(api_var)
@@ -41,7 +44,9 @@ def send_dataset(request):
         person = api_var.persons_set.pop()
         _ = sending_person(person, api_var)
 
-    return api_var.wrong_persons_record
+    return HttpResponse(
+        f"all persons sending. Can't sending {str(api_var.wrong_persons_record)}, \n {str(api_var.wrong_photo_records)}  ",
+        status=status.HTTP_400_BAD_REQUEST)
 
 
 def photos_sending(api_var:API_var):
@@ -87,8 +92,10 @@ def sending_person(person: Person, api_var: API_var, check_married:bool = True):
             temporary_person = person.who_married
             temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
         cur_context.update({'who_married': int(temp_person['id'])})
-
+    if str(person) == 'Комляков Валерий Александрович':
+        pass
     json = (person_sending(person, context=cur_context)).json()
+
     if json['status']:
         print(f'got json {json["status"]} for {str(person)}')
     if json['status'] == 'error':
@@ -99,9 +106,6 @@ def sending_person(person: Person, api_var: API_var, check_married:bool = True):
         if person in api_var.persons_set:
             api_var.persons_set.remove(person)
     return sent_person
-
-
-    # sending persons
 
 
 
@@ -154,19 +158,25 @@ class PersonView(AV):
             json_data = get_json_data(request=request, token=RAW_CONFIG['API']['token'])
 
             _ = json_data.pop('token', None)
-            temp_the_photo = json_data['mainPhoto']
+            create_logs(str(json_data))
+            if json_data['mainPhoto']:
+                temp_the_photo = json_data['mainPhoto']
+            else:
+                temp_the_photo = str(MEDIA_ROOT) + '/work/Without photo.jpg'
             json_data['mainPhoto'] = None
-            temp_photo_file = json_data['mainPhotofile'].encode('utf-8')
             my_the_photo = 'img' + temp_the_photo[temp_the_photo.rfind('/'):]
-            logging.debug(msg=my_the_photo)
             file_path = str(MEDIA_ROOT) + '/' + my_the_photo
-            path_or_exist_or_error = _recovery_picture_from_bynaryfield(
-                        b_string=temp_photo_file,
-                        file_path=file_path,
-                                                                 )
+            if json_data['mainPhotofile']:
+                temp_photo_file = json_data['mainPhotofile'].encode('utf-8')
+                my_the_photo = 'img' + temp_the_photo[temp_the_photo.rfind('/'):]
+                logging.debug(msg=my_the_photo)
 
-           # json_data['path_to_file'] = file_path
-            json_data['mainPhoto'] = file_path
+                path_or_exist_or_error = _recovery_picture_from_bynaryfield(
+                        b_string=temp_photo_file,
+                        file_path=file_path,)
+
+
+            json_data['mainPhoto'] = my_the_photo
             serializer = PersonSerializer(data=json_data)
             try:
                 serializer.is_valid(raise_exception=True)

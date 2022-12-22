@@ -10,7 +10,7 @@ django:
   secret_key: django-insecure-n024y^s%+qk5&9^ry47_m!kvd36!tphz-4^o8h-o1o$%@&hr-o
 
 database:
-  db: postgresql12
+  db: postgresql13
 
 postgresql13:
   host: localhost

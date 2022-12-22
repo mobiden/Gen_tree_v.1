@@ -41,8 +41,8 @@ class Int_to_persPhoto(serializers.Field):
     def to_internal_value(self, data: int):
         return Photo.objects.get(pk=data)
 
-class Int_to_Photo_class(serializers.Serializer):
-    photo = Int_to_persPhoto()
+class Int_to_Photo_list(serializers.ListField):
+    child = Int_to_persPhoto(allow_null=True)
 
 
 class Int_to_mainPhoto(serializers.Field):
@@ -62,7 +62,7 @@ class PersonSerializer(serializers.ModelSerializer):
         mother = Int_to_Person(required=False)
         father = Int_to_Person(required=False)
         who_married = Int_to_Person(required=False)
-        pers_photo = Int_to_Photo_class(many=True, required=False)
+        pers_photo = serializers.ListField(child=Int_to_persPhoto(), allow_empty=True,  )
     #    mainPhoto_str = Int_to_mainPhoto(required=False)
 
         mainPhotofile = Bytes_to_Str_Field(required=False)
@@ -83,8 +83,9 @@ class PersonSerializer(serializers.ModelSerializer):
 
         person = Person.objects.create(**validated_data)
       #  person.mainPhoto = m_p_file
-        for p_photo in pers_photo_data:
-            person.pers_photo.update(Photo.objects.get(pk=p_photo))
+   #     for p_photo in pers_photo_data:
+      #      create_logs(str(p_photo))
+     #       person.pers_photo.update(Photo.objects.filter(pk__exact=p_photo).first())
         return person
 
     def to_representation(self, instance):
@@ -108,6 +109,12 @@ class PersonSerializer(serializers.ModelSerializer):
             data['father'] = Person.objects.get(id = data['father'])
         if data['who_married']:
             data['who_married'] = Person.objects.get(id = data['who_married'])
+        if data['pers_photo']:
+            photo_list = []
+            for p_photo in data['pers_photo']:
+                create_logs(str(p_photo))
+                photo_list.append(Photo.objects.filter(pk__exact=p_photo).first())
+            data['pers_photo'] = photo_list
         return data
 
         
