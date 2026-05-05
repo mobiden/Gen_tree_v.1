@@ -1,55 +1,69 @@
 {% extends 'main.html' %}
 {% load static %}
-
-
+    {% block page_shell_class %}app-page-shell--tree{% endblock page_shell_class %} <!-- #### -->
 
 {% block main_body %}
 {% csrf_token %}
-    <div class="container">
+    <div class="tree-page-container"> <!-- #### -->
+        <div class="tree-page-card tree-page-card--full"> <!-- #### -->
 
-           {% for lines, arrow_lines in mix_lines %}
-               <div class="row">
-
-                    {% for person in lines %}
-                    <div class="col-1">
-                    {% if person is None %}
-            <img src= "/media/work/transp.png" height="60" class="figure-img img-fluid rounded" alt="пусто">
-
-                    {% else %}
-                        {% if person.id %}
-
-                            <a  style="color: #4f5050" href="{% url 'detailed_person' pk=person.id%}"   >
-                            {% include 'Tree/tree_person.html' %}
-                            </a>
-
-                        {% else %}
-                            <a  style="color: #4f5050" href="{% url 'create_person'%}">
-                            {% include 'Tree/tree_person.html' %}
-                            </a>
-                    {% endif %}
-                    {% endif %}
-                    </div>
-                    {% endfor %}
-
-                   {% if forloop.counter == 2 %}
-                     <div class="col-3">
-                    {% include 'Tree/button_for_move.html' %}
-                     </div>
-
-                   {% endif %}
-                   </div>
-
-
-                     <div class="row">
-                      {% for arrow, wi in arrow_lines %}
-                    <div class="col-{{ wi }}">
-            <img src="{{ arrow }}" height="20" width="auto" class="figure-img img-fluid rounded" alt="стрелка">
-                     </div>
-                {% endfor %}
-                     {% endfor %}
-
+            <!-- Заголовок и небольшая подсказка пользователю -->
+            <div class="tree-page-header">
+                <div>
+                    <h1 class="tree-page-title mb-1">Семейное дерево</h1>
+                    <p class="tree-page-subtitle mb-0">
+                        Нажмите на человека, чтобы открыть карточку. Голубая рамка показывает текущий фокус дерева.
+                    </p>
+                </div>
             </div>
 
+            <!-- Отдельная область со скроллом, чтобы большое дерево не ломало всю страницу -->
+            <div class="tree-canvas-wrap">
+                <div class="tree-canvas">
 
+                   {% for lines, arrow_lines in mix_lines %}
+                       <div class="row align-items-start tree-generation-row g-0">
+
+                            {% for person in lines %}
+                            <div class="col-1 tree-cell">
+                            {% if person is None %}
+                                <!-- Пустую ячейку не скрываем полностью: она сохраняет структуру ветки -->
+                                <div class="tree-empty-slot" aria-hidden="true"></div>
+
+                            {% else %}
+                                {% if person.id %}
+                                    <a class="tree-person-link" href="{% url 'detailed_person' pk=person.id %}">
+                                        {% include 'Tree/tree_person.html' %}
+                                    </a>
+                                {% else %}
+                                    <a class="tree-person-link" href="{% url 'create_person' %}">
+                                        {% include 'Tree/tree_person.html' %}
+                                    </a>
+                                {% endif %}
+                            {% endif %}
+                            </div>
+                            {% endfor %}
+
+                       </div>
+
+                       <div class="row g-0 tree-arrow-row">
+                          {% for arrow, wi in arrow_lines %}
+                            <div class="col-{{ wi }} tree-arrow-cell">
+                                <!-- Соединительные линии оставляем как есть -->
+                                <img src="{{ arrow }}" height="20" width="auto" class="img-fluid tree-arrow-img" alt="стрелка">
+                            </div>
+                          {% endfor %}
+                       </div>
+                   {% endfor %}
+
+                </div>
+            </div>
+
+            <!-- Навигация вынесена из Bootstrap-сетки дерева, но остается внутри карточки страницы -->
+            <div class="tree-nav-floating">
+                {% include 'Tree/button_for_move.html' %}
+            </div>
+
+        </div>
     </div>
-    {% endblock main_body %}
+{% endblock main_body %}

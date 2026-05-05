@@ -1,7 +1,7 @@
 import os
 from itertools import zip_longest
 from typing import Union
-
+from datetime import date
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
@@ -213,8 +213,6 @@ def fam_tree_schema (request, pk):
 
         children_of_person = (Person.objects.filter(Q(mother=main_person)|
                                                                 Q(father=main_person)))
-
-
         married = False
         if marr_person:
             married = True
@@ -240,21 +238,14 @@ def fam_tree_schema (request, pk):
 #                            f_grandfather_marr, f_grandmother_marr,
 #                            m_grandfather_marr, m_grandmother_marr,
                             ]
-
-
         else:
             grandparents = [None, f_grandmother_main, None, f_grandfather_main,
                             None, m_grandfather_main, None, m_grandmother_main,
                         ]
-
-
-
         cur_fam = [None, None, None, None, main_person, None, marr_person, None]
-
     except Person.DoesNotExist:
         # change raise
         raise Http404
-
     lines = [grandparents, parents, cur_fam, children_of_person, ]
     arrow_lines = get_arrows_lines(lines)
 
@@ -265,6 +256,52 @@ def fam_tree_schema (request, pk):
     })
 
 
+def _person_arrow_sort_key(person):  ####
+    """Единая сортировка людей для горизонтальной навигации по братьям/сестрам.  ####
+    Сначала используем дату рождения, если она есть, потом ФИО и id.  ####
+    Так левая стрелка ведет к предыдущему человеку в понятном семейном порядке,  ####
+    а не к случайной записи из базы данных.  ####
+    """  ####
+    return (  ####
+        person.birth_date or date.max,  ####
+        (person.last_name or "").lower(),  ####
+        (person.first_name or "").lower(),  ####
+        (person.middle_name or "").lower(),  ####
+        person.id or 0,  ####
+    )  ####
+  ####
+  ####
+def _get_siblings_for_arrows(cur_person):  ####
+    """Возвращает текущего человека и его братьев/сестер для стрелочной навигации.  ####
+    Берем людей с тем же отцом или той же матерью, потому что в базе может быть указан  ####
+    только один родитель. distinct() нужен, чтобы человек не дублировался, если совпали оба родителя.  ####
+    """  ####
+    parents_query = Q()  ####
+    if cur_person.father_id:  ####
+        parents_query |= Q(father_id=cur_person.father_id)  ####
+    if cur_person.mother_id:  ####
+        parents_query |= Q(mother_id=cur_person.mother_id)  ####
+  ####
+    if not parents_query:  ####
+        return []  ####
+  ####
+    return sorted(Person.objects.filter(parents_query).distinct(), key=_person_arrow_sort_key)  ####
+  ####
+  ####
+def _get_previous_sibling_or_self_for_arrows(cur_person):  ####
+    """Цель для левой стрелки: предыдущий брат/сестра.  ####
+    Если текущий человек первый в списке или братьев/сестер нет, оставляем текущую карточку.  ####
+    Это безопаснее, чем циклически прыгать в конец списка и путать пользователя.  ####
+    """  ####
+    siblings = _get_siblings_for_arrows(cur_person)  ####
+    if not siblings:  ####
+        return cur_person.id  ####
+  ####
+    current_index = next((index for index, person in enumerate(siblings) if person.id == cur_person.id), None)  ####
+    if current_index is None or current_index == 0:  ####
+        return cur_person.id  ####
+  ####
+    return siblings[current_index - 1].id 
 
 def moving_by_arrows (request, pk: Union[str, int], arrow: Union[str, int]):
     # id = request.GET.get('id')
@@ -274,7 +311,7 @@ def moving_by_arrows (request, pk: Union[str, int], arrow: Union[str, int]):
     arrow = int(arrow)
     if arrow == 1:
         # left
-        pass
+        new_pk = _get_previous_sibling_or_self_for_arrows(cur_person)
     elif arrow == 2:
         # up
         if cur_person.sex == 'M':

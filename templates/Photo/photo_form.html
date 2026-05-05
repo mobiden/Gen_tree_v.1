@@ -1,28 +1,23 @@
 {% extends 'main.html' %}
 {% load static %}
-{% block title %}Add a photo{% endblock %}
+{% block title %}Добавить фото{% endblock %}
 
-{% block styles %}
-    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
-{% endblock %}
+
+
+
 
 {% block main_body %}
-            <form method="post" enctype="multipart/form-data" action="{% url 'add_photo' %}">
+            <form method="post" enctype="multipart/form-data" action="{% url 'add_photo' %}" class="app-card app-card--narrow">
             {% csrf_token %}
-            <div class="container">
-                     <div class="row">
-                <div class="col-4">
+            <h1 class="app-title">Добавить фотографию</h1>
+                <p class="app-subtitle">Загрузите архивное фото и добавьте комментарий, чтобы позже проще найти снимок.</p>
+
                     {{ form.as_ul}}
-
             <input id="form-submit" type="submit" value="Сохранить">
-                </div>
-                 <div class="col-4">
+                {% if success %}
+                    <p class="h3 mt-3">{{ success }}</p>
+                {% endif %}
 
-                    <p class="h3">{{ success }}</p>
 
-
-                </div>
-                     </div>
-            </div>
             </form>
 {% endblock %}

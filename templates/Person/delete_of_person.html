@@ -2,26 +2,18 @@
 {% load static %}
 {% block title %}Удалить человека{% endblock %}
 
-{% block styles %}
-    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
-{% endblock %}
+
+
+
 
 {% block main_body %}
-            <form method="post" enctype="multipart/form-data" action="{% url 'delete_person' pk=object.id %}">
+            <form method="post" enctype="multipart/form-data" action="{% url 'delete_person' pk=object.id %}" class="app-card app-card--narrow">
             {% csrf_token %}
-            <div class="container">
-                     <div class="row">
-                <div class="col-4">
-               <p>Are you sure you want to delete "{{ object }}"?</p>
+            <h1 class="app-title">Удалить человека</h1>
+                <p class="app-subtitle">Это действие нельзя отменить.</p>
+                <div class="empty-state mb-3">Вы уверены, что хотите удалить: <strong>{{ object }}</strong>?</div>
+                <input type="submit" value="Удалить">
 
-     <input type="submit" value="Удаление">
-
-
-
-                </div>
-
-                     </div>
-            </div>
             </form>
 
 {% endblock %}

@@ -20,16 +20,20 @@
 
 
 <body>
-    {% block main_body %}
 
-        <h3>Генеалогическое древо</h3>
-        <h7>Добро пожаловать в мое геналогическое древо.</h7>
-        <h7>Здесь можно будет <a href="{% url 'photo_list' %}">посмотреть</a> и <a href="{% url 'add_photo' %}">добавить</a> архивные фотографии.<br></h7>
-        <h7>Посмотреть всех людей, <a href="{% url 'persons_list'%}">занесенных в древо,</a>,<br></h7>
-        <h7>все связи и родственников по каждому человеку в отдельности.<br></h7>
-        <h7>И еще добавить <a href="{% url 'create_person'%}">новых людей</a>и прописать их связи.<br></h7>
+{% block main_body %}
+    <div class="app-card app-card--narrow">
+        <h1 class="app-title">🌳 Генеалогическое древо</h1>
+        <p class="app-subtitle">Добро пожаловать в семейный архив: здесь можно смотреть дерево, добавлять людей и хранить архивные фотографии.</p>
 
-    {% endblock main_body %}
+        <div class="app-list">
+            <div class="app-list-item">📷 <a href="{% url 'photo_list' %}">Посмотреть фотографии</a> или <a href="{% url 'add_photo' %}">добавить новое архивное фото</a>.</div>
+            <div class="app-list-item">👥 <a href="{% url 'persons_list'%}">Открыть список людей</a>, занесенных в древо.</div>
+            <div class="app-list-item">🌿 Смотреть связи и родственников по каждому человеку отдельно.</div>
+            <div class="app-list-item">➕ <a href="{% url 'create_person'%}">Добавить нового человека</a> и указать его связи.</div>
+        </div>
+    </div>
+{% endblock main_body %}
 
 
 </body>

@@ -4,27 +4,258 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow" />
 
     <title> {% block title %}{% endblock%}</title>
 
 
 <link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.min.css"%}">
+<link rel="stylesheet" type="text/css" href="{% static "css/tree.css" %}">
 
-    {% block styles %}
+
     <style>
 
-        .main_body_style {
+        :root {
+            --gt-green: #1f7a3a;
+            --gt-green-dark: #145427;
+            --gt-green-soft: #e7f3df;
+            --gt-paper: rgba(255, 248, 220, 0.88);
+            --gt-paper-strong: rgba(255, 250, 232, 0.96);
+            --gt-text: #26402d;
+            --gt-muted: #6f775f;
+            --gt-border: rgba(47, 112, 46, 0.25);
+            --gt-shadow: 0 18px 38px rgba(51, 70, 31, 0.18);
+        }
 
-            background-image: url(/media/work/oak.png);
+
+        body {
+            min-height: 100vh;
+            color: var(--gt-text);
+            background-color: #f6efcf;
+            background-image: linear-gradient(rgba(255, 250, 230, 0.62), rgba(255, 250, 230, 0.72)), url(/media/work/oak.png);
             background-repeat:no-repeat;
-            background-position:center 50px;
+            background-position:left top;
+            background-size: cover;
             background-attachment:fixed;
+                         }
 
+        a {
+            color: var(--gt-green-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
 
+        a:hover {
+            color: var(--gt-green);
+            text-decoration: underline;
+        }
+        .app-navbar {
+            background: rgba(255, 246, 210, 0.92) !important;
+            border-bottom: 1px solid var(--gt-border);
+            backdrop-filter: blur(6px);
+        }
+
+        .navbar-brand {
+            color: var(--gt-green-dark) !important;
+        }
+
+        .dropdown-menu {
+            background: var(--gt-paper-strong);
+            border: 1px solid var(--gt-border);
+            border-radius: 16px;
+            box-shadow: var(--gt-shadow);
+        }
+
+        .dropdown-item:hover,
+        .nav-link:hover {
+            background-color: var(--gt-green-soft);
+            color: var(--gt-green-dark) !important;
+        }
+
+        .app-page-shell {
+            width: min(1180px, calc(100% - 32px));
+            margin: 22px auto 44px;
+        }
+
+        .app-page-shell--tree { /* #### */
+            width: 100%; /* #### */
+            margin: 0; /* #### */
+        } /* #### */
+
+        .app-card {
+            background: var(--gt-paper);
+            border: 1px solid var(--gt-border);
+            border-radius: 26px;
+            box-shadow: var(--gt-shadow);
+            padding: 28px;
+        }
+
+        .app-card--narrow {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .app-title {
+            color: var(--gt-green-dark);
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(2rem, 3vw, 3.1rem);
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .app-subtitle {
+            color: var(--gt-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .app-section-title {
+            color: var(--gt-green-dark);
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .btn,
+        input[type="submit"] {
+            border-radius: 14px;
+            font-weight: 600;
+            box-shadow: 0 8px 18px rgba(31, 122, 58, 0.14);
+        }
+
+        .btn-primary,
+        input[type="submit"] {
+            color: #fff;
+            background: linear-gradient(180deg, #2c9349 0%, #17682d 100%);
+            border-color: #17682d;
+            padding: 0.55rem 1rem;
+        }
+
+        form ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        form li {
+            margin-bottom: 0.9rem;
+        }
+
+        form label {
+            display: block;
+            color: var(--gt-green-dark);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        form input:not([type="submit"]),
+        form textarea,
+        form select {
+            width: 100%;
+            border: 1px solid var(--gt-border);
+            border-radius: 14px;
+            padding: 0.55rem 0.75rem;
+            background: rgba(255, 255, 255, 0.82);
+        }
+
+        .app-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .app-list-item {
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid var(--gt-border);
+            border-radius: 18px;
+            padding: 0.85rem 1rem;
+        }
+
+        .app-actions {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .app-photo {
+            width: 100%;
+            max-height: 460px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--gt-border);
+            border-radius: 22px;
+            padding: 0.5rem;
+        }
+
+        .app-photo-thumb {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 3px solid rgba(47, 112, 46, 0.45);
+            background: rgba(255, 255, 255, 0.65);
+            padding: 0.25rem;
+        }
+
+        .photo_item {
+            height: 100%;
+            background: rgba(255, 250, 232, 0.88);
+            border: 1px solid var(--gt-border);
+            border-radius: 22px;
+            padding: 0.75rem;
+            box-shadow: 0 10px 24px rgba(51, 70, 31, 0.12);
+        }
+
+        .empty-state {
+            color: var(--gt-muted);
+            background: rgba(255, 255, 255, 0.56);
+            border: 1px dashed var(--gt-border);
+            border-radius: 18px;
+            padding: 1rem;
+        }
+        
+        .tree-page-container { /* #### */
+            position: relative; /* #### */
+            min-height: calc(100vh - 58px); /* #### */
+            padding: 0; /* #### */
+        } /* #### */
+
+        .tree-page-card--full { /* #### */
+            position: relative; /* #### */
+            min-height: calc(100vh - 58px); /* #### */
+            border-radius: 0; /* #### */
+            box-shadow: none; /* #### */
+            border: 0; /* #### */
+            background: rgba(255, 248, 220, 0.38); /* #### */
+            overflow: auto; /* #### */
+        } /* #### */
+
+        .tree-page-header { /* #### */
+            width: min(1180px, calc(100% - 32px)); /* #### */
+            margin: 0 auto; /* #### */
+            padding: 28px 0 14px; /* #### */
+            border-bottom: 1px solid rgba(47, 112, 46, 0.18); /* #### */
+        } /* #### */
+
+        .tree-canvas-wrap { /* #### */
+            position: relative; /* #### */
+            width: 100%; /* #### */
+            overflow-x: auto; /* #### */
+            padding: 16px 24px 60px; /* #### */
+        } /* #### */
+
+        .tree-canvas { /* #### */
+            min-width: 1180px; /* #### */
+            margin: 0 auto; /* #### */
+        } /* #### */
+
+        .tree-nav-floating { /* #### */
+            position: fixed; /* #### */
+            right: 10%; /* #### */
+            top: 48%; /* #### */
+            transform: translateY(-50%); /* #### */
+            z-index: 20; /* #### */
         }
 
     </style>
+    {% block styles %}
     {% endblock styles %}
 
     <script type="text/javascript" src="{% static "jquery/jquery-3.6.0.min.js"%}"></script>
@@ -37,14 +268,23 @@
 
 <body>
 {% block body %}
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'family_tree'%}">Список</a>
+    <!-- Основная шапка приложения: делаем ее визуально легче, чище и удобнее для чтения -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm app-navbar">
+  <div class="container-fluid px-3 px-lg-4">
+    <a class="navbar-brand fw-semibold" href="{% url 'family_tree'%}">
+        🌳 GenTree
+    </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+
+        <!-- Быстрый переход к дереву -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-main" href="{% url 'family_tree'%}">Дерево</a>
+        </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,9 +311,11 @@
 
       </ul>
      {%  block search_place %}
-      <form class="d-flex" action="{% url 'persons_list' %}">
-        <input class="form-control me-2" type="search" placeholder="Поиск человека" aria-label="Search" name="search_p">
-        <button class="btn btn-outline-success" type="submit">Поиск</button>
+        <!-- Поиск оформляем как отдельный заметный, но не кричащий блок -->
+      <form class="d-flex app-search-form" action="{% url 'persons_list' %}">
+        <input class="form-control me-2 app-search-input" type="search" placeholder="Поиск человека" aria-label="Search" name="search_p">
+        <button class="btn btn-outline-success app-search-btn" type="submit">Поиск</button>
+
       </form>
       {% endblock search_place %}
     </div>
@@ -81,10 +323,13 @@
 </nav>
 
 
-    {% block main_body %}
+<!-- Весь контент страницы идет в общий контейнер, чтобы фон и отступы выглядели единообразно -->
+    <main class="app-page-shell {% block page_shell_class %}{% endblock page_shell_class %}"> <!-- #### -->
+        {% block main_body %}
 
 
     {% endblock main_body %}
+    </main>
 
 {% endblock body %}
 

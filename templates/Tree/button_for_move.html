@@ -2,12 +2,21 @@
 
 
 <div class="button_for_move">
-    <div class="btn-group" role="group" aria-label="Arrows">
-  <a class="border border-success border-1 btn btn btn-primary" href="#">←</a>
-  <div class="btn-group-vertical">
-        <a class="border border-success border-1 btn btn btn-primary" href="{% url 'fam_tree_arrows' pk=id arrow='2' %}"> ↑ </a>
-        <a class="border border-success border-1 btn btn btn-primary" href="{% url 'fam_tree_arrows' pk=id arrow='4' %}">↓</a>
-  </div>
-  <a class="border border-success border-1 btn btn btn-primary" href="{% url 'fam_tree_arrows' pk=id arrow='3' %}">→</a>
-</div>
+
+    <!-- Навигацию по дереву делаем отдельной "плавающей" панелью -->
+    <div class="tree-nav-panel" role="group" aria-label="Навигация по дереву">
+        <div class="tree-nav-title">Навигация</div>
+
+        <div class="tree-nav-grid">
+           <!-- Левая стрелка ведет к предыдущему брату/сестре текущего человека -->
+            <a class="tree-nav-btn" href="{% url 'fam_tree_arrows' pk=id arrow='1' %}" title="К предыдущему брату/сестре">←</a>
+
+            <a class="tree-nav-btn" href="{% url 'fam_tree_arrows' pk=id arrow='2' %}" title="К родителям">↑</a>
+            <a class="tree-nav-btn" href="{% url 'fam_tree_arrows' pk=id arrow='3' %}" title="К супругу или супруге">→</a>
+
+            <div class="tree-nav-spacer"></div>
+            <a class="tree-nav-btn" href="{% url 'fam_tree_arrows' pk=id arrow='4' %}" title="К детям">↓</a>
+            <div class="tree-nav-spacer"></div>
+        </div>
+    </div>
     </div>

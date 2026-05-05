@@ -1,17 +1,14 @@
 
-import requests
-from django.core.serializers import json
 from django.http import HttpResponse
 from rest_framework.request import Request
 
-from rest_framework.response import Response
-from rest_framework.permissions import AllowAny, IsAuthenticated
+
 from rest_framework import status
 import logging
 
 from rest_framework.views import APIView as AV
 from rest_framework.generics import RetrieveUpdateAPIView, get_object_or_404
-# from .models import User, Users_likes, Posts
+
 from Gen_tree.settings import RAW_CONFIG, MEDIA_ROOT, DEBUG
 from gtree_db.models import Photo, Person
 
@@ -92,8 +89,7 @@ def sending_person(person: Person, api_var: API_var, check_married:bool = True):
             temporary_person = person.who_married
             temp_person = sending_person(person=temporary_person, api_var=api_var, check_married=False)
         cur_context.update({'who_married': int(temp_person['id'])})
-    if str(person) == 'Комляков Валерий Александрович':
-        pass
+
     json = (person_sending(person, context=cur_context)).json()
 
     if json['status']:

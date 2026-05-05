@@ -3,8 +3,8 @@
 
 {% block style %}
     .brd {
-        margin-top: 30%;
-        margin-bottom: 50%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
 
    }
 {% endblock style %}
@@ -12,25 +12,25 @@
 
 {% block check_photo %}
             {% if check %}
-            <div style="font-weight: bold; margin-top: 30px">
-                Поиск совпадений:
-            </div>
+            <h2 class="app-section-title mt-4">Поиск совпадений</h2>
+            <div class="app-list">
             {% for id, name, conf in check_photo %}
-                <div class="row">
+                <div class="app-list-item">
                     <a target="_blank" href="{% url 'detailed_person'  pk=id %}">
                         {{name}}
                     </a>
                 </div>
             {% empty %}
-              <p>Новых совпадений не найдено</p>
+              <div class="empty-state">Новых совпадений не найдено</div>
             {% endfor %}
-
+              </div>
 
         {% endif%}
          {% endblock check_photo %}
 
 {% block bottoms %}
         <form action="{% url 'person_add_to_photo' pk=photo.pk %}" >
+               <h2 class="app-section-title">Добавить человека</h2>
                <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example"
                        name="per_id" required="on" title="Добавить людей на фото">
      <option value="" disabled selected>Добавить людей на фото</option>

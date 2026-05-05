@@ -3,21 +3,15 @@
 
 {% block title %}Изменить данные{% endblock %}
 {% block main_body %}
-            <form method="post" enctype="multipart/form-data" action="{% url 'change_person' pk=object.id %}">
+            <form method="post" enctype="multipart/form-data" action="{% url 'change_person' pk=object.id %}" class="app-card app-card--narrow">
             {% csrf_token %}
-            <div class="container">
-                     <div class="row">
-                <div class="col-4">
+            <h1 class="app-title">Изменить данные</h1>
+                <p class="app-subtitle">Проверьте данные человека и сохраните изменения.</p>
                 {{ form.as_ul}}
             <input id="form-submit" type="submit" value="Изменить">
-                </div>
-                 <div class="col-4">
+                {% if success %}
+                    <p class="h3 mt-3">{{ success }}</p>
+                {% endif %}
 
-                    <p class="h3">{{ success }}</p>
-
-
-                </div>
-                     </div>
-            </div>
             </form>
 {% endblock %}

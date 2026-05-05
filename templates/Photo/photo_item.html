@@ -2,8 +2,15 @@
 
 <div class="photo_item">
     <a href="{% url 'photo_detailed'  pk=photo.id %}">
-    <img src= "{{photo.the_photo.url}}" height="200" width="200" class="figure-img img-fluid rounded" alt="фото">
-                     <p> {{ photo.comments}}</p>
-</a>
+    {% if photo.the_photo %}
+            <img src="{{photo.the_photo.url}}" class="app-photo-thumb" alt="фото">
+        {% endif %}
+        {% if photo.comments %}
+            <p>{{ photo.comments }}</p>
+        {% else %}
+            <p>Без комментария</p>
+        {% endif %}
+    </a>
+
 
 </div>

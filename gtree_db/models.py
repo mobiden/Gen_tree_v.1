@@ -113,6 +113,8 @@ class Person(Abs_Person):
                                          null=True,
                                          auto_now_add=True,
                                          )
+
+
     class Meta:
         constraints = [
             models.UniqueConstraint(fields=['last_name', 'first_name', 'birth_date'], name='unicue_person')
@@ -148,7 +150,7 @@ class Person(Abs_Person):
 
         instance = super().from_db(db, field_names, values)
         ph_file = instance.mainPhoto
-        if not os.path.exists(ph_file.path) and instance.mainPhotofile:
+        if ph_file and ph_file.name and instance.mainPhotofile and not os.path.exists(ph_file.path):
             with open('temp11111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.mainPhotofile)
                 ph.write(base64.b64decode(enfile))
@@ -181,7 +183,7 @@ class Photo(models.Model):
                                          auto_now_add=True,
                                          )
     def __str__(self):
-        return self.the_photo.path
+        return self.the_photo.path if self.the_photo and self.the_photo.name else ''
 
     def save(self, *args, **kwargs):
         if self.the_photo:
@@ -194,7 +196,7 @@ class Photo(models.Model):
     def from_db(cls, db, field_names, values):
         instance = super().from_db(db, field_names, values)
         ph_file = instance.the_photo
-        if not os.path.exists(ph_file.path) and instance.photo_file:
+        if ph_file and ph_file.name and instance.photo_file and not os.path.exists(ph_file.path):
             with open('temp21111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.photo_file)
                 ph.write(base64.b64decode(enfile))
@@ -240,14 +242,9 @@ class Picture(models.Model):
     def from_db(cls, db, field_names, values):
         instance = super().from_db(db, field_names, values)
         ph_file = instance.picture
-        if not os.path.exists(ph_file.path) and instance.picturefile:
+        if ph_file and ph_file.name and instance.picturefile and not os.path.exists(ph_file.path):
             with open('temp31111111', 'wb') as ph:
                 enfile = base64.b64encode(instance.picturefile)
                 ph.write(base64.b64decode(enfile))
                 ph.close()
                 os.rename('temp31111111', ph_file.path)
-
-#    class Meta:
-#        constraints = [
-#            models.UniqueConstraint(fields=['project', 'people'], name='one_person_in_pr')
-#        ]

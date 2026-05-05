@@ -1,0 +1,326 @@
+body {
+    background: #efe4c6;
+    color: #183528;
+}
+
+.app-navbar {
+    background: rgba(255, 248, 225, 0.94) !important;
+    border-bottom: 1px solid rgba(77, 55, 22, 0.22);
+}
+
+.tree-page-container {
+    padding: 0 !important;
+}
+
+.tree-page-card {
+    position: relative;
+    min-height: calc(100vh - 74px);
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    background:
+        linear-gradient(90deg, rgba(255, 248, 225, 0.08), rgba(255, 248, 225, 0.82) 170px, rgba(255, 248, 225, 0.78)),
+        url("/static/img/oak/page-bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.tree-page-card::before {
+    content: "";
+    position: absolute;
+    left: 120px;
+    right: 0;
+    top: 0;
+    height: 150px;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(42, 77, 29, 0.34), transparent 82%),
+        radial-gradient(circle at 20% 20%, rgba(63, 111, 37, 0.36), transparent 16%),
+        radial-gradient(circle at 48% 12%, rgba(82, 127, 45, 0.34), transparent 18%),
+        radial-gradient(circle at 78% 18%, rgba(55, 100, 34, 0.33), transparent 17%);
+    filter: blur(1px);
+}
+
+.tree-page-header {
+    position: relative;
+    z-index: 2;
+    margin-left: 170px;
+    padding: 2.1rem 2rem 1rem;
+    border-bottom: 1px solid rgba(86, 62, 25, 0.22);
+}
+
+.tree-page-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.55rem;
+    font-weight: 700;
+    color: #123d26;
+}
+
+.tree-page-title::before,
+.tree-page-title::after {
+    content: "🍃";
+    font-size: 1.55rem;
+    margin: 0 0.45rem;
+}
+
+.tree-page-subtitle {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    color: #304637;
+}
+
+.tree-canvas-wrap {
+    position: relative;
+    z-index: 2;
+    margin-left: 170px;
+    padding: 1.5rem 2rem 2.8rem;
+    overflow: auto;
+}
+
+.tree-canvas {
+    min-width: 1180px;
+}
+
+.tree-cell {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+}
+
+.tree-empty-slot {
+    width: 112px;
+    height: 150px;
+    background: transparent;
+}
+
+.tree_person {
+    width: 112px;
+}
+
+.tree_person__item {
+    min-height: 150px;
+    padding: 0.65rem 0.45rem;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255, 253, 238, 0.98), rgba(245, 234, 198, 0.96));
+    border: 2px solid rgba(74, 126, 48, 0.82);
+    box-shadow:
+        0 16px 28px rgba(75, 52, 20, 0.18),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.tree-person-link {
+    color: #1f2d22;
+    text-decoration: none;
+}
+
+.tree-person-link:hover .tree_person__item {
+    transform: translateY(-4px);
+    box-shadow:
+        0 22px 36px rgba(75, 52, 20, 0.25),
+        0 0 0 5px rgba(86, 134, 52, 0.14);
+}
+
+.tree-person-photo-wrap {
+    width: 78px;
+    height: 78px;
+    border-radius: 18px;
+    padding: 4px;
+    margin: 0 auto;
+    background: #fff9df;
+}
+
+.tree-person-photo-wrap--regular {
+    border: 3px solid #368044;
+}
+
+.tree-person-photo-wrap--active {
+    border: 5px solid #4bc1ff;
+    box-shadow: 0 0 0 6px rgba(75, 193, 255, 0.25);
+}
+
+.tree-person-photo-wrap--archived {
+    border: 3px solid #8b986f;
+    filter: sepia(0.15);
+}
+
+.tree-person-photo-wrap--empty {
+    border: 3px dashed #9aa685;
+}
+
+.tree-person-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.tree-person-name {
+    margin-top: 0.45rem;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.12;
+    text-align: center;
+    width: 100%; /* #### */
+    overflow: visible; /* #### */
+}
+
+.tree-person-last-name {
+    font-weight: 700;
+    color: #183528;
+}
+
+.tree-person-first-name,
+.tree-person-middle-name {
+    color: #25372c;
+}
+
+.tree-person-last-name,
+.tree-person-first-name,
+.tree-person-middle-name {
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+}
+
+/* ВОЗВРАЩЕНЫ СТАРЫЕ ЗЕЛЕНЫЕ СТРЕЛКИ */
+
+.tree-arrow-row {
+    margin-top: -0.15rem;
+    margin-bottom: 0.25rem;
+}
+
+.tree-arrow-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree-arrow-img {
+    opacity: 0.96;
+    height: 20px;
+    width: auto;
+}
+
+.tree-arrow-row::before,
+.tree-arrow-row::after,
+.tree-arrow-cell::before,
+.tree-arrow-cell::after {
+    content: none !important;
+    display: none !important;
+}
+
+.tree-nav-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree-nav-panel {
+    position: sticky;
+    top: 94px;
+    width: 230px;
+    padding: 1.2rem;
+    border-radius: 26px;
+    background: linear-gradient(180deg, rgba(255, 248, 220, 0.96), rgba(239, 221, 167, 0.95));
+    border: 1px solid rgba(117, 86, 34, 0.34);
+    box-shadow:
+        0 20px 40px rgba(71, 48, 20, 0.22),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+.tree-nav-title {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #173b27;
+    margin-bottom: 0.75rem;
+}
+
+.tree-nav-title::before,
+.tree-nav-title::after {
+    content: "🍃";
+    font-size: 1rem;
+    margin: 0 0.35rem;
+}
+
+.tree-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 58px);
+    gap: 0.65rem;
+    justify-content: center;
+}
+
+.tree-nav-btn {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: #fffef2;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 800;
+    background:
+        radial-gradient(circle at 35% 20%, rgba(255, 255, 255, 0.22), transparent 32%),
+        linear-gradient(180deg, #3f8c42, #1f5d2a);
+    border: 1px solid rgba(30, 75, 31, 0.65);
+    box-shadow:
+        0 10px 18px rgba(35, 82, 36, 0.28),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.18);
+}
+
+.tree-nav-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.tree-nav-spacer {
+    height: 58px;
+}
+
+.tree-nav-panel::after {
+    content: " ";
+    white-space: pre-line;
+    display: block;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(82, 61, 26, 0.22);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #1e3a2b;
+}
+
+/* Навигация не участвует в Bootstrap-сетке дерева и не сдвигает стрелки */
+.tree-nav-floating {
+    position: absolute;
+    right: 12rem;
+    top: 18rem;
+    z-index: 20;
+}
+
+/* Старый контейнер больше не должен занимать место в строках дерева */
+.tree-nav-col {
+    display: none;
+}
+
+/* Оставляем исходную Bootstrap-сетку, чтобы стрелки совпадали с карточками */
+.tree-canvas {
+    min-width: 1180px;
+}
+
+/* Не центрируем строки через flex, иначе col-1/col-N начинают смещать стрелки */
+.tree-generation-row {
+    justify-content: flex-start;
+}
+
+.tree-arrow-row {
+    justify-content: flex-start;
+}

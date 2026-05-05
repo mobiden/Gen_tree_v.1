@@ -2,26 +2,17 @@
 {% load static %}
 {% block title %}Добавить человека{% endblock %}
 
-{% block styles %}
-    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
-{% endblock %}
+
 
 {% block main_body %}
-            <form method="post" enctype="multipart/form-data" action="{% url 'create_person' %}">
+            <form method="post" enctype="multipart/form-data" action="{% url 'create_person' %}" class="app-card app-card--narrow">
             {% csrf_token %}
-            <div class="container">
-                     <div class="row">
-                <div class="col-4">
+            <h1 class="app-title">Добавить человека</h1>
+                <p class="app-subtitle">Заполните основные данные. Связи с родственниками можно будет уточнить позже.</p>
                 {{ form.as_ul}}
-            <input id="form-submit" type="submit" value="Готово">
-                </div>
-                 <div class="col-4">
-
-                    <p class="h3">{{ success }}</p>
-
-
-                </div>
-                     </div>
-            </div>
+                <input id="form-submit" type="submit" value="Готово">
+                {% if success %}
+                    <p class="h3 mt-3">{{ success }}</p>
+                {% endif %}
             </form>
 {% endblock %}

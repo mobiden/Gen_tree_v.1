@@ -1,56 +1,62 @@
 {% extends 'main.html' %}
 {% load static %}
-<style>
-    {% block style %}
-    {% endblock style %}
 
-mytitle {
-    font-weight: bold;
-    font-size: 10px;
-    margin-bottom: 50%;
 
-    border-bottom: 50px;
-    padding-bottom: 50%;
-
-    padding: 100px
-
-}
-</style>
 
 {% block title %}Фото с людьми{% endblock %}
+{% block styles %}
+    {% block style %}
+    {% endblock style %}
+{% endblock styles %}
 
 {% block main_body %}
 
 
             {% csrf_token %}
-            <div class="container">
-                <div class="row">
-        <div class="col-5">
+            <div class="app-card">
+                <h1 class="app-title">Архивное фото</h1>
+                <p class="app-subtitle">Здесь можно посмотреть снимок, список людей на фото и добавить новые связи.</p>
+                <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-6">
 
-<img src= "{{photo.the_photo.url}}" height="auto" width="400" alt="фото">
-                   <p> {{ photo.comments }} </p>
+    {% if photo.the_photo %}
+    <img src= "{{photo.the_photo.url}}" class="app-photo" alt="фото">
+    {% else %}
+    <div class="empty-state">Файл фотографии не прикреплен.</div>
+    {% endif %}
+                   {% if photo.comments %}
+                   <div class="app-list-item mt-3">{{ photo.comments }}</div>
+                   {% else %}
+                   <div class="empty-state mt-3">Комментарий пока не добавлен.</div>
+                   {% endif %}
+
+
         </div>
-        <div class="col-3">
-            <div style="font-weight: bold" >Люди на фото:
-            </div>
+        <div class="col-12 col-lg-3">
+            <h2 class="app-section-title">Люди на фото</h2>
+            <div class="app-list">
+
          {% for person in ph_persons %}
-                <div class="row">
+                <div class="app-list-item">
                     <a href="{% url 'detailed_person'  pk=person.id %}">
                         {{person}}
                     </a>
                 </div>
 
                        {% empty %}
-             <p><span style="margin-bottom:30px">Нет прикрепленных людей</span> </p>
+             <div class="empty-state">Нет прикрепленных людей</div>
                        {% endfor %}
-
+             </div>
          {% block check_photo %}
          {% endblock check_photo %}
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-3">
+     <h2 class="app-section-title">Действия</h2>
      {% block bottoms %}
-      <p><a class="btn btn-primary"  href="{% url 'photo_detailed' pk=photo.pk %}?add_per=True">Добавить человека</a></p>
-      <p><a class="btn btn-primary"  href="{% url 'photo_detailed' pk=photo.pk %}?ch_p=True">Найти людей на фото (займет некоторое время)</a></p>
+      <div class="app-actions">
+      <a class="btn btn-primary"  href="{% url 'photo_detailed' pk=photo.pk %}?add_per=True">➕ Добавить человека</a>
+      <a class="btn btn-primary"  href="{% url 'photo_detailed' pk=photo.pk %}?ch_p=True">🔎 Найти людей на фото</a>
+      </div>
      {% endblock bottoms %}
         </div>
                 </div>

@@ -5,74 +5,93 @@
 {% block main_body %}
 
             {% csrf_token %}
-            <div class="container">
-                     <div class="row">
+            <div class="app-card">
+                     <div class="row g-4 align-items-start">
 
-                <div class="col-4">
-           <h1>{{ cur_person.last_name }}</h1>
-           <h2>{{ cur_person.first_name }}</h2>
+
+            <div class="col-12 col-lg-4">
+           <h1 class="app-title">{{ cur_person.last_name }}</h1>
+           <h2 class="app-section-title">{{ cur_person.first_name }}</h2>
            {%  if cur_person.middle_name %}
-                    <h2>{{ cur_person.middle_name }}</h2>
+                    <h2 class="app-section-title">{{ cur_person.middle_name }}</h2>
            {% endif %}
 
            {% if cur_person.birth_date %}
-                    <h6>{{cur_person.birth_date|date:"d.m.y"}} - {%if cur_person.death_date%}{{ cur_person.death_date|date:"d.m.y"}}
+                    <div class="app-list-item mb-3">
+                    🗓 {{cur_person.birth_date|date:"d.m.Y"}} - {%if cur_person.death_date%}{{ cur_person.death_date|date:"d.m.Y"}}
                                                     {% else %} настоящее время
                                                     {% endif %}
-                    </h6>
+                    </div>
            {% endif %}
-
+            <div class="app-list">
             {% if cur_person.who_married %}
-                    {%if cur_person.sex == 'M'%}Жена:
+                    <div class="app-list-item">
+                    {%if cur_person.sex == 'M'%}<strong>Жена:</strong>
                 <a href="{% url 'detailed_person' pk=cur_person.who_married_id%}">
-                <h6>{{cur_person.who_married}}</h6>
+                {{cur_person.who_married}}
                 </a>
-            {% else %}Муж:
+            {% else %}<strong>Муж:</strong>
                 <a href="{% url 'detailed_person' pk=cur_person.who_married_id%}">
-                <h6>{{cur_person.who_married}}</h6>
+                {{cur_person.who_married}}
                 </a>
             {% endif %}
+                        </div>
                 {% endif %}
 
             {%if cur_person.father%}
-                Отец:
+                <div class="app-list-item">
+                <strong>Отец:</strong>
             <a href="{% url 'detailed_person' pk=cur_person.father_id%}">
-            <h6>{{cur_person.father}}
-            </h6>
+                {{cur_person.father}}
             </a>
+                    </div>
                 {% endif %}
 
             {%if cur_person.mother%}
-                Мать:
+               <div class="app-list-item">
+                <strong>Мать:</strong>
             <a href="{% url 'detailed_person' pk=cur_person.mother_id%}">
-            <h6>{{cur_person.mother}}
-            </h6>
+            {{cur_person.mother}}
             </a>
+                </div>
                 {% endif %}
             {% if children %}
-                Дети:
+               <div class="app-list-item">
+                <strong>Дети:</strong>
             {% for child in children %}
+                   <div>
                 <a href="{% url 'detailed_person' pk=child.id%}">
-            <h6>{{ child }}
-            </h6>
+                {{ child }}
                 </a>
+                   </div>
                 {% endfor %}
+                   </div>
                 {% endif %}
+                </div>
                </div>
 
 
-                 <div class="col-4">
-                 {% if cur_person.mainPhoto.url %}
-    <img src= "{{cur_person.mainPhoto.url}}" height="200" width="300" class="figure-img img-fluid rounded" alt="фото">
-            {% endif %}
-                <p>  {{ cur_person.comment }}</p>
-                </div>
 
-                      <div class="col-4">
-           <p><a class="btn btn-primary"  href="{% url 'fam_tree_schema' pk=cur_person.id%}">Древо человека</a></p>
-           <p><a class="btn btn-primary" href="{% url 'change_person' pk=cur_person.id%}">Изменить данные</a></p>
-           <p><a class="btn btn-primary" href="{% url 'photo_list_id' pk=cur_person.id%}">Человек на фото</a></p>
-           <p><a class="btn btn-primary" href="{% url 'kinfolk_list' pk=cur_person.id%}">Родственники</a></p>
+               <div class="col-12 col-lg-4">
+                 {% if cur_person.mainPhoto %}
+    <img src= "{{cur_person.mainPhoto.url}}" class="app-photo" alt="фото">
+
+
+            {% endif %}
+                {% if cur_person.comment %}
+                <div class="app-list-item mt-3">{{ cur_person.comment }}</div>
+                {% else %}
+                <div class="empty-state mt-3">Комментарий пока не добавлен.</div>
+                {% endif %}
+                </div>
+                <div class="col-12 col-lg-4">
+           <h2 class="app-section-title">Действия</h2>
+           <div class="app-actions">
+           <a class="btn btn-primary"  href="{% url 'fam_tree_schema' pk=cur_person.id%}">🌳 Древо человека</a>
+           <a class="btn btn-primary" href="{% url 'change_person' pk=cur_person.id%}">✏️ Изменить данные</a>
+           <a class="btn btn-primary" href="{% url 'photo_list_id' pk=cur_person.id%}">📷 Человек на фото</a>
+           <a class="btn btn-primary" href="{% url 'kinfolk_list' pk=cur_person.id%}">👪 Родственники</a>
+           </div>
 
                      </div>
             </div>

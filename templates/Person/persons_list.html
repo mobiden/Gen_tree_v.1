@@ -4,28 +4,25 @@
 
 
 {% block main_body %}
-            <h2>Список</h2>
-            {% csrf_token %}
-            <div class="container">
-                     <div class="row">
-                <div class="col-8">
+            <div class="app-card app-card--narrow">
+            <h1 class="app-title">Список людей</h1>
+            <p class="app-subtitle">Выберите человека, чтобы открыть карточку, дерево, родственников и фотографии.</p>
 
-                    <ul class="list-group">
+
+
+            {% csrf_token %}
+
+                    <div class="app-list">
                        {% for person in object_list %}
-                        <li class="list-group-item">
+                       <div class="app-list-item">
                          <a    href="{% url 'detailed_person' pk=person.id  %}">
                       {{ person.last_name }}  {{ person.first_name}}{% if person.middle_name%} {{person.middle_name}}{% endif %}
                         </a>
-                        </li>
+                        </div>
                        {% empty %}
-                        <li>Нет людей</li>
+                       <div class="empty-state">Нет людей</div>
                        {% endfor %}
-                    </ul>
 
-
-                </div>
-
-                     </div>
+                         </div>
             </div>
-            </form>
 {% endblock %}

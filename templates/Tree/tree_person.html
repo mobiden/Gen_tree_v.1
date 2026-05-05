@@ -6,24 +6,38 @@
     {% if person.id is not None %}
 
                 {% if person.id == id %}
-        <!-- рамка человека в фокусе -->
-                        <img class="border border-info border-5"  src= "{{person.mainPhoto.url}}"  width="65" class="figure-img img-fluid rounded" alt="фото">
+            <!-- Человек в текущем фокусе дерева: делаем самую заметную и аккуратную рамку -->
+                        <div class="tree-person-photo-wrap tree-person-photo-wrap--active">
+                            <img class="tree-person-photo" src="{{person.mainPhoto.url}}" alt="фото">
+                        </div>
+
                 {%  elif person.death_date %}
-        <!-- изменить цвет рамки, когда будут заполнены даты смерти -->
-                        <img class="border border-success border-3"  src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
+            <!-- Для умершего человека используем более спокойный тон рамки -->
+                        <div class="tree-person-photo-wrap tree-person-photo-wrap--archived">
+                            <img class="tree-person-photo" src="{{person.mainPhoto.url}}" alt="фото">
+                        </div>
+
                 {% else %}
-                        <img class="border border-success border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
+                        <div class="tree-person-photo-wrap tree-person-photo-wrap--regular">
+                            <img class="tree-person-photo" src="{{person.mainPhoto.url}}" alt="фото">
+                        </div>
                 {% endif %}
 
             {% else  %}
-                <img class="border border-light border-3" src= "{{person.mainPhoto.url}}"  width="60" class="figure-img img-fluid rounded" alt="фото">
+                <!-- Временный/пустой человек для добавления в дерево -->
+                <div class="tree-person-photo-wrap tree-person-photo-wrap--empty">
+                    <img class="tree-person-photo" src="{{person.mainPhoto.url}}" alt="фото">
+                </div>
             {% endif %}
 
-                {{ person.last_name}}
-                {{ person.first_name }}
-            {% if person.middle_name %}
-                {{ person.middle_name }}
-            {% endif %}
+             <div class="tree-person-name">
+                <div class="tree-person-last-name">{{ person.last_name }}</div>
+                <div class="tree-person-first-name">{{ person.first_name }}</div>
+                {% if person.middle_name %}
+                    <div class="tree-person-middle-name">{{ person.middle_name }}</div>
+                {% endif %}
+            </div>
+
 
         </div>
 
